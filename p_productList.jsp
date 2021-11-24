@@ -17,7 +17,7 @@
 .tit{text-align:center;}
 table { display:table; border-collapse:collapse;}
 tr { display:table-row;}
-th, td{display:table=cell;}
+th, td{display:table=cell; text-align: center;}
 .tb{ width:1000px; margin:20px auto;}
 .tb th, .tb td{ line-height:36px; border-bottom:1px solid #333;}
 .tb th { border-top:2px solid #333; background:#ABABAB;}
@@ -49,11 +49,11 @@ text-align:center; border:0; outline:0; float:left; line-height:38px; }
 	
 %>
 		<tr>
-				<td class="item1"><%=product.getP_num() %></td>	
+				<td class="item1"><a href=""><%=product.getP_num() %></a></td>	
 				<td class="item2"><%=product.getP_name() %></td>	
 				<td class="item3"><%=product.getP_kind() %></td>
 				<td class="item4"><%=product.getP_price() %></td>
-				<td> <img src="<%=product.getP_img() %>" alt=""></td>
+				<td> <img src='./img/<%=product.getP_img() %>' alt=""></td>
 		</tr>
 <%
 	}

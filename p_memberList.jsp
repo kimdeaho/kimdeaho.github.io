@@ -30,6 +30,8 @@ td:last-child{ border-right: 1px solid #333; }
 text-align:center; border:0; outline:0; float:left; line-height:38px; }
 .btn_wrap .in_btn:hover { background-color:#E1E1E1; }
 </style>
+<link rel="stylesheet" href="./css/reset2.css">
+<link rel="stylesheet" href="./css/a_common.css">
 </head>
 <body>
 <%@ include file="p_admin_header.jsp"%>
@@ -57,7 +59,7 @@ text-align:center; border:0; outline:0; float:left; line-height:38px; }
    
 %>
 	         <tr>
-	            <td class="item1"><a href=""><%=member.getM_id() %></a></td>   
+	            <td class="item1"><a href="EditMemberFromCtrl?id=<%=member.getM_id() %>"><%=member.getM_id() %></a></td>   
 	            <td class="item2"><%=member.getM_pw() %></td>
 	            <td class="item3"><%=member.getM_name() %></td>
 	            <td class="item4"><%=member.getM_birth1() %>년 <%=member.getM_birth2() %>월 <%=member.getM_birth3() %>일</td>

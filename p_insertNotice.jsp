@@ -103,7 +103,7 @@ h1 {
 	<%@ include file="p_admin_header.jsp"%>
 	<h1>공지사항 등록</h1>
 	<!-- 상품 등록 폼 -->
-	<form action="insertProductPro.jsp" class="frm" method="post"
+	<form action="p_insertNoticePro.jsp" class="frm" method="post"
 		name="pform">
 		<table class="content">
 			<tr>

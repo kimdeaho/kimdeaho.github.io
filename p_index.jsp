@@ -114,7 +114,7 @@ a:link {
 				</a>
 			</div>
 			<div class="link_1_2">
-				<a href=""> 
+				<a href="p_gum.jsp"> 
 				<img src="./img/gum.jpg" alt="" class="ani_img" style="margin: 15px; transition:0.5s;" />
 				</a>
 			</div>
@@ -126,19 +126,19 @@ a:link {
 				</a>
 			</div>
 			<div class="link_2_2">
-				<a href="">
+				<a href="p_candy.jsp">
 				<img src="./img/candy.jpg" alt="" style="margin: 15px;" />
 				</a>
 			</div>
 		</div>
 		<div class="link link_3" style="opacity: 1;">
 			<div class="link_3_1">
-				<a href="">
+				<a href="p_bisket.jsp">
 				<img src="./img/bisket.jpg" alt=""  style="margin: 15px;"/>
 				</a>
 			</div>
 			<div class="link_3_2">
-				<a href="">
+				<a href="p_chocolate.jsp">
 				<img src="./img/choco.jpg" alt="" style="margin: 15px;" />
 				</a>
 			</div>

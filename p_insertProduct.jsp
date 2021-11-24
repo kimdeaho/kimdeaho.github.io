@@ -43,6 +43,7 @@ h1 {
 	line-height: 42px;
 	float: left;
 	padding-bottom: 20px;
+	
 }
 .item_name2 { padding-top: 240px; }
 
@@ -102,7 +103,7 @@ h1 {
 	<%@ include file="p_admin_header.jsp"%>
 	<h1>제품 등록</h1>
 	<!-- 상품 등록 폼 -->
-	<form action="insertProductPro.jsp" class="frm" method="post"
+	<form action="p_insertProductPro.jsp" class="frm" method="post"
 		name="pform">
 		<table class="content">
 			<tr>
@@ -154,11 +155,11 @@ h1 {
 	</form>
 	<script>
 		function codeCheck() {
-			window.open("codeCheckform.jsp", "pcodecheck",
+			window.open("p_codeCheckForm.jsp", "pcodecheck",
 					"width=300, height=300");
 		}
 		function imgCheck() {
-			window.open("imgCheckform.jsp", "pimgcheck",
+			window.open("p_imgCheckForm.jsp", "pimgcheck",
 					"width=300, height=300");
 		}
 		function pCheck() {

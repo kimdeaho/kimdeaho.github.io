@@ -17,7 +17,7 @@
 .tit{text-align:center;}
 table { display:table; border-collapse:collapse;}
 tr { display:table-row;}
-th, td{display:table=cell;}
+th, td{display:table=cell; text-align: center;}
 .tb{ width:1000px; margin:20px auto;}
 .tb th, .tb td{ line-height:36px; border-bottom:1px solid #333;}
 .tb th { border-top:2px solid #333; background:#ABABAB;}

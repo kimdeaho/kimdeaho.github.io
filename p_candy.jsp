@@ -185,25 +185,25 @@ p{ font-size: 13px; }
 						<div class="typeListLine">
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_001.png" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub01.png" alt="" width=125px; height="127" />
 									<p>포도알맹이</p>
 								</dt>
 							</dl>
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_002.png" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub02.png" alt="" width=125px; height="127" />
 									<p>꼬물탱</p>
 								</dt>
 							</dl>
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_003.png" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub03.jpg" alt="" width=125px; height="127" />
 									<p>찡어젤리</p>
 								</dt>
 							</dl>
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_004.jpg" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub04.jpg" alt="" width=125px; height="127" />
 									<p>몽키나나</p>
 								</dt>
 							</dl>
@@ -211,25 +211,25 @@ p{ font-size: 13px; }
 						<div class="typeListLine">
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_005.jpg" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub05.jpg" alt="" width=125px; height="127" />
 									<p>마이구미 JAM</p>
 								</dt>
 							</dl>
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_006.jpg" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub06.jpg" alt="" width=125px; height="127" />
 									<p>마이구미 청포도</p>
 								</dt>
 							</dl>
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_007.png" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub07.jpg" alt="" width=125px; height="127" />
 									<p>사워꿈틀이</p>
 								</dt>
 							</dl>
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_008.png" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub08.jpg" alt="" width=125px; height="127" />
 									<p>젤리데이</p>
 								</dt>
 							</dl>
@@ -237,25 +237,25 @@ p{ font-size: 13px; }
 						<div class="typeListLine">
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_009.jpg" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub09.jpg" alt="" width=125px; height="127" />
 									<p>땅콩 카라멜</p>
 								</dt>
 							</dl>
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_010.png" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub10.png" alt="" width=125px; height="127" />
 									<p>비틀즈 사워</p>
 								</dt>
 							</dl>
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_011.jpg" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub11.jpg" alt="" width=125px; height="127" />
 									<p>더 탱글 마이구미</p>
 								</dt>
 							</dl>
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_012.jpg" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub12.jpg" alt="" width=125px; height="127" />
 									<p>대왕젤리밥</p>
 								</dt>
 							</dl>
@@ -263,25 +263,25 @@ p{ font-size: 13px; }
 						<div class="typeListLine">
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_013.jpg" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub13.png" alt="" width=125px; height="127" />
 									<p>아이셔 츄잉캔디</p>
 								</dt>
 							</dl>
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_014.jpg" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub14.jpg" alt="" width=125px; height="127" />
 									<p>밀크카라멜</p>
 								</dt>
 							</dl>
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_015.jpg" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub15.jpg" alt="" width=125px; height="127" />
 									<p>마이구미 복숭아</p>
 								</dt>
 							</dl>
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_016.jpg" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub16.jpg" alt="" width=125px; height="127" />
 									<p>마이구미 포도</p>
 								</dt>
 							</dl>
@@ -289,25 +289,25 @@ p{ font-size: 13px; }
 						<div class="typeListLine">
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_017.jpg" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub17.jpg" alt="" width=125px; height="127" />
 									<p>통아몬드 캔디</p>
 								</dt>
 							</dl>
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_018.jpg" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub18.jpg" alt="" width=125px; height="127" />
 									<p>비틀즈</p>
 								</dt>
 							</dl>
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_018.jpg" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub19.jpg" alt="" width=125px; height="127" />
 									<p>대왕꿈틀이</p>
 								</dt>
 							</dl>
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_018.jpg" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub20.png" alt="" width=125px; height="127" />
 									<p>왕꿈틀이</p>
 								</dt>
 							</dl>
@@ -315,7 +315,7 @@ p{ font-size: 13px; }
 						<div class="typeListLine">
 							<dl class="typeListSet">
 								<dt>
-									<img src="./img/snack/sub_017.jpg" alt="" width=125px; height="127" />
+									<img src="./img/candy/sub21.jpg" alt="" width=125px; height="127" />
 									<p>바이오 캔디</p>
 								</dt>
 							</dl>

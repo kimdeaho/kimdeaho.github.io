@@ -143,7 +143,7 @@ a:link {
 				</a>
 			</div>
 			<div class="link_3_2">
-				<a href="">
+				<a href="CsListCtrl">
 				<img src="./img/admin_cus.jpg" alt="" style="margin: 15px;" />
 				</a>
 			</div>
