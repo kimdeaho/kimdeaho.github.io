@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>관리자 상품관리</title>
+<title>공지사항 관리</title>
 <link rel="stylesheet" href="./css/reset2.css">
 <link rel="stylesheet" href="./css/a_common.css">
 <style>
@@ -103,32 +103,41 @@ h1 {
 	<%@ include file="p_admin_header.jsp"%>
 	<h1>공지사항 등록</h1>
 	<!-- 상품 등록 폼 -->
-	<form action="p_insertNoticePro.jsp" class="frm" method="post"
+	<form action="AddNoticeCtrl" class="frm" method="post"
 		name="pform">
 		<table class="content">
 			<tr>
-				<th class="item_name"><label for="p_tit" class="lb rep">제목</label>
+				<th class="item_name"><label for="n_id" class="lb rep">공지사항 번호</label>
 				</th>
-				<td class="item_val"><input type="text" name="p_tit" id="p_tit"
-					class="in_data" placeholder="제목 입력" /></td>
+				<td class="item_val"><input type="text" name="n_id" id="n_id"
+					class="in_data" placeholder="번호 입력" required /></td>
 			</tr>
 			<tr>
-				<th class="item_name"><label for="p_sub" class="lb rep">내용</label>
+				<th class="item_name"><label for="n_title" class="lb rep">제목</label>
 				</th>
-				<td class="item_val"><input type="text" name="p_sub" id="p_sub"
+				<td class="item_val"><input type="text" name="n_title" id="n_title"
+					class="in_data" placeholder="제목 입력" /></td>
+			</tr>
+			
+			<tr>
+				<th class="item_name"><label for="n_sub" class="lb rep">내용</label>
+				</th>
+				<td class="item_val"><input type="text" name="n_sub" id="n_sub"
 					class="in_data" placeholder="내용 입력" required style="height: 300px;" /></td>
 			</tr>
 			<tr>
-				<th class="item_name2"><label for="p_name" class="lb rep">작성자</label>
+				<th class="item_name2"><label for="n_name" class="lb rep">작성자</label>
 				</th>
-				<td class="item_val"><input type="text" name="p_name"
-					id="p_name" class="in_data" placeholder="이름 입력" required /></td>
+				<td class="item_val"><input type="text" name="n_name"
+					id="n_name" class="in_data" placeholder="이름 입력" required /></td>
 			</tr>
 			<tr>
-				<th class="item_name"><label for="p_price" class="lb rep">가격</label>
+				<th class="item_name"><label for="n_file" class="lb rep">첨부파일</label>
 				</th>
-				<td class="item_val"><input type="text" name="p_price"
-					id="p_price" class="in_data" placeholder="가격 입력" required /></td>
+				<td class="item_val">
+				<input type="text" name="p_img" id="p_img" class="in_data" /> 
+					<input type="button" value="첨부파일 업로드" class="in_btn" onclick="imgCheck()" /> 
+					<input type="hidden" value="" name="imgck" id="imgck" /></td>
 			</tr>
 		</table>
 		<span class="fr_col first"> <input type="submit" value="공지사항등록"
@@ -143,7 +152,7 @@ h1 {
 					"width=300, height=300");
 		}
 		function imgCheck() {
-			window.open("imgCheckform.jsp", "pimgcheck",
+			window.open("p_imgCheckForm.jsp", "pimgcheck",
 					"width=300, height=300");
 		}
 		function pCheck() {

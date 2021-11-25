@@ -4,17 +4,30 @@ import java.util.Date;
 
 public class NoticeDAO {
 	private int n_num;
+	private String n_id;
 	private String n_name;
 	private String n_title;
 	private String n_sub;
 	private Date n_date;
 	private String n_file;
-	
+	private String num;
+	public String getNum() {
+		return num;
+	}
+	public void setNum(String num) {
+		this.num = num;
+	}
 	public int getN_num() {
 		return n_num;
 	}
 	public void setN_num(int n_num) {
 		this.n_num = n_num;
+	}
+	public String getN_id() {
+		return n_id;
+	}
+	public void setN_id(String n_id) {
+		this.n_id = n_id;
 	}
 	public String getN_name() {
 		return n_name;

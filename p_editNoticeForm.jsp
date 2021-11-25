@@ -22,7 +22,10 @@ th, td { display:table-cell; }
 .tb th, .tb td { line-height:42px; border-bottom:1px solid #333; }
 .tb th { background:#ffd35e; }
 .tb tr:first-child th, .tb tr:first-child td { border-top:1px solid #333; } 
-.in_data { display:block; line-height:32px; height:32px; margin-left:10px; padding-left:5px; width:240px; }
+.in_data { display:block; line-height:32px; height:32px; margin-left:10px; padding-left:5px; width:200px; }
+.in_btn { display:block; width:120px; margin:15px; background-color:#333; color:#fff; 
+text-align:center; border:0; outline:0; float:left; line-height:38px; }
+.in_btn:hover { background-color:deeppink; }
 .btn_wrap { width:220px; margin:20px auto; }
 .btn_wrap .in_btn { display:block; width:80px; margin:15px; background-color:#333; color:#fff; 
 text-align:center; border:0; outline:0; float:left; line-height:38px; }
@@ -33,15 +36,23 @@ input[readonly] { background:#f1f1f1; }
 </head>
 <body>
 <h2 class="tit">공지사항 수정</h2>
-<form action="EditNoticeCtrl" method="post" id="frm" name="frm">
+<form action="EditNoticeCtrl" method="post" id="pform" name="pform">
 	<table class="tb">
 		<tbody>
 			<tr>
 				<th class="col_hd">
-					<label for="n_num">번호</label>
+					<label for="n_num" >번호</label>
 				</th>
 				<td class="col_data">
 					<input type="text" id="n_num" name="n_num" class="in_data" value="<%=notice.getN_num() %>" readonly required />
+				</td>
+			</tr>
+			<tr>
+				<th class="col_hd">
+					<label for="n_name" >공지사항 번호</label>
+				</th>
+				<td class="col_data">
+					<input type="text" id="n_id" name="n_id" class="in_data" value="<%=notice.getN_id() %>" readonly />
 				</td>
 			</tr>
 			<tr>
@@ -76,14 +87,16 @@ input[readonly] { background:#f1f1f1; }
 					<input type="text" id="n_date" name="n_date" class="in_data" value="<%=notice.getN_date() %>"/>
 				</td>
 			</tr>
-			<tr>
-				<th class="col_hd">
-					<label for="upoint">첨부파일</label>
-				</th>
-				<td class="col_data">
-					<input type="text" id="n_file" name="n_file" class="in_data" value="<%=notice.getN_file() %>"/>
-				</td>
-			</tr>
+			 <tr>
+            <th class="col_hd">
+               <label for="n_file">첨부파일</label>
+            </th>
+            <td class="col_data">
+              <input type="text" name="p_img" id="p_img" class="in_data" /> 
+					<input type="button" value="첨부파일 업로드" class="in_btn" onclick="imgCheck()" /> 
+					<input type="hidden" value="" name="imgck" id="imgck" /></td>
+            </td>
+         </tr>
 		</tbody>
 	</table>
     <hr />
@@ -92,6 +105,18 @@ input[readonly] { background:#f1f1f1; }
 		<button type="reset" class="in_btn" onclick="">취소</button>
 	</div>	
 </form>
- 
+ <script>
+		
+		function imgCheck() {
+			window.open("p_imgCheckForm.jsp", "pimgcheck",
+					"width=300, height=300");
+		}
+		function pCheck() {
+			if (f.imgck.value != "yes") {
+				alert("이미지 체크가 되어 있지 않습니다.")
+				return false;
+			}
+		}
+	</script>
 </body>
 </html>

@@ -103,8 +103,7 @@ h1 {
 	<%@ include file="p_admin_header.jsp"%>
 	<h1>제품 등록</h1>
 	<!-- 상품 등록 폼 -->
-	<form action="p_insertProductPro.jsp" class="frm" method="post"
-		name="pform">
+	<form action="p_insertProductPro.jsp" class="frm" method="post"	name="pform">
 		<table class="content">
 			<tr>
 				<th class="item_name"><label for="p_num" class="lb rep">제품코드</label>

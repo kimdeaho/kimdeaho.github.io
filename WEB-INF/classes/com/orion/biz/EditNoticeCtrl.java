@@ -17,6 +17,7 @@ public class EditNoticeCtrl extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 		int n_num = Integer.parseInt(request.getParameter("n_num"));
+		String n_id = request.getParameter("n_id");
 		String n_name = request.getParameter("n_name");
 		String n_title = request.getParameter("n_title");
 		String n_sub = request.getParameter("n_sub");
@@ -33,12 +34,12 @@ public class EditNoticeCtrl extends HttpServlet {
 			//드라이버로딩/연결/상태정보로딩
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			con = DriverManager.getConnection(url, db_id, db_pw);
-			sql = "update notice set n_title=?, n_sub=?, n_file=? where n_num=?";
+			sql = "update notice set n_title=?, n_sub=?, n_file=? where n_id=?";
 			stmt = con.prepareStatement(sql);
 			stmt.setString(1, n_title);
 			stmt.setString(2, n_sub);
 			stmt.setString(3, n_file);
-			stmt.setInt(4, n_num);
+			stmt.setString(4, n_id);
 			int cnt = stmt.executeUpdate();
 			if(cnt >= 1) { 
 				response.sendRedirect("NoticeListCtrl");

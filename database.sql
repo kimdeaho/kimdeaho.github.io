@@ -4,15 +4,17 @@ m_birth3 number(2) not null,
 m_email varchar2(30), m_tel varchar2(15), m_zipcode varchar2(10), m_address1 varchar2(150), 
 m_address2 varchar2(150), regdate date)
 select * from p_mem
-drop table p_mem
+drop table notice
 insert into p_mem values('admin','1234','관리자','1111','11','11',null,null,null,null,null,null)
 create table p_admin(a_id varchar2(15) primary key, a_pw varchar2(20))
 insert into p_admin values('admin','admin1234')
 delete from p_mem where m_id='admin'
 
-create table notice(n_num number(6) primary key, n_name varchar(15) not null, 
+create table notice(n_num number(6) not null, n_id varchar2(5) primary key, n_name varchar(15) not null, 
 n_title varchar2(100) not null, n_sub varchar2(500) not null, 
 n_date date not null, n_file varchar2(30))
+insert into notice values(aaa.NEXTVAL, 'a001', '관리자','안녕하세요','안녕하세요', sysdate,'null');
+select * from notice
 create table product(p_num varchar2(5) primary key, p_name varchar2(30) not null, p_kind varchar2(30) not null, p_price number(6) not null,
 p_sub varchar2(2000) not null, p_img varchar2(20) not null)
 create table n_product(n_num varchar2(5) primary key, n_name varchar2(30) not null, n_kind varchar2(30) not null, n_price number(6) not null,
@@ -28,4 +30,6 @@ create table cs(cs_num number(6) primary key, cs_name varchar(15) not null,
 cs_title varchar2(100) not null, cs_sub varchar2(2000) not null, 
 cs_date date not null, cs_file varchar2(30))
 select * from PRODUCT
-
+select substr(p_num,2,3) as num2 from (select * from product order by p_num desc) where ROWNUM <= 1; 
+create sequence seq_num start with 1 increment by 1 maxvalue 1000000 cycle nocache;
+drop sequence seq_num
