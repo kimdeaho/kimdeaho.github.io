@@ -49,7 +49,7 @@ text-align:center; border:0; outline:0; float:left; line-height:38px; }
 	
 %>
 		<tr>
-				<td class="item1"><a href=""><%=product.getP_num() %></a></td>	
+				<td class="item1"><a href="EditProductFormCtrl?id=<%=product.getP_num() %>"><%=product.getP_num() %></a></td>	
 				<td class="item2"><%=product.getP_name() %></td>	
 				<td class="item3"><%=product.getP_kind() %></td>
 				<td class="item4"><%=product.getP_price() %></td>

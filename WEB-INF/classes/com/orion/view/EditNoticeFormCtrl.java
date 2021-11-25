@@ -20,7 +20,7 @@ public class EditNoticeFormCtrl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int p_num = Integer.parseInt(request.getParameter("n_num"));
+		String n_num = request.getParameter("id");
 		Connection con = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -31,10 +31,9 @@ public class EditNoticeFormCtrl extends HttpServlet {
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
 			con = DriverManager.getConnection(url, db_id, db_pw);
-			sql = "select * from notice where n_num";
+			sql = "select * from notice where n_num=?";
 			stmt = con.prepareStatement(sql);
-			stmt.setInt(1, p_num);
-			System.out.println();
+			stmt.setString(1, n_num);
 			rs = stmt.executeQuery();
 			NoticeDAO notice = new NoticeDAO();
 			
@@ -49,13 +48,12 @@ public class EditNoticeFormCtrl extends HttpServlet {
 				response.sendRedirect("NoticeListCtrl");
 			}
 			request.setAttribute("notice", notice);
-			RequestDispatcher view = request.getRequestDispatcher("editNoticeForm.jsp");
+			RequestDispatcher view = request.getRequestDispatcher("p_editNoticeForm.jsp");
 			view.forward(request, response);
 			rs.close();
 			stmt.close();
 			con.close();
 		} catch(Exception e) {
-			response.sendRedirect("e404,jsp");
 			e.printStackTrace();
 		}
 	}

@@ -10,9 +10,9 @@
       try {  
          int maxSize = 1024*1024*10;
          //String saveDirectory = config.getServletContext().getRealPath("/img"); 
-         String saveDirectory = "D:\\kdh\\jsp\\project\\WebContent\\img";
-         //MultipartRequest multi = new MultipartRequest(request, saveDirectory, maxSize, "utf-8");      //덮어쓰기
-         MultipartRequest multi = new MultipartRequest(request, saveDirectory, maxSize, "utf-8", new DefaultFileRenamePolicy());   
+         String saveDirectory = "F:\\kim\\jsp\\project\\WebContent\\img";
+         MultipartRequest multi = new MultipartRequest(request, saveDirectory, maxSize, "utf-8");      //덮어쓰기
+         //MultipartRequest multi = new MultipartRequest(request, saveDirectory, maxSize, "utf-8", new DefaultFileRenamePolicy());   
          originalFile = multi.getOriginalFileName("p_pic");
          uploadFile = multi.getFilesystemName("p_pic");
          //여러 파일 인 경우 파일 목록을 저장하기

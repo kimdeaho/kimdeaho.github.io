@@ -1,18 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>    
-<%@ page import="java.util.*" %>
-<%@ page import="com.orion.model.MemberDAO" %>
-<%
-	MemberDAO mem = (MemberDAO) request.getAttribute("mem");
-%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원정보수정</title>
-<link rel="stylesheet" href="./css/reset2.css">
-<link rel="stylesheet" href="./css/a_common.css">
+<title>회원가입</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/p_reset.css">
+<link rel="stylesheet" href="./css/p_common.css">
+<link rel="stylesheet" href="./css/p_main.css">
 <style>
 input { outline:0; border:0;  border-radius:0;  }
 .fr { clear:both; width:960px; margin:10px auto; margin-bottom:80px;    }
@@ -39,91 +38,99 @@ cursor:pointer; }
 </style>
 </head>
 <body>
-<%@ include file="p_admin_header.jsp" %>
+<%@ include file="p_header.jsp" %>
 	<!-- 회원가입 폼 -->
 <div class="fr">	
-	<form action="EditMemberCtrl" class="frm" method="post" name="joinform" onsubmit="return joinCheck(this)">
-	<h1 class="fr_tit">회원 정보 수정</h1>
+	<form action="p_joinPro.jsp" class="frm" method="post" name="joinform" onsubmit="return joinCheck(this)">
+	<h1 class="fr_tit">회원 가입</h1>
 	<p class="fr_com"> 필수 입력 항목에는 반드시 입력 하셔야 합니다.</p>
 	<ul class="fr_list">
 		<li>
 			<label for="m_id" class="lb rep">아이디</label>
 			<span class="lb_data">
-				<input type="text" name="m_id" id="m_id" class="in_data" value="<%=mem.getM_id() %>" readonly required />
+				<input type="text" name="m_id" id="m_id" placeholder="6~15 문자 및 숫자로 입력" maxlength="12" class="in_data" required autofocus />
+				<input type="button" value="ID중복 확인" onclick="idCheck()" class="in_btn"/>
+				<input type="hidden" value="" name="idck" id="idck" />
 			</span>
 		</li>
 		<li>
 			<label for="m_pw" class="lb rep">비밀번호</label>
 			<span class="lb_data">
-				<input type="password" name="m_pw" id="m_pw"  class="in_data" value="<%=mem.getM_pw() %>" readonly />
+				<input type="password" name="m_pw" id="m_pw" placeholder="영문, 숫자를 반드시 포함할 것"  class="in_data" required />
 			</span>
 		</li>
 		<li>
-			<label for="m_name" class="lb rep">이름</label>
+			<label for="m_pw2" class="lb rep">비밀번호 확인</label>
 			<span class="lb_data">
-				<input type="text" name="m_name" id="m_name" class="in_data" value="<%=mem.getM_name() %>" readonly />
+				<input type="password" name="m_pw2" id="m_pw2" placeholder="영문, 숫자를 반드시 포함할 것" class="in_data" required />
 			</span>
 		</li>
 		<li>
-         <label for="m_birth1" class="lb rep">생년월일</label>
+			<label for="name" class="lb rep">이름</label>
+			<span class="lb_data">
+				<input type="text" name="name" id="name" placeholder="한글 이름 입력" class="in_data" required />
+			</span>
+		</li>
+		<li>
+         <label for="birth" class="lb rep">생년월일</label>
          <span class="lb_data">
-            <input type="text" id="m_birth1" name="m_birth1" class="in_data2" maxlength="4" placeholder="년(4자)" value="<%=mem.getM_birth1() %>"/>
+            <input type="text" id="yy" name="birth1" class="in_data2" maxlength="4" placeholder="년(4자)" required/>
          </span>
          <span class="lb_data">
-               <select id="m_birth2" name="m_birth2" class="in_data3">
-                   <%
-                   	for(int i=1;i<13;i++){
-                   		if(mem.getM_birth2()==i) {
-                   %>
-                    	<option value="<%=i%>" selected><%=i %></option>                   
-                   <%
-                   		} else {
-                   %>
-                   		<option value="<%=i%>"><%=i %></option>
-                   <%			
-                   		}
-                   	}
-                   %>
+               <select id="mm" name="birth2" class="in_data3">
+                   <option>월</option>
+                    <option value="01">1</option>
+                    <option value="02">2</option>
+                    <option value="03">3</option>
+                    <option value="04">4</option>
+                    <option value="05">5</option>
+                    <option value="06">6</option>
+                    <option value="07">7</option>
+                    <option value="08">8</option>
+                    <option value="09">9</option>                                    
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>               
                  </select>
               </span>
               <span class="lb_data">
-                 <input type="text" id="m_birth3" name="m_birth3" class="in_data2" maxlength="4" placeholder="일" value="<%=mem.getM_birth3() %>"/>
+                 <input type="text" id="dd" name="birth3" class="in_data2" maxlength="4" placeholder="일" required/>
               </span>
       
 		  
 		<li>
-			<label for="m_email" class="lb">이메일</label>
+			<label for="email" class="lb">이메일</label>
 			<span class="lb_data">
-				<input type="text" name="m_email" id="m_email" placeholder="@를 포함하여 입력" class="in_data" value="<%=mem.getM_email() %>" />
+				<input type="text" name="email" id="email" placeholder="@를 포함하여 입력" class="in_data"  />
 			</span>
 		</li>
 		<li>
-			<label for="m_tel" class="lb">전화번호</label>
+			<label for="tel" class="lb">전화번호</label>
 			<span class="lb_data">
-				<input type="text" name="m_tel" id="m_tel" placeholder="-를 제외하여 입력" class="in_data" value="<%=mem.getM_tel() %>"  />
+				<input type="text" name="tel" id="tel" placeholder="-를 제외하여 입력" class="in_data"  />
 			</span>
 		</li>
-		<li><label for="m_zipcode" class="lb">우편번호 (선택)</label>
+		<li><label for="zipcode" class="lb">우편번호 (선택)</label>
 			  <span class="lb_data">
-			  		<input type="text" name="m_zipcode" id="m_zipcode" class="in_data" placeholder="주소찾기를 눌러주세요." value="<%=mem.getM_zipcode() %>"/>
+			  		<input type="text" name="zipcode" id="zipcode" class="in_data" placeholder="주소찾기를 눌러주세요."/>
 			  		<input type="button" value="주소찾기" onclick="findAddr()" class="in_btn"/>	
 			  </span>
 		</li>
 		<li>
-		    <label for="m_address1" class="lb">주소 (선택)</label>
+		    <label for="address1" class="lb">주소 (선택)</label>
 			<span class="lb_data">
-				<input type="text" name="m_address1" id="m_address1" class="in_data" value="<%=mem.getM_address1() %>" />
+				<input type="text" name="address1" id="address1" class="in_data" />
 			</span>
 		</li>
 		<li>
-			<label for="m_address2" class="lb">상세주소 (선택)</label>
+			<label for="address2" class="lb">상세주소 (선택)</label>
 			<span class="lb_data">
-				<input type="text" name="m_address2" id="m_address2" class="in_data" value="<%=mem.getM_address2() %>"/>
+				<input type="text" name="address2" id="address2" class="in_data" />
 			</span>
 		</li>
 		<li>
 			<span class="fr_col first">
-				<input type="submit" value="수정"  class="in_btn"/>
+				<input type="submit" value="회원가입"  class="in_btn"/>
 			</span>
 			<span class="fr_col last">
 				<input type="reset" value="취소" class="in_btn"/>
@@ -152,6 +159,23 @@ cursor:pointer; }
         }
     </script>
     <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-
+    
+	
+	<script>
+	function idCheck() {
+		window.open("p_idCheckForm.jsp", "idwin", "width=400, height=350");
+	}
+	function joinCheck(f){
+		if(f.idck.value!="yes"){
+			alert("아이디 중복 검사를 진행하지 않으셨습니다.");
+			return false;
+		}
+		if(f.m_pw.value!=f.m_pw2.value) {
+			alert("비밀번호와 비밀번호 확인이 서로 다릅니다.");
+			return false;
+		}
+	}
+	</script>
+<%@ include file="p_footer.jsp" %>
 </body>
 </html>

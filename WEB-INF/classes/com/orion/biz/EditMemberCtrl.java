@@ -53,7 +53,7 @@ public class EditMemberCtrl extends HttpServlet {
 			stmt.setString(9, m_id);
 			
 			int cnt = stmt.executeUpdate();
-			if(cnt == 0) { 
+			if(cnt >= 1) { 
 				response.sendRedirect("MemberListCtrl");
 			} else {
 				response.sendRedirect("MemberListCtrl");

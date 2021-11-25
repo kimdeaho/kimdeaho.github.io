@@ -49,8 +49,8 @@ text-align:center; border:0; outline:0; float:left; line-height:38px; }
 	
 %>
 			<tr>
-				<td class="item1"><%=a %></td>	
-				<td class="item2"><a href="EditNoticeFormCtrl?id=<%=notice.getN_title() %>"><%=notice.getN_title() %></a></td>
+				<td class="item1"><a href="EditNoticeFormCtrl?id=<%=notice.getN_num() %>"><%=a %></td>	
+				<td class="item2"><%=notice.getN_title() %></a></td>
 				<td class="item3"><%=notice.getN_name() %></td>
 				<td class="item4"><%=notice.getN_date() %></td>
 			</tr>
