@@ -46,6 +46,7 @@ public class EditNoticeFormCtrl extends HttpServlet {
 				notice.setN_sub(rs.getString("n_sub"));
 				notice.setN_date(rs.getDate("n_date"));
 				notice.setN_file(rs.getString("n_file"));
+				notice.setNum(num);
 			} else {
 				response.sendRedirect("NoticeListCtrl");
 			}

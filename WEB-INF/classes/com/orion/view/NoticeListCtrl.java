@@ -39,7 +39,7 @@ public class NoticeListCtrl extends HttpServlet {
 			ArrayList<NoticeDAO> noticeList= new ArrayList<NoticeDAO>();
 			while(rs.next()) {
 				int num = rs.getInt("n_num");
-				String n_id = rs.getString("n_id");
+				String id = rs.getString("n_id");
 				String name = rs.getString("n_name");
 				String title = rs.getString("n_title");
 				String sub = rs.getString("n_sub");
@@ -48,7 +48,7 @@ public class NoticeListCtrl extends HttpServlet {
 				
 				NoticeDAO notice = new NoticeDAO();
 				notice.setN_num(num);
-				notice.setN_id(n_id);
+				notice.setN_id(id);
 				notice.setN_name(name);
 				notice.setN_title(title);
 				notice.setN_sub(sub);

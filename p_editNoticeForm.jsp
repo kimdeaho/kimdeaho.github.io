@@ -18,25 +18,26 @@
 table { display:table; border-collapse:collapse; }
 tr { display:table-row; }
 th, td { display:table-cell; }
-.tb { width:600px; margin:20px auto; }
+.tb { width:880px; margin:20px auto; }
 .tb th, .tb td { line-height:42px; border-bottom:1px solid #333; }
-.tb th { background:#ffd35e; }
+.tb th { background:#E1E1E1; }
 .tb tr:first-child th, .tb tr:first-child td { border-top:1px solid #333; } 
-.in_data { display:block; line-height:32px; height:32px; margin-left:10px; padding-left:5px; width:200px; }
+.in_data { display:block; line-height:32px; height:32px; margin-left:10px; padding-left:5px; width:600px; }
 .in_btn { display:block; width:120px; margin:15px; background-color:#333; color:#fff; 
 text-align:center; border:0; outline:0; float:left; line-height:38px; }
-.in_btn:hover { background-color:deeppink; }
+.in_btn:hover { background-color:#ABABAB; }
 .btn_wrap { width:220px; margin:20px auto; }
 .btn_wrap .in_btn { display:block; width:80px; margin:15px; background-color:#333; color:#fff; 
 text-align:center; border:0; outline:0; float:left; line-height:38px; }
-.btn_wrap .in_btn:hover { background-color:deeppink; }
+.btn_wrap .in_btn:hover { background-color:#ABABAB; }
 .in_comment { padding-left:18px; }
 input[readonly] { background:#f1f1f1; }
 </style>
 </head>
 <body>
+<%@ include file="p_admin_header.jsp"%>
 <h2 class="tit">공지사항 수정</h2>
-<form action="EditNoticeCtrl" method="post" id="pform" name="pform">
+<form action="EditNoticeCtrl" method="post" id="nform" name="nform">
 	<table class="tb">
 		<tbody>
 			<tr>
@@ -68,7 +69,7 @@ input[readonly] { background:#f1f1f1; }
 					<label for="n_title">공지사항 제목</label>
 				</th>
 				<td class="col_data">
-					<input type="text" id="n_title" name="n_title" class="in_data" value="<%=notice.getN_title() %>" />
+					<input type="text" id="n_title" name="n_title" class="in_data" value="<%=notice.getN_title() %>"  />
 				</td>
 			</tr>
 			<tr>
@@ -76,7 +77,7 @@ input[readonly] { background:#f1f1f1; }
 					<label for="ubirth">공지사항 내용</label>
 				</th>
 				<td class="col_data">
-					<input type="text" id="n_sub" name="n_sub" class="in_data" value="<%=notice.getN_sub() %>"/>
+					<input type="text" id="n_sub" name="n_sub" class="in_data" value="<%=notice.getN_sub() %>" style="height: 300px"/>
 				</td>
 			</tr>
 			<tr>
@@ -84,7 +85,7 @@ input[readonly] { background:#f1f1f1; }
 					<label for="uregdate">작성일</label>
 				</th>
 				<td class="col_data">
-					<input type="text" id="n_date" name="n_date" class="in_data" value="<%=notice.getN_date() %>"/>
+					<input type="text" id="n_date" name="n_date" class="in_data" value="<%=notice.getN_date() %>" readonly/>
 				</td>
 			</tr>
 			 <tr>
@@ -92,10 +93,10 @@ input[readonly] { background:#f1f1f1; }
                <label for="n_file">첨부파일</label>
             </th>
             <td class="col_data">
-              <input type="text" name="p_img" id="p_img" class="in_data" /> 
-					<input type="button" value="첨부파일 업로드" class="in_btn" onclick="imgCheck()" /> 
+              <input type="text" name="n_file" id="n_file" class="in_data" value="<%=notice.getN_file() %>" /> 
+					<td class="col_data">
+					<input type="button" value="첨부파일 업로드" class="in_btn" onclick="imgCheck()"  /> 
 					<input type="hidden" value="" name="imgck" id="imgck" /></td>
-            </td>
          </tr>
 		</tbody>
 	</table>
@@ -108,7 +109,7 @@ input[readonly] { background:#f1f1f1; }
  <script>
 		
 		function imgCheck() {
-			window.open("p_imgCheckForm.jsp", "pimgcheck",
+			window.open("p_fileCheckForm.jsp", "pimgcheck",
 					"width=300, height=300");
 		}
 		function pCheck() {
