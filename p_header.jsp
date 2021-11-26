@@ -25,7 +25,7 @@
     } else {   
 %>         
          <li><a href="p_loginpage.jsp">로그인</a></li>
-         <li><a href="p_join.jsp">회원가입</a></li>
+         <li><a href="p_agreement.jsp">회원가입</a></li>
          <li><a href="sitemap.html">사이트맵</a></li>
 <%
     }

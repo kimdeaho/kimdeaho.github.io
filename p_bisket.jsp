@@ -204,7 +204,7 @@ dl {
 %>
 								<dt style="padding-left: 20px;">
 									<img src="<%=proImg %>" alt=""  >
-									<h3 class="pro_tit" style="text-align: center;" ><%=proName %></h3>
+									<h3 class="pro_tit" style="text-align: center; font-size: 14px;" ><%=proName %></h3>
 								</dt>
 	<%
 		}	
