@@ -63,7 +63,14 @@ input[readonly] { background:#f1f1f1; }
                <label for="p_kind">종류</label>
             </th>
             <td class="col_data">
-               <input type="text" id="p_kind" name="p_kind" class="in_data" value="<%=product.getP_kind() %>" />
+               <select name="p_kind" id="p_kind" class="in_data">
+					<option value="파이류">파이류</option>
+					<option value="스낵류">스낵류</option>
+					<option value="비스킷류">비스킷류</option>
+					<option value="껌류">껌류</option>
+					<option value="사탕류">사탕류</option>
+					<option value="초콜릿류">초콜릿류</option>
+					</select>
             </td>
          </tr>
          <tr>
@@ -87,10 +94,10 @@ input[readonly] { background:#f1f1f1; }
                <label for="p_img">이미지</label>
             </th>
             <td class="col_data">
-               <input type="text" id="p_img" name="p_img" class="in_data2" value="<%=product.getP_img() %>"/>
+               <input type="text" id="p_img" name="p_img" class="in_data2" value="<%=product.getP_img() %>"/></td>
                <td class="col_data">
                		<input type="button" value="이미지 업로드" class="in_btn" onclick="imgCheck()" /> 
-					<input type="hidden" value="" name="imgck" id="imgck" /></td>
+					<input type="hidden" value="" name="imgck" id="imgck" />
             </td>
          </tr>
       </tbody>

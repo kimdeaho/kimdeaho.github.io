@@ -18,14 +18,14 @@
 table { display:table; border-collapse:collapse; }
 tr { display:table-row; }
 th, td { display:table-cell; }
-.tb { width:880px; margin:20px auto; }
+.tb { width:900px; margin:20px auto; }
 .tb th, .tb td { line-height:42px; border-bottom:1px solid #333; }
 .tb th { background:#E1E1E1; }
 .tb tr:first-child th, .tb tr:first-child td { border-top:1px solid #333; } 
-.in_data { display:block; line-height:32px; height:32px; margin-left:10px; padding-left:5px; width:600px; }
-.in_btn { display:block; width:120px; margin:15px; background-color:#333; color:#fff; 
-text-align:center; border:0; outline:0; float:left; line-height:38px; }
-.in_btn:hover { background-color:#ABABAB; }
+.in_data { display:block; line-height:32px; height:32px; margin-left:10px; padding-left:5px; width:650px; }
+.in_btn { background-color: #333; color: #fff; border-style: none; height:32px;}
+.in_btn:hover {  background-color:#ABABAB; }
+.in_data_area { line-height:1.6; padding:5px; width:400px; margin-left:10px; }
 .btn_wrap { width:220px; margin:20px auto; }
 .btn_wrap .in_btn { display:block; width:80px; margin:15px; background-color:#333; color:#fff; 
 text-align:center; border:0; outline:0; float:left; line-height:38px; }
@@ -45,7 +45,7 @@ input[readonly] { background:#f1f1f1; }
 					<label for="n_num" >번호</label>
 				</th>
 				<td class="col_data">
-					<input type="text" id="n_num" name="n_num" class="in_data" value="<%=notice.getN_num() %>" readonly required />
+					<input type="text" id="n_num" name="n_num" class="in_data" value="<%=notice.getNum() %>" readonly required />
 				</td>
 			</tr>
 			<tr>
