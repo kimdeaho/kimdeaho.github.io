@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="./css/a_common.css">
 <link rel="stylesheet" href="./css/reset2.css">
 <style>
+.wrap{ height: 1000px; }
 div {
 	display: block;
 }
@@ -102,6 +103,7 @@ dl {
 .content .contentsBody {
 	float: left;
 	width: calc(100% - 20%);
+	height: 1000px;
 	border-left: 2px solid #f1f1f1;
 	margin: 0 auto;
 }
@@ -131,20 +133,22 @@ dl {
 	width: 700px;
 	position: relative;
 	overflow: hidden;
+	
 }
 
 .typeList .typeListLine {
 	border-bottom: 1px solid #ff7a83;
 	overflow: hidden;
 	padding: 32px 0 15px 0;
+	
 }
 
 .typeList dl.typeListSet {
-	width: 700px; margin: 20px auto;
+	width: 750px; margin: 20px auto;
 }
 
 .typeList dl.typeListSet dt {
-	float:left; width: 125px; margin: 0 auto; margin-left: 20px;
+	float:left; width: 145px; margin: 0 auto;
 }
 </style>
 </head>

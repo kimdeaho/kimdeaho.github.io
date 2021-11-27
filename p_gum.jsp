@@ -140,11 +140,11 @@ dl {
 }
 
 .typeList dl.typeListSet {
-	width: 700px; margin: 20px auto;
+	width: 750px; margin: 20px auto;
 }
 
 .typeList dl.typeListSet dt {
-	float:left; width: 125px; margin: 0 auto; margin-left: 20px;
+	float:left; width: 145px; margin: 0 auto;
 }
 </style>
 </head>

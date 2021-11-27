@@ -32,7 +32,7 @@ create table cs(cs_num number(6) primary key, cs_name varchar(15) not null,
 cs_title varchar2(100) not null, cs_sub varchar2(2000) not null, 
 cs_date date not null, cs_file varchar2(30))
 select * from n_PRODUCT
-drop table notice
+drop table product
 create sequence seq_num start with 1 increment by 1 maxvalue 1000000 cycle nocache;
 drop sequence aaa
 delete from product where p_name='와우'
