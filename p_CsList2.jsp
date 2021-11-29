@@ -52,18 +52,7 @@ text-align:center; border:0; outline:0;  line-height:38px; }
 			%>
 			<tr>
 				<td class="item1"><%=a%></td>
-
-				<td class="item2">
-					<%
-						if (m_id != null) {
-					%> 
-					<a href="DetailCsFormCtrl?num=<%=a %>&id=<%=cs.getCs_id()%>"><%=cs.getCs_id()%></a>
-					<%
-						} else {
-					%> <span><%=cs.getCs_id()%></span> <%
- 	}
- %>
-				</td>
+				<td class="item2"><%=cs.getCs_id()%></td>
 				<td class="item3"><%=cs.getCs_title()%></td>
 				<td class="item4"><%=cs.getCs_name()%></td>
 				<td class="item5"><%=cs.getCs_date()%></td>
