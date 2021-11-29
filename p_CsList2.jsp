@@ -40,28 +40,40 @@ text-align:center; border:0; outline:0;  line-height:38px; }
 				<th class="item3">제목</th>
 				<th class="item4">작성자</th>
 				<th class="item5">작성일시</th>
+				<th class="item6">첨부파일</th>
 			</tr>
-		</thead>		
+		</thead>
 		<tbody>
-	
-<%
-	for(int i=0; i<CsList.size();i++){
-		int a=i+1;
-		CsDAO cs = CsList.get(i);
-	
-%>
+
+			<%
+				for (int i = 0; i < CsList.size(); i++) {
+				int a = i + 1;
+				CsDAO cs = CsList.get(i);
+			%>
 			<tr>
-				<td class="item1"><%=a %></td>
-				<td class="item2"><%=cs.getCs_id() %></td>	
-				<td class="item3"><%=cs.getCs_title() %></a></td>
-				<td class="item4"><%=cs.getCs_name() %></td>
-				<td class="item5"><%=cs.getCs_date() %></td>
+				<td class="item1"><%=a%></td>
+
+				<td class="item2">
+					<%
+						if (m_id != null) {
+					%> 
+					<a href="DetailCsFormCtrl?num=<%=a %>&id=<%=cs.getCs_id()%>"><%=cs.getCs_id()%></a>
+					<%
+						} else {
+					%> <span><%=cs.getCs_id()%></span> <%
+ 	}
+ %>
+				</td>
+				<td class="item3"><%=cs.getCs_title()%></td>
+				<td class="item4"><%=cs.getCs_name()%></td>
+				<td class="item5"><%=cs.getCs_date()%></td>
+				<td><img src='./img/<%=cs.getCs_file()%>' alt=""></td>
 			</tr>
-<%
-	}
-%>
-				</tbody>
-				</table>
+			<%
+				}
+			%>
+		</tbody>
+	</table>
 				<span class="btn_wrap">
 				<input type="submit" class="in_btn" value="글쓰기"/>
 				</span>

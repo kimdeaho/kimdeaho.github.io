@@ -1,12 +1,10 @@
-package com.orion.biz;
+package com.orion.view;
 
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -17,12 +15,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.orion.model.CsDAO;
 
-
-@WebServlet("/CsDel")
-public class CsDel extends HttpServlet {
+@WebServlet("/DetailCsFormCtrl")
+public class DetailCsFormCtrl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-     
+       
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String cs_id = request.getParameter("id");
+		String num = request.getParameter("num");
 		Connection con = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -30,44 +29,36 @@ public class CsDel extends HttpServlet {
 		String db_id = "scott";
 		String db_pw = "tiger";
 		String sql;
-		try { 
+		try {
 			Class.forName("oracle.jdbc.OracleDriver");
 			con = DriverManager.getConnection(url, db_id, db_pw);
-			sql = "select * from cs order by cs_date desc";
+			sql = "select * from cs where cs_id=?";
 			stmt = con.prepareStatement(sql);
+			stmt.setString(1, cs_id);
 			rs = stmt.executeQuery();
-			ArrayList<CsDAO> CsList = new ArrayList<CsDAO>();
-			while(rs.next()) {
-				String cs_id = rs.getString("cs_id");
-				int cs_num = rs.getInt("cs_num");
-				String cs_name = rs.getString("cs_name");
-				String cs_title = rs.getString("cs_title");
-				String cs_sub = rs.getString("cs_sub");
-				Date cs_date = rs.getDate("cs_date");
-				String cs_file = rs.getString("cs_file");
-				
-				CsDAO cs = new CsDAO();
-				cs.setCs_id(cs_id);
-				cs.setCs_num(cs_num);
-				cs.setCs_name(cs_name);
-				cs.setCs_title(cs_title);
-				cs.setCs_sub(cs_sub);
-				cs.setCs_date(cs_date);
-				cs.setCs_file(cs_file);
-				
-				CsList.add(cs);
+			CsDAO cs = new CsDAO();
+			
+			if(rs.next()) {
+				cs.setCs_num(rs.getInt("cs_num"));
+				cs.setCs_id(rs.getString("cs_id"));
+				cs.setCs_name(rs.getString("cs_name"));
+				cs.setCs_title(rs.getString("cs_title"));
+				cs.setCs_sub(rs.getString("cs_sub"));
+				cs.setCs_date(rs.getDate("cs_date"));
+				cs.setCs_file(rs.getString("cs_file"));
+				cs.setNum(num);
+			} else {
+				response.sendRedirect("DetailCsCtrl");
 			}
-			request.setAttribute("CsList", CsList); // 
-			RequestDispatcher view = request.getRequestDispatcher("p_CsDel.jsp"); 
-			view.forward(request, response); 
+			request.setAttribute("cs", cs);
+			RequestDispatcher view = request.getRequestDispatcher("p_detailCs.jsp");
+			view.forward(request, response);
 			rs.close();
 			stmt.close();
 			con.close();
-			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		
 	}
 
 }

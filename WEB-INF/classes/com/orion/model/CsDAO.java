@@ -10,6 +10,13 @@ public class CsDAO {
 	private String cs_sub;
 	private Date cs_date;
 	private String cs_file;
+	private String num;
+	public String getNum() {
+		return num;
+	}
+	public void setNum(String num) {
+		this.num = num;
+	}
 	public int getCs_num() {
 		return cs_num;
 	}

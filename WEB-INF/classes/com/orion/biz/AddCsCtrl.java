@@ -34,12 +34,13 @@ public class AddCsCtrl extends HttpServlet {
          //드라이버로딩/연결/상태정보로딩
          Class.forName("oracle.jdbc.driver.OracleDriver");
          con = DriverManager.getConnection(url, db_id, db_pw);
-         sql = "insert into cs values(seq_num2.NEXTVAL,  ?, ?, ?, sysdate, ?)";
+         sql = "insert into cs values(seq_num2.NEXTVAL,?,  ?, ?, ?, sysdate, ?)";
          stmt = con.prepareStatement(sql);
-         stmt.setString(1, cs_name);
-         stmt.setString(2, cs_title);
-         stmt.setString(3, cs_sub);
-         stmt.setString(4, cs_file);
+         stmt.setString(1, cs_id);
+         stmt.setString(2, cs_name);
+         stmt.setString(3, cs_title);
+         stmt.setString(4, cs_sub);
+         stmt.setString(5, cs_file);
          int cnt = stmt.executeUpdate();
          if(cnt >= 1) { 
             response.sendRedirect("CsListCtrl2");

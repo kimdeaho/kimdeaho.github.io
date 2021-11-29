@@ -61,7 +61,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="" class="dp1">신제품 소개</a>
+                            <a href="p_newproduct.jsp" class="dp1">신제품 소개</a>
                             <ul class="sub">
                                 <li><a href="p_newproduct.jsp">신제품 / 리뉴얼 소개</a></li>
                             </ul>
