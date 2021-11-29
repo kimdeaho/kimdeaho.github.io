@@ -63,14 +63,14 @@
                         <li>
                             <a href="" class="dp1">신제품 소개</a>
                             <ul class="sub">
-                                <li><a href="">신제품 / 리뉴얼 소개</a></li>
+                                <li><a href="p_newproduct.jsp">신제품 / 리뉴얼 소개</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="CsListCtrl2" class="dp1">고객문의</a>
                             <ul class="sub">
                                 <li><a href="CsListCtrl2">고객문의</a></li>
-                                <li><a href="">영업소 위치</a></li>
+                                <li><a href="p_office.jsp">영업소 위치</a></li>
                             </ul>
                         </li>
                     </ul>

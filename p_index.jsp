@@ -46,7 +46,8 @@ text-align: center; }
 .page { clear:both; width: 100%; border-top:3px solid #f1f1f1;  }
 .page_fr { clear:both; width: 1000px; margin: 0 auto; } 
 .page_tit { padding-top: 28px; }
-.more { text-decoration: none; font-size:14px; text-align:right; display:block; float:right; color:deepskyblue; }
+.more { text-decoration: none; font-size:14px; text-align:right; display:block; float:right; color:#333; }
+.more:hover{ color: #ABABAB; font-size: large; }
 .noti_lst { clear:both; width: 1000px; }
 .noti_lst li { float:left; margin:20px; width: 360px; text-align: center; }
 .noti_lst li a { color:#333; }

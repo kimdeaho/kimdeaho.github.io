@@ -29,14 +29,14 @@ select * from product
 update product set p_num='b001', p_kind='비스킷류' where p_name='초코송이'
 update product set p_img = './img/choco.jpg' where p_name='초코파이';
 select * from cs
-create table cs(cs_num number(6) primary key, cs_name varchar(15) not null, 
+create table cs(cs_num number(6) not null,cs_id varchar2(5) primary key, cs_name varchar(15) not null, 
 cs_title varchar2(100) not null, cs_sub varchar2(2000) not null, 
 cs_date date not null, cs_file varchar2(30))
 select * from n_PRODUCT
-drop table notice
-create sequence seq_num start with 1 increment by 1 maxvalue 1000000 cycle nocache;
+drop table cs
+create sequence seq_num2 start with 1 increment by 1 maxvalue 1000000 cycle nocache;
 create sequence seq_cs_num start with 1 increment by 1 maxvalue 1000000 cycle nocache;
-drop sequence seq_num
+drop sequence seq_num2
 delete from product where p_name='와우'
 select * from NOTICE
 insert into cs values(seq_cs_num.Nextval,'고객','고객문의1입니다', '고객문의1 입니다', sysdate, null)

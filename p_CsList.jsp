@@ -35,9 +35,10 @@ text-align:center; border:0; outline:0; float:left; line-height:38px; }
 		<thead>
 			<tr>
 				<th class="item1">번호</th>
-				<th class="item2">제목</th>
-				<th class="item3">작성자</th>
-				<th class="item4">작성일시</th>
+				<th class="item2">글 번호</th>
+				<th class="item3">제목</th>
+				<th class="item4">작성자</th>
+				<th class="item5">작성일시</th>
 			</tr>
 		</thead>		
 		<tbody>
@@ -45,14 +46,15 @@ text-align:center; border:0; outline:0; float:left; line-height:38px; }
 <%
 	for(int i=0; i<CsList.size();i++){
 		int a=i+1;
-		CsDAO notice = CsList.get(i);
+		CsDAO cs = CsList.get(i);
 	
 %>
 			<tr>
-				<td class="item1"><%=a %></td>	
-				<td class="item2"><a href=""><%=notice.getCs_title() %></a></td>
-				<td class="item3"><%=notice.getCs_name() %></td>
-				<td class="item4"><%=notice.getCs_date() %></td>
+				<td class="item1"><%=a %></td>
+				<td class="item2"><%=cs.getCs_id() %></td>	
+				<td class="item3"><%=cs.getCs_title() %></a></td>
+				<td class="item4"><%=cs.getCs_name() %></td>
+				<td class="item5"><%=cs.getCs_date() %></td>
 			</tr>
 <%
 	}
