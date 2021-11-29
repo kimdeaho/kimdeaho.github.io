@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>관리자 공지사항 수정</title>
+<title>공지사항</title>
 <link rel="stylesheet" href="./css/reset2.css">
 <link rel="stylesheet" href="./css/a_common.css">
 <style>
@@ -35,9 +35,9 @@ input[readonly] { background:#f1f1f1; }
 </style>
 </head>
 <body>
-<%@ include file="p_admin_header.jsp"%>
-<h2 class="tit">공지사항 수정</h2>
-<form action="EditNoticeCtrl" method="post" id="nform" name="nform">
+<%@ include file="p_header.jsp"%>
+<h2 class="tit">공지사항 </h2>
+<form action="DetailNoticeCtrl" method="post" id="nform" name="nform">
 	<table class="tb">
 		<tbody>
 			<tr>
@@ -69,24 +69,7 @@ input[readonly] { background:#f1f1f1; }
 					<label for="n_title">공지사항 제목</label>
 				</th>
 				<td class="col_data">
-					<input type="text" id="n_title" name="n_title" class="in_data" value="<%=notice.getN_title() %>"  />
-				</td>
-			</tr>
-			<tr>
-				<th class="col_hd">
-					<label for="n_sub">공지사항 내용</label>
-				</th>
-				<td class="col_data">
-					<textarea cols="95" rows="30" id="n_sub" name="n_sub" ><%=notice.getN_sub() %>
-					</textarea>
-				</td>
-			</tr>
-			<tr>
-				<th class="col_hd">
-					<label for="n_date">작성일</label>
-				</th>
-				<td class="col_data">
-					<input type="text" id="n_date" name="n_date" class="in_data" value="<%=notice.getN_date() %>" readonly/>
+					<input type="text" id="n_title" name="n_title" class="in_data" value="<%=notice.getN_title() %>" readonly />
 				</td>
 			</tr>
 			 <tr>
@@ -94,31 +77,29 @@ input[readonly] { background:#f1f1f1; }
                <label for="n_file">첨부파일</label>
             </th>
             <td class="col_data">
-              <input type="text" name="n_file" id="n_file" class="in_data" value="<%=notice.getN_file() %>" /> 
-					<td class="col_data">
-					<input type="button" value="첨부파일 업로드" class="in_btn" onclick="imgCheck()"  /> 
-					<input type="hidden" value="" name="imgck" id="imgck" /></td>
-         </tr>
+              <img src='./img/<%=notice.getN_file() %>' alt="" readonly/>	
+         	</tr>
+			<tr>
+				<th class="col_hd">
+					<label for="ubirth">공지사항 내용</label>
+				</th>
+				<td class="col_data">
+					<textarea cols="95" rows="30" id="n_sub" name="n_sub" readonly/><%=notice.getN_sub() %>
+					</textarea>
+				</td>
+			</tr>
+			<tr>
+				<th class="col_hd">
+					<label for="uregdate">작성일</label>
+				</th>
+				<td class="col_data">
+					<input type="text" id="n_date" name="n_date" class="in_data" value="<%=notice.getN_date() %>" readonly/>
+				</td>
+			</tr>
 		</tbody>
 	</table>
     <hr />
-	<div class="btn_wrap">	
-		<button type="submit" class="in_btn" onclick="">수정</button>
-		<button type="reset" class="in_btn" onclick="">취소</button>
-	</div>	
 </form>
- <script>
-		
-		function imgCheck() {
-			window.open("p_fileCheckForm.jsp", "pimgcheck",
-					"width=300, height=300");
-		}
-		function pCheck() {
-			if (f.imgck.value != "yes") {
-				alert("이미지 체크가 되어 있지 않습니다.")
-				return false;
-			}
-		}
-	</script>
+
 </body>
 </html>

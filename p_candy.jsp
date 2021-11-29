@@ -102,10 +102,11 @@ dl {
 
 .content .contentsBody {
 	float: left;
-	width: calc(100% - 20%);
-	height: 1000px;
+	width: 80%;
+	height: 1200px;
 	border-left: 2px solid #f1f1f1;
 	margin: 0 auto;
+	text-align: center;
 }
 
 #subContents {
@@ -207,7 +208,7 @@ dl {
 			int proPrice = rs.getInt("p_price");
 			String proImg = "./img/"+rs.getString("p_img");
 %>
-								<dt style="padding-left: 20px;">
+								<dt style="padding-left: 20px; padding-top: 20px;">
 									<img src="<%=proImg %>" alt=""  >
 									<h3 class="pro_tit" style="text-align: center; font-size: 14px;" ><%=proName %></h3>
 								</dt>

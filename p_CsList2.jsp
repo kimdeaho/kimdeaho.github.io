@@ -22,15 +22,16 @@ th, td{display:table=cell;}
 .tb th, .tb td{ line-height:36px; border-bottom:1px solid #333; text-align: center;}
 .tb th { border-top:2px solid #333; background:#ABABAB;}
 .tb tbody tr:nth-child(2n) td{background:#E1E1E1;}
-.btn_wrap { width:220px; margin:20px auto; }
-.btn_wrap .in_btn { display:block; width:80px; margin:15px; background-color:#333; color:#fff; 
-text-align:center; border:0; outline:0; float:left; line-height:38px; }
+.btn_wrap { width:1000px; margin:20px auto; text-align: center;}
+.btn_wrap .in_btn {clear:both; display:block; width:80px; margin:0 auto; background-color:#333; color:#fff; 
+text-align:center; border:0; outline:0;  line-height:38px; }
 .btn_wrap .in_btn:hover { background-color:#E1E1E1; }
 </style>
 </head>
 <body>
-<%@ include file = "p_admin_header.jsp" %><br><br><br><br>
+<%@ include file = "p_header.jsp" %><br><br><br><br>
 	<h2 class="tit">고객문의 목록</h2>
+	<form action="AddCsCtrl">
 	<table class="tb">
 		<thead>
 			<tr>
@@ -56,6 +57,12 @@ text-align:center; border:0; outline:0; float:left; line-height:38px; }
 			</tr>
 <%
 	}
-%>	
+%>
+				</tbody>
+				</table>
+				<span class="btn_wrap">
+				<input type="submit" class="in_btn" value="글쓰기"/>
+				</span>
+	</form>
 </body>
 </html>

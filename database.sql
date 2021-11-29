@@ -9,10 +9,11 @@ insert into p_mem values('admin','1234','관리자','1111','11','11',null,null,n
 create table p_admin(a_id varchar2(15) primary key, a_pw varchar2(20))
 insert into p_admin values('admin','admin1234')
 delete from p_mem where m_id='admin'
-
+select * from notice
 create table notice(n_num number(6) not null, n_id varchar2(5) primary key, n_name varchar(15) not null, 
 n_title varchar2(100) not null, n_sub varchar2(500) not null, 
 n_date date not null, n_file varchar2(30))
+delete from NOTICE where n_id='a001'
 insert into notice values(seq_num.Nextval,'A001','관리자', '공지사항1 입니다','공지사항1 내용입니다', sysdate, null)
 insert into notice values(seq_num.Nextval,'A002','관리자', '공지사항2 입니다','공지사항2 내용입니다', sysdate, null)
 insert into notice values(seq_num.Nextval,'A003','관리자', '공지사항3 입니다','공지사항3 내용입니다', sysdate, null)
@@ -32,7 +33,10 @@ create table cs(cs_num number(6) primary key, cs_name varchar(15) not null,
 cs_title varchar2(100) not null, cs_sub varchar2(2000) not null, 
 cs_date date not null, cs_file varchar2(30))
 select * from n_PRODUCT
-drop table product
+drop table notice
 create sequence seq_num start with 1 increment by 1 maxvalue 1000000 cycle nocache;
-drop sequence aaa
+create sequence seq_cs_num start with 1 increment by 1 maxvalue 1000000 cycle nocache;
+drop sequence seq_num
 delete from product where p_name='와우'
+select * from NOTICE
+insert into cs values(seq_cs_num.Nextval,'고객','고객문의1입니다', '고객문의1 입니다', sysdate, null)
