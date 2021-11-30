@@ -14,10 +14,10 @@
 <link rel="stylesheet" href="./css/reset2.css">
 <link rel="stylesheet" href="./css/a_common.css">
 <style>
-.tit{text-align:center;}
+.tit{ clear:both; text-align:center; padding: 20px;}
 table { display:table; border-collapse:collapse;}
 tr { display:table-row;}
-th, td{display:table=cell;}
+th, td{display:table=cell; text-align: center;}
 .tb{ width:1000px; margin:20px auto;}
 .tb th, .tb td{ line-height:36px; border-bottom:1px solid #333;}
 .tb th { border-top:2px solid #333; background:#ABABAB;}
@@ -29,7 +29,7 @@ text-align:center; border:0; outline:0; float:left; line-height:38px; }
 </style>
 </head>
 <body>
-<%@ include file = "p_admin_header.jsp" %><br><br><br><br>
+<%@ include file = "p_admin_header.jsp" %>
 	<h2 class="tit">고객문의 삭제</h2>
 	<form action="deleteCsCtrl" method="post" name="delForm" onsubmit="return frm_submit(this)">
 	<table class="tb">
