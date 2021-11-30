@@ -88,7 +88,6 @@ th, td {
 				<th class="item3">제목</th>
 				<th class="item4">작성자</th>
 				<th class="item5">작성일시</th>
-				<th class="item6">첨부파일</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -115,7 +114,6 @@ th, td {
 				<td class="item3"><%=notice.getN_title()%></td>
 				<td class="item4"><%=notice.getN_name()%></td>
 				<td class="item5"><%=notice.getN_date()%></td>
-				<td><img src='./img/<%=notice.getN_file()%>' alt=""></td>
 			</tr>
 			<%
 				}

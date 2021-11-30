@@ -42,7 +42,7 @@ background-repeat:no-repeat; overflow:hidden; background-size:auto 100%; }
 <div class="page product">
 			<!-- 최근 상품 6개 -->
 			<section class="page_fr">
-				<h2 class="page_tit">제품보기<a href="ProductListCtrl" class="more">더보기</a></h2>
+				<h2 class="page_tit">제품보기<a href="p_pie.jsp" class="more">더보기</a></h2>
 				<ul class="pro_lst">
 			<%
 				try {

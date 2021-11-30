@@ -38,7 +38,7 @@ a:link {
 	color: #666666;
 	text-decoration: none;
 }
-.vs { clear:both; width:100%; height:300px; 
+.vs { clear:both; display:block; width:100%; height:300px; 
 background-image:url("./img/banner.gif"); background-position: center center; 
 background-size:50% auto; background-repeat:no-repeat; }
 .vs_tit { padding-top:100px; color:#333; text-shadow:1px 1px 3px #333; font-size:40px; 
@@ -186,7 +186,7 @@ background-repeat:no-repeat; overflow:hidden; background-size:auto 100%; }
 		<div class="page product">
 			<!-- 최근 상품 6개 -->
 			<section class="page_fr">
-				<h2 class="page_tit">New Product <a href="NewProductListCtrl" class="more">더보기</a></h2>
+				<h2 class="page_tit">New Product <a href="p_newproduct.jsp" class="more">더보기</a></h2>
 				<ul class="pro_lst">
 	<%
 					sql = "select * from (select * from n_product order by n_num desc) where ROWNUM <= 6";	

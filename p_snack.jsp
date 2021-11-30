@@ -171,7 +171,7 @@ dl {
 			<h2 class="tit">스낵류</h2>
 			<div class="bread">
 				<p>
-					<a href="">제품목록</a> <span> &gt;</span> <span>스낵류</span>
+					<a href="p_allProduct.jsp">제품목록</a> <span> &gt;</span> <span>스낵류</span>
 				</p>
 			</div>
 		</div>
