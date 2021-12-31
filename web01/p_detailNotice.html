@@ -100,7 +100,7 @@ input[readonly] { background:#f1f1f1; }
 					<label for="n_num" >번호</label>
 				</th>
 				<td class="col_data">
-					<input type="text" id="n_num" name="n_num" class="in_data" value="<%=notice.getNum() %>" readonly required />
+					<input type="text" id="n_num" name="n_num" class="in_data" value="1" readonly required />
 				</td>
 			</tr>
 			<tr>
@@ -108,7 +108,7 @@ input[readonly] { background:#f1f1f1; }
 					<label for="n_name" >공지사항 번호</label>
 				</th>
 				<td class="col_data">
-					<input type="text" id="n_id" name="n_id" class="in_data" value="<%=notice.getN_id() %>" readonly />
+					<input type="text" id="n_id" name="n_id" class="in_data" value="1" readonly />
 				</td>
 			</tr>
 			<tr>
@@ -116,7 +116,7 @@ input[readonly] { background:#f1f1f1; }
 					<label for="n_name" >작성자</label>
 				</th>
 				<td class="col_data">
-					<input type="text" id="n_name" name="n_name" class="in_data" value="<%=notice.getN_name() %>" readonly />
+					<input type="text" id="n_name" name="n_name" class="in_data" value="관리자" readonly />
 				</td>
 			</tr>
 			<tr>
@@ -124,7 +124,7 @@ input[readonly] { background:#f1f1f1; }
 					<label for="n_title">공지사항 제목</label>
 				</th>
 				<td class="col_data">
-					<input type="text" id="n_title" name="n_title" class="in_data" value="<%=notice.getN_title() %>" readonly />
+					<input type="text" id="n_title" name="n_title" class="in_data" value="공지사항" readonly />
 				</td>
 			</tr>
 			 <tr>
@@ -139,7 +139,7 @@ input[readonly] { background:#f1f1f1; }
 					<label for="ubirth">공지사항 내용</label>
 				</th>
 				<td class="col_data">
-					<textarea cols="95" rows="30" id="n_sub" name="n_sub" readonly/>
+					<textarea cols="95" rows="30" id="n_sub" name="n_sub" readonly/>공지사항
 					</textarea>
 				</td>
 			</tr>
@@ -148,7 +148,7 @@ input[readonly] { background:#f1f1f1; }
 					<label for="uregdate">작성일</label>
 				</th>
 				<td class="col_data">
-					<input type="text" id="n_date" name="n_date" class="in_data" value="<%=notice.getN_date() %>" readonly/>
+					<input type="text" id="n_date" name="n_date" class="in_data" value="2021-11-25" readonly/>
 				</td>
 			</tr>
 		</tbody>

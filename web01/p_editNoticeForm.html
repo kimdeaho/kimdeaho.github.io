@@ -99,7 +99,7 @@ input[readonly] { background:#f1f1f1; }
 					<label for="n_num" >번호</label>
 				</th>
 				<td class="col_data">
-					<input type="text" id="n_num" name="n_num" class="in_data" value="<%=notice.getNum() %>" readonly required />
+					<input type="text" id="n_num" name="n_num" class="in_data" value="1" />
 				</td>
 			</tr>
 			<tr>
@@ -107,7 +107,7 @@ input[readonly] { background:#f1f1f1; }
 					<label for="n_name" >공지사항 번호</label>
 				</th>
 				<td class="col_data">
-					<input type="text" id="n_id" name="n_id" class="in_data" value="<%=notice.getN_id() %>" readonly />
+					<input type="text" id="n_id" name="n_id" class="in_data" value="1" />
 				</td>
 			</tr>
 			<tr>
@@ -115,7 +115,7 @@ input[readonly] { background:#f1f1f1; }
 					<label for="n_name" >작성자</label>
 				</th>
 				<td class="col_data">
-					<input type="text" id="n_name" name="n_name" class="in_data" value="<%=notice.getN_name() %>" readonly />
+					<input type="text" id="n_name" name="n_name" class="in_data" value="관리자" />
 				</td>
 			</tr>
 			<tr>
@@ -123,7 +123,7 @@ input[readonly] { background:#f1f1f1; }
 					<label for="n_title">공지사항 제목</label>
 				</th>
 				<td class="col_data">
-					<input type="text" id="n_title" name="n_title" class="in_data" value="<%=notice.getN_title() %>"  />
+					<input type="text" id="n_title" name="n_title" class="in_data" value="공지사항"  />
 				</td>
 			</tr>
 			<tr>
@@ -131,7 +131,7 @@ input[readonly] { background:#f1f1f1; }
 					<label for="n_sub">공지사항 내용</label>
 				</th>
 				<td class="col_data">
-					<textarea cols="95" rows="30" id="n_sub" name="n_sub" ><%=notice.getN_sub() %>
+					<textarea cols="95" rows="30" id="n_sub" name="n_sub" >공지사항
 					</textarea>
 				</td>
 			</tr>
@@ -140,7 +140,7 @@ input[readonly] { background:#f1f1f1; }
 					<label for="n_date">작성일</label>
 				</th>
 				<td class="col_data">
-					<input type="text" id="n_date" name="n_date" class="in_data" value="<%=notice.getN_date() %>" readonly/>
+					<input type="text" id="n_date" name="n_date" class="in_data" value="2021-11-25" readonly/>
 				</td>
 			</tr>
 			 <tr>
@@ -148,7 +148,7 @@ input[readonly] { background:#f1f1f1; }
                <label for="n_file">첨부파일</label>
             </th>
             <td class="col_data">
-              <input type="text" name="n_file" id="n_file" class="in_data" value="<%=notice.getN_file() %>" /> 
+              <input type="text" name="n_file" id="n_file" class="in_data" value="" /> 
 					<td class="col_data">
 					<input type="button" value="첨부파일 업로드" class="in_btn" onclick="imgCheck()"  /> 
 					<input type="hidden" value="" name="imgck" id="imgck" /></td>
@@ -164,7 +164,7 @@ input[readonly] { background:#f1f1f1; }
  <script>
 		
 		function imgCheck() {
-			window.open("p_fileCheckForm.jsp", "pimgcheck",
+			window.open("p_fileCheckForm.html", "pimgcheck",
 					"width=300, height=300");
 		}
 		function pCheck() {

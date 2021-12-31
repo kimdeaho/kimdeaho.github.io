@@ -92,7 +92,7 @@ input[readonly] { background:#f1f1f1; }
       </div>
     </header>
 <h2 class="tit">상세 제품 정보 수정</h2>
-<form action="EditProductCtrl" method="post" id="pform" name="pform">
+<form action="" method="post" id="pform" name="pform">
    <table class="tb">
       <tbody>
          <tr>
@@ -100,7 +100,7 @@ input[readonly] { background:#f1f1f1; }
                <label for="p_num">제품코드</label>
             </th>
             <td class="col_data">
-               <input type="text" id="p_num" name="p_num" class="in_data" value="<%=product.getP_num() %>" readonly required />
+               <input type="text" id="p_num" name="p_num" class="in_data" value="a001" readonly required />
             </td>
          </tr>
          <tr>
@@ -108,7 +108,7 @@ input[readonly] { background:#f1f1f1; }
                <label for="p_name" >이름</label>
             </th>
             <td class="col_data">
-               <input type="text" id="p_name" name="p_name" class="in_data" value="<%=product.getP_name() %>" />
+               <input type="text" id="p_name" name="p_name" class="in_data" value="초코파이" />
             </td>
          </tr>
          <tr>
@@ -131,7 +131,7 @@ input[readonly] { background:#f1f1f1; }
                <label for="p_price">가격</label>
             </th>
             <td class="col_data">
-               <input type="text" id="p_price" name="p_price" class="in_data" value="<%=product.getP_price() %>"/>
+               <input type="text" id="p_price" name="p_price" class="in_data" value="4500"/>
             </td>
          </tr>
          <tr>
@@ -139,7 +139,7 @@ input[readonly] { background:#f1f1f1; }
                <label for="p_ub">내용</label>
             </th>
             <td class="col_data">
-               <input type="text" id="p_sub" name="p_sub" class="in_data" value="<%=product.getP_sub() %>"/>
+               <input type="text" id="p_sub" name="p_sub" class="in_data" value="초코파이"/>
             </td>
          </tr>
          <tr>
@@ -147,7 +147,7 @@ input[readonly] { background:#f1f1f1; }
                <label for="p_img">이미지</label>
             </th>
             <td class="col_data">
-               <input type="text" id="p_img" name="p_img" class="in_data2" value="<%=product.getP_img() %>"/></td>
+               <input type="text" id="p_img" name="p_img" class="in_data2" value=""/></td>
                <td class="col_data">
                		<input type="button" value="이미지 업로드" class="in_btn" onclick="imgCheck()" /> 
 					<input type="hidden" value="" name="imgck" id="imgck" />
@@ -164,7 +164,7 @@ input[readonly] { background:#f1f1f1; }
 <script>
 		
 		function imgCheck() {
-			window.open("p_imgCheckForm.jsp", "pimgcheck",
+			window.open("p_imgCheckForm.html", "pimgcheck",
 					"width=300, height=300");
 		}
 		function pCheck() {
