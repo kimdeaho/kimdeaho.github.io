@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인 페이지</title>
+<style>
+.content {
+	clear: both;
+	width: 100%;
+	min-height: 2000px;
+}
+</style>
+<style>
+/* 내부 스타일 */
+.frm fieldset {
+	width: 600px;
+	border-style: none;
+	padding: 10px;
+	margin: 20px auto;
+}
+
+.frm>fieldset>li {
+	list-style: none;
+}
+
+.con_tit {
+	padding:25px;
+	font-size: large;
+	font-weight:bold;
+	text-align: center;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.indata {
+	display: block;
+	width: 600px;
+	height: 48px;
+	line-height: 48px;
+	text-indent: 16px;
+	margin: 30px auto;
+}
+
+.btn_fr {
+	width: 600px;
+}
+
+.btn_fr li:first-child {
+	float: left;
+}
+
+.btn_fr li:last-child {
+	float: right;
+}
+
+.inbtn {
+	display: block;
+	width: 240px;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	background-color: #333;
+	color: #fff;
+	border: 0;
+	outline: 0;
+	border-radius: 28px;
+}
+
+.inbtn:hover {
+	background-color: #ABABAB;
+}
+</style>
+<link rel="stylesheet" href="./css/a_common.css">
+<link rel="stylesheet" href="./css/reset2.css">
+</head>
+<body>
+	<header class="hd">
+		<div class="hd_wrap">
+			<nav class="tnb">
+				<a href="index.html" class="logo">
+					<img src="./img/logo.png" alt="앰블럼이미지">
+				</a>
+				<ul class="right">   
+	 <li>님이 로그인 중입니다.</li>
+	 
+	 <li><a href="p_mypage.html">마이 페이지</a></li>
+	 <li><a href="sitemap.html">사이트맵</a></li>
+  
+	 <li><a href="p_loginpage.html">로그인</a></li>
+	 <li><a href="p_agreement.html">회원가입</a></li>
+	 <li><a href="sitemap.html">사이트맵</a></li>
+  
+				</ul>
+			</nav>
+		</div>
+		<div class="hd_wrap">
+			<nav class="gnb">
+				<ul>
+					<li>
+						<a href="" class="dp1">공지사항</a>
+						<ul class="sub">
+							<li><a href="Notice.html">공지사항</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="p_company.html" class="dp1">회사소개</a>
+						<ul class="sub">
+							<li><a href="p_company.html">회사소개</a></li>
+							<li><a href="p_companycom.html">찾아 오시는 길</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="p_allProduct.html" class="dp1">제품소개</a>
+						<ul class="sub">
+							<li><a href="p_pie.html">파이류</a></li>
+							<li><a href="p_snack.html">스낵류</a></li>
+							<li><a href="p_bisket.html">비스킷류</a></li>
+							<li><a href="p_gum.html">껌류</a></li>
+							<li><a href="p_candy.html">캔디류</a></li>
+							<li><a href="p_chocolate.html">초콜릿류</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="p_newproduct.html" class="dp1">신제품 소개</a>
+						<ul class="sub">
+							<li><a href="p_newproduct.html">신제품 / 리뉴얼 소개</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="CsList.html" class="dp1">고객문의</a>
+						<ul class="sub">
+							<li><a href="CsList.html">고객문의</a></li>
+							<li><a href="p_office.html">영업소 위치</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section class="content" style="background-color: #fff;">
+		<h1 class="con_tit">로그인</h1>
+		<form action="p_login.jsp" method="post" class="frm">
+			<fieldset>
+				<li>아이디</li> <input type="text" class="indata" id="m_id" name="m_id"
+					placeholder="아이디 입력" autofocus required />
+				<li>비밀번호</li> <input type="password" class="indata" id="m_pw"
+					name="m_pw" placeholder="비밀번호 입력" required /> <br />
+				<br />
+				<ul class="btn_fr">
+					<li><input type="submit" class="inbtn" value="로그인" /></li>
+					<li><input type="reset" class="inbtn" value="취소" /></li>
+				</ul>
+			</fieldset>
+		</form>
+	</section>
+	<footer class="ft">
+		<div class="ft_wrap">
+			 <p class="copyright">copyrights 2021. Companyname Co. all rights reserved.</p>
+			 <address>경기도 고양시 일산동구 장항동 128</address>
+		</div>	
+	 </footer>
+</body>
+</html>

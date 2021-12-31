@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>고객문의</title>
+<link rel="stylesheet" href="./css/reset2.css">
+<link rel="stylesheet" href="./css/a_common.css">
+<style>
+.tit { padding-top:50px; line-height:50px; text-align:center; }
+table { display:table; border-collapse:collapse; }
+tr { display:table-row; }
+th, td { display:table-cell; }
+.tb { width:900px; margin:20px auto; }
+.tb th, .tb td { line-height:42px; border-bottom:1px solid #333; }
+.tb th { background:#E1E1E1; }
+.tb tr:first-child th, .tb tr:first-child td { border-top:1px solid #333; } 
+.in_data { display:block; line-height:32px; height:32px; margin-left:10px; padding-left:5px; width:650px; }
+.in_btn { background-color: #333; color: #fff; border-style: none; height:32px;}
+.in_btn:hover {  background-color:#ABABAB; }
+.in_data_area { line-height:1.6; padding:5px; width:400px; margin-left:10px; }
+.btn_wrap { width:220px; margin:20px auto; }
+.btn_wrap .in_btn { display:block; width:80px; margin:15px; background-color:#333; color:#fff; 
+text-align:center; border:0; outline:0; float:left; line-height:38px; }
+.btn_wrap .in_btn:hover { background-color:#ABABAB; }
+.in_comment { padding-left:18px; }
+input[readonly] { background:#f1f1f1; }
+</style>
+</head>
+<body>
+ <!-- 헤더 -->
+ <header class="hd">
+	<div class="hd_wrap">
+		<nav class="tnb">
+			<a href="index.html" class="logo">
+				<img src="./img/logo.png" alt="앰블럼이미지">
+			</a>
+			<ul class="right">   
+ <li>님이 로그인 중입니다.</li>
+ 
+ <li><a href="p_mypage.html">마이 페이지</a></li>
+ <li><a href="sitemap.html">사이트맵</a></li>
+
+ <li><a href="p_loginpage.html">로그인</a></li>
+ <li><a href="p_agreement.html">회원가입</a></li>
+ <li><a href="sitemap.html">사이트맵</a></li>
+
+			</ul>
+		</nav>
+	</div>
+	<div class="hd_wrap">
+		<nav class="gnb">
+			<ul>
+				<li>
+					<a href="" class="dp1">공지사항</a>
+					<ul class="sub">
+						<li><a href="Notice.html">공지사항</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="p_company.html" class="dp1">회사소개</a>
+					<ul class="sub">
+						<li><a href="p_company.html">회사소개</a></li>
+						<li><a href="p_companycom.html">찾아 오시는 길</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="p_allProduct.html" class="dp1">제품소개</a>
+					<ul class="sub">
+						<li><a href="p_pie.html">파이류</a></li>
+						<li><a href="p_snack.html">스낵류</a></li>
+						<li><a href="p_bisket.html">비스킷류</a></li>
+						<li><a href="p_gum.html">껌류</a></li>
+						<li><a href="p_candy.html">캔디류</a></li>
+						<li><a href="p_chocolate.html">초콜릿류</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="p_newproduct.html" class="dp1">신제품 소개</a>
+					<ul class="sub">
+						<li><a href="p_newproduct.html">신제품 / 리뉴얼 소개</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="CsList.html" class="dp1">고객문의</a>
+					<ul class="sub">
+						<li><a href="CsList.html">고객문의</a></li>
+						<li><a href="p_office.html">영업소 위치</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<h2 class="tit">고객문의</h2>
+<form action="DetailCsCtrl" method="post" id="cform" name="cform">
+	<table class="tb">
+		<tbody>
+			<tr>
+				<th class="col_hd">
+					<label for="cs_num" >번호</label>
+				</th>
+				<td class="col_data">
+					<input type="text" id="cs_num" name="cs_num" class="in_data" value="" readonly required />
+				</td>
+			</tr>
+			<tr>
+				<th class="col_hd">
+					<label for="cs_id" >고객문의 글 번호</label>
+				</th>
+				<td class="col_data">
+					<input type="text" id="cs_id" name="cs_id" class="in_data" value="" readonly />
+				</td>
+			</tr>
+			<tr>
+				<th class="col_hd">
+					<label for="cs_name" >작성자</label>
+				</th>
+				<td class="col_data">
+					<input type="text" id="cs_name" name="cs_name" class="in_data" value="" readonly />
+				</td>
+			</tr>
+			<tr>
+				<th class="col_hd">
+					<label for="cs_title">공지사항 제목</label>
+				</th>
+				<td class="col_data">
+					<input type="text" id="cs_title" name="cs_title" class="in_data" value="" readonly />
+				</td>
+			</tr>
+			 <tr>
+            <th class="col_hd">
+               <label for="cs_file">첨부파일</label>
+            </th>
+            <td class="col_data">
+              <img src='' alt="" readonly/>	
+         	</tr>
+			<tr>
+				<th class="col_hd">
+					<label for="cs_sub">공지사항 내용</label>
+				</th>
+				<td class="col_data">
+					<textarea cols="95" rows="30" id="cs_sub" name="cs_sub" readonly/>
+					</textarea>
+				</td>
+			</tr>
+			<tr>
+				<th class="col_hd">
+					<label for="cs_date">작성일</label>
+				</th>
+				<td class="col_data">
+					<input type="text" id="cs_date" name="cs_date" class="in_data" value="" readonly/>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+    <hr />
+</form>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>orion pie</title>
+<link rel="stylesheet" href="./css/a_common.css">
+<link rel="stylesheet" href="./css/reset2.css">
+<style>
+div {
+	display: block;
+}
+
+dt {
+	display: block;
+}
+
+dl {
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+
+.content {
+	width: 100%;
+	height: 500px;
+}
+
+.content .breadcrumb {
+	clear: both;
+	width: 1000px;
+	height: 80px;
+	background-color: #fff;
+	margin: 0 auto;
+}
+
+.tit {
+	text-align:center;
+	font-size: 24px;
+	line-height: 80px;
+}
+
+.bread {
+	float: right;
+	line-height: 80px;
+}
+
+.bread a, .bread span, .bread select, .bread .loc_area {
+	display: block;
+	line-height: 80px;
+	float: left;
+	margin-left: 10px;
+	font-size: 14px;
+}
+
+.bread a {
+	color: gold;
+}
+
+.bread span:last-child {
+	color: #333;
+}
+
+.con {
+	clear: both;
+	width: 100%;
+	border-top: 2px solid red;
+}
+
+.sidebar {
+	width: 200px;
+	min-height: 100vh;
+	float: left;
+	position: relative;
+}
+
+.lnb {
+	clear: both;
+}
+
+.lnb li {
+	line-height: 50px;
+	background-color: #333;
+}
+
+.lnb li a {
+	padding-left: 30px;
+	color: #fff;
+	font-size: 14px;
+}
+
+.lnb li a.cur {
+	color: gold;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.content .contentsBody {
+	
+	width: 100%;
+	border-left: 2px solid #f1f1f1;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#subContents {
+	clear: both;
+	width: 670px;
+	margin: 0 auto;
+}
+
+.subTitleArea {
+	width: 670px;
+	height: 400px;
+	clear: both;
+	margin: 0 auto;
+	position: relative;
+	border-bottom: 2px solid #e21321;
+}
+
+.subTitleArea {
+	height: 45px;
+	margin-bottom: 0;
+	position: relative;
+}
+
+.typeList {
+	width: 700px;
+	position: relative;
+	overflow: hidden;
+}
+
+.typeList .typeListLine {
+	border-bottom: 1px solid #ff7a83;
+	overflow: hidden;
+	padding: 32px 0 15px 0;
+}
+
+.typeList dl.typeListSet {
+	width: 750px; margin: 20px auto;
+}
+
+.typeList dl.typeListSet dt {
+	float:left; width: 145px; margin: 0 auto;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+	<!-- 헤더 -->
+	<header class="hd">
+		<div class="hd_wrap">
+		   <nav class="tnb">
+			  <a href="index.html" class="logo">
+				 <img src="./img/logo.png" alt="앰블럼이미지">
+			  </a>
+			  <ul class="right">   
+	  <li>님이 로그인 중입니다.</li>
+	  
+	  <li><a href="p_mypage.html">마이 페이지</a></li>
+	  <li><a href="sitemap.html">사이트맵</a></li>
+	
+	  <li><a href="p_loginpage.html">로그인</a></li>
+	  <li><a href="p_agreement.html">회원가입</a></li>
+	  <li><a href="sitemap.html">사이트맵</a></li>
+	
+			  </ul>
+		   </nav>
+		</div>
+		<div class="hd_wrap">
+		   <nav class="gnb">
+			  <ul>
+				 <li>
+					<a href="" class="dp1">공지사항</a>
+					<ul class="sub">
+					   <li><a href="Notice.html">공지사항</a></li>
+					</ul>
+				 </li>
+				 <li>
+					<a href="p_company.html" class="dp1">회사소개</a>
+					<ul class="sub">
+					   <li><a href="p_company.html">회사소개</a></li>
+					   <li><a href="p_companycom.html">찾아 오시는 길</a></li>
+					</ul>
+				 </li>
+				 <li>
+					<a href="p_allProduct.html" class="dp1">제품소개</a>
+					<ul class="sub">
+					   <li><a href="p_pie.html">파이류</a></li>
+					   <li><a href="p_snack.html">스낵류</a></li>
+					   <li><a href="p_bisket.html">비스킷류</a></li>
+					   <li><a href="p_gum.html">껌류</a></li>
+					   <li><a href="p_candy.html">캔디류</a></li>
+					   <li><a href="p_chocolate.html">초콜릿류</a></li>
+					</ul>
+				 </li>
+				 <li>
+					<a href="p_newproduct.html" class="dp1">신제품 소개</a>
+					<ul class="sub">
+					   <li><a href="p_newproduct.html">신제품 / 리뉴얼 소개</a></li>
+					</ul>
+				 </li>
+				 <li>
+					<a href="CsList.html" class="dp1">고객문의</a>
+					<ul class="sub">
+					   <li><a href="CsList.html">고객문의</a></li>
+					   <li><a href="p_office.html">영업소 위치</a></li>
+					</ul>
+				 </li>
+			  </ul>
+		   </nav>
+		</div>
+	 </header>
+	<div class="content">
+		<div class="breadcrumb">
+			<h2 class="tit">신제품목록</h2>
+		</div>
+		<section class="contentsBody">
+			<div class="subContents">
+				<div class="subTitleArea">
+					<h3 style="color: red; font-size: 20px; font-weight:bold; text-align: left; margin-top: 15px;">신제품</h3>
+					<div class="typeList">
+						<div class="typeListLine">
+							<dl class="typeListSet">
+
+								<dt style="padding-left: 20px; padding-top: 20px;">
+									<img src="" alt=""  >
+									<h3 class="pro_tit" style="text-align: center; font-size: 14px;" ></h3>
+								</dt>
+
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+<footer class="ft">
+	<div class="ft_wrap">
+		 <p class="copyright">copyrights 2021. Companyname Co. all rights reserved.</p>
+		 <address>경기도 고양시 일산동구 장항동 128</address>
+	</div>   
+ </footer>
+</div>
+</html>
