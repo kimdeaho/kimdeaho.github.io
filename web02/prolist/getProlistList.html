@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0, userscalable=no"/>
+<title>제품 목록</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/header.css">
+<style>
+.tit { font-size:48px; text-align: center; }
+.navbar-collapse .right {
+	float: right;
+	font-family: 'Noto Sans KR', sans-serif;
+	list-style: none;
+}
+
+.navbar-collapse .right li {
+	float: left;
+	color: #fff;
+}
+.navbar-collapse .rigth li a{
+    line-height: 20px;
+    text-decoration: none;
+}
+.navbar-collapse li a {
+	color: #fff;
+	font-size: 16px;
+	padding: 15px;
+}
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed" style="margin-bottom: 0px;">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/index.html"><img src="../assets/img/logo.png" alt="" /></a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="right" style="padding-top: 10px;">
+					<li class="top_item"><a href="/index.html" class="top_link"> 메인페이지로 </a></li>
+					<li class="top_item"><a href="/getProlistList.html"	class="top_link"> 제품목록 </a></li>
+					<li class="top_item"><a href="/inform/getInformList.html" class="top_link"> 공지사항목록 </a></li>
+					<li class="top_item"><a href="/board/getBoardList2.html" class="top_link"> 묻고답하기목록 </a></li>
+					<li class="top_item">
+					<a href="/custom/getCustomList.html" class="top_link"> 회원목록 </a></li>
+					<li class="top_item">
+					<a href="LogoutCtrl" class="top_link"> 로그아웃 </a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="container">
+		<h2 class="tit">제품 목록</h2>
+		<table class="table">
+			<tr>
+				<td width="25%">번호</td>
+				<td width="10%">제품번호</td>
+				<td width="30%">제품명</td>
+				<td width="15%">제품가격</td>
+				<td width="20%">제품수량</td>
+				<td width="10%">제품종류</td>
+			</tr>
+			
+			<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>
+					
+					<a href="/prolist/getProlist.html">신발1</a>
+
+				</td>
+				<td>10000</td>
+				<td>4</td>
+				<td>shoes</td>
+			</tr>
+			
+		
+			<tr>
+				<td colspan="6" align="center">
+					
+								<a href="">[이전]</a>	
+					
+								
+					
+									<a href="">[1]</a>
+						
+							
+					
+								<a href="">[다음]</a>
+								
+						
+				</td>
+			</tr>
+		</table>
+			<div class="btn-group">
+				<a href="/prolist/addProlist.html" class="btn btn-default">제품등록</a>
+			</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0, userscalable=no"/>
+<title>제품상세 보기</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/templatemo.css">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+	<link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+<style>
+	#templatemo_nav_top .tnb{float: right;}
+#templatemo_nav_top ul li { padding-left:10px; list-style: none; float: left;}
+#templatemo_nav_top ul li:last-child { padding-right:20px;}
+#templatemo_nav_top a {text-decoration: none;}
+#templatemo_nav_top a:hover {
+	color: #333;
+}
+.tit { font-size:48px; text-align: center; }
+</style>
+</head>
+<body>
+	<!-- Start Top Nav -->
+	<nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+		<ul class="tnb">
+			
+	
+		<li><a class="text-light" href="getInformList2.html" rel="sponsored">고객센터</a> </li>
+		<li><a class="text-light" href="">관심상품</a> </li>
+		<li><a class="text-light" href="Login.html">로그인</a></li>
+		<li><a class="text-light" href="./custom/addCustom.html">회원가입</a></li>
+	
+		</ul>
+	</nav>
+	<!-- Close Top Nav -->
+
+
+	<!-- Header -->
+	<nav class="navbar navbar-expand-lg navbar-light shadow" style="width:100%; background-color: white;">
+		<div class="container d-flex justify-content-between align-items-center">
+
+			<a class="navbar-brand text-success logo h1 align-self-center" href="index.html" style="float: left;"> <img src="/assets/img/logo.png" alt="" /></a>
+
+			<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav"	aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+				<div class="flex-fill">
+					<ul
+						class="nav navbar-nav d-flex justify-content-between mx-lg-auto" style="float:right;">
+						<li class="nav-item"><a class="nav-link" href="Company.html">Company</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="/inform/getInformList2.html">About</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="/prolist/getProlistList2.html">Shop</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</nav>
+	<!-- Close Header -->
+	<div class="container">
+		<h2 class="tit">제품 상세 보기</h2>
+
+			<table class="table">
+				<tr>	
+					<th class="item1">제품이미지</th>
+					<td class="item2"><img src="/img/shoe1.png" alt="" /></td>
+				</tr>
+				<tr>	
+					<th class="item1">제품명</th>
+					<td class="item2">
+						<input type="hidden" name="pname" id="pname" value="" />
+						<p>신발1</p>
+					</td>
+				</tr>	
+				<tr>
+					<th class="item1">제품가격</th>
+					<td class="item2">
+						<input type="hidden" name="price" id="price" value="" />
+						<p class="price">10000</p>
+					</td>
+				</tr>
+				<tr>
+					<th class="item1">제품수량</th>
+					<td class="item2">
+					<input type="number" name="cnt" id="cnt" max="" min="1" value="5"/></td>
+				</tr>
+				<tr>	
+					<th class="item1">제품종류</th>
+					<td class="item2">shoes</td>
+				</tr>
+			</table>
+			<!--  버튼 그룹 -->
+			<div class="btn-group">
+			
+				<a href="../payment/payment.html" onclick="payAction()" class="btn btn-default">구매</a>
+				<a href="" class="btn btn-default">장바구니 담기</a>
+			
+				<a href="/prolist/getProlistList2.html" class="btn btn-default">목록</a>
+			</div>
+	</div>
+			<script>
+		function payAction(){
+			var cnt = document.getElementById("cnt").value;
+			var price = document.getElementById("price").value;
+			var pname = document.getElementById("pname").value;
+			location.href="./payment/payment.jsp?cnt="+cnt+"&price="+price+"&pname="+pname;
+		}
+		</script>
+		
+</body>
+</html>

@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>공지사항 목록</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.css"/>
+<script src="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./css/header.css">
+<style>
+  .tit { font-size:48px; text-align: center; }
+.navbar-collapse .right {
+	float: right;
+	font-family: 'Noto Sans KR', sans-serif;
+	list-style: none;
+}
+
+.navbar-collapse .right li {
+	float: left;
+	color: #fff;
+}
+.navbar-collapse .rigth li a{
+    line-height: 20px;
+    text-decoration: none;
+}
+.navbar-collapse li a {
+	color: #fff;
+	font-size: 16px;
+	padding: 15px;
+}
+header.masthead {
+  padding-top: 10rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: #fff;
+  background-image: url("./img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+header.masthead .masthead-subheading {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.masthead .masthead-heading {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 17rem;
+    padding-bottom: 12.5rem;
+  }
+  header.masthead .masthead-subheading {
+    font-size: 2.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  header.masthead .masthead-heading {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+  }
+}
+.tit{ display:block; clear: both;}
+</style>
+<style>
+.tit{ font-size:48px; text-align: center;}
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed" style="margin-bottom: 0px;">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html"><img src="../assets/img/logo.png" alt="" /></a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="right" style="padding-top: 10px;">
+					<li class="top_item"><a href="../index.html" class="top_link"> 메인페이지로 </a></li>
+					<li class="top_item"><a href="/prolist/getProlistList.html"	class="top_link"> 제품목록 </a></li>
+					<li class="top_item"><a href="/inform/getInformList2.html" class="top_link"> 공지사항목록 </a></li>
+					<li class="top_item"><a href="/board/getBoardList2.html" class="top_link"> 묻고답하기목록 </a></li>
+					<li class="top_item">
+					<a href="/custom/getCustomList.html" class="top_link"> 회원목록 </a></li>
+					<li class="top_item">
+					<a href="" class="top_link"> 로그아웃 </a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+   <div class="container">
+      <h2 class="tit">공지사항 목록</h2>
+         <form action="" method="post" >
+            </form>
+            <table class="table display" id="cus_tb">
+               <thead>
+               <tr>
+                  <th class="item1">번호</th>
+                  <th class="item2">제목</th>
+                  <th class="item3">작성자</th>
+                  <th class="item4">작성일</th>
+               </tr>
+               </thead>
+               <tbody>   
+
+               <tr>
+                  <td class="item1">1</td>
+                  <td class="item2"><a href="/inform/getInform.html">공지사항입니다</a></td>
+                  <td class="item3">관리자</td>
+                  <td class="item4">2021-12-31</td>
+               </tr>
+        
+               </tbody>         
+            </table>
+             <script>
+      $(document).ready(function(){
+        $("#cus_tb").DataTable();
+      });
+      </script>
+            <!-- 페이지내이션(PageNation): 목록의 값이 한 페이지 분량을 초과할 경우 나누어 표시하고, 
+            해당페이지 링크를 누르면 그페이지에 해당하는 내용만 표시 -->
+            <!-- 버튼 그룹 -->
+            <div class="btn-group">
+               <a href="/inform/addInform.html" class="btn btn-default">글 작성</a>
+            </div>   
+      
+   </div>
+   
+  
+</body>
+</html>

@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원 목록</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.css"/>
+<script src="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./css/header.css">
+<style>
+.tit {
+	font-size: 48px;
+	text-align: center;
+}
+.navbar-collapse .right {
+	float: right;
+	font-family: 'Noto Sans KR', sans-serif;
+	list-style: none;
+}
+
+.navbar-collapse .right li {
+	float: left;
+	color: #fff;
+}
+.navbar-collapse .rigth li a{
+    line-height: 20px;
+    text-decoration: none;
+}
+.navbar-collapse li a {
+	color: #fff;
+	font-size: 16px;
+	padding: 15px;
+}
+header.masthead {
+  padding-top: 10rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: #fff;
+  background-image: url("./img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+header.masthead .masthead-subheading {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.masthead .masthead-heading {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 17rem;
+    padding-bottom: 12.5rem;
+  }
+  header.masthead .masthead-subheading {
+    font-size: 2.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  header.masthead .masthead-heading {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+  }
+}
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed" style="margin-bottom: 0px;">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html"><img src="../assets/img/logo.png" alt="" /></a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="right" style="padding-top: 10px;">
+					<li class="top_item"><a href="../index.html" class="top_link"> 메인페이지로 </a></li>
+					<li class="top_item"><a href="/prolist/getProlistList.html"	class="top_link"> 제품목록 </a></li>
+					<li class="top_item"><a href="/inform/getInformList.html" class="top_link"> 공지사항목록 </a></li>
+					<li class="top_item"><a href="/board/getBoardList2.html" class="top_link"> 묻고답하기목록 </a></li>
+					<li class="top_item">
+					<a href="/custom/getCustomList.html" class="top_link"> 회원목록 </a></li>
+					<li class="top_item">
+					<a href="" class="top_link"> 로그아웃 </a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<h2 class="tit">회원 목록</h2>
+		<table class="table display" id="cus_tb">
+			<thead>
+			<tr>
+				<th class="item1">회원아이디</th>
+				<th class="item2">회원비밀번호</th>
+				<th class="item3">회원이름</th>
+				<th class="item4">회원주소</th>
+				<th class="item5">회원이메일</th>
+				<th class="item6">회원연락처</th>
+				<th class="item7">회원등급</th>
+				<th class="item8">회원가입일</th>
+			</tr>
+			</thead>
+			<tbody>
+			
+			<tr>
+				<td class="item1"><a href="/custom/getCustom.html">admin</a></td>
+				<td class="item2">1234</td>
+				<td class="item3">관리자</td>
+				<td class="item4">10501<br>관리자<br>관리자</td>
+				<td class="item5">admin@admin.com</td>
+				<td class="item6">000-000-0000</td>
+				<td class="item7">관리자</td>
+				<td class="item8">2021-12-31</td>
+			</tr>
+			
+			</tbody>
+		</table>
+	   <script>
+	   $(document).ready(function(){
+		  $("#cus_tb").DataTable();
+	   });
+	   </script>
+	</div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>회원 목록</title>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<style>
+.tit {
+	font-size: 48px;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	
+<nav class="navbar navbar-inverse navbar-fixed" style="margin-bottom: 0px;">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+				aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="index.html"><img src="./assets/img/logo.png" alt="" /></a>
+		</div>
+		<div id="navbar" class="collapse navbar-collapse">
+			<ul class="right" style="padding-top: 10px;">
+				<li class="top_item"><a href="index.html" class="top_link"> 메인페이지로 </a></li>
+				<li class="top_item"><a href="prolist/getProlistList.html"	class="top_link"> 제품목록 </a></li>
+				<li class="top_item"><a href="inform/getInformList.html" class="top_link"> 공지사항목록 </a></li>
+				<li class="top_item"><a href="board/getBoardSimpleList.html" class="top_link"> 묻고답하기목록 </a></li>
+				<li class="top_item">
+				<a href="/custom/getCustomList.html" class="top_link"> 회원목록 </a></li>
+				<li class="top_item">
+				<a href="" class="top_link"> 로그아웃 </a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+	<div class="container">
+		<h2 class="tit">회원 보기</h2>
+		<form action="" method="post">
+			<table class="table">
+				<tr>
+					<th class="item1">회원 아이디</th>
+					<td class="itme2">
+					<span>admin</span> 
+					<input type="hidden" name="cid" id="cid" value="<%=custom.getCid() %>" readonly /></td>
+				</tr>
+				<tr>
+					<th class="item1">회원 비밀번호</th>
+					<td class="itme2"><input type="password" name="cpw" id="cpw"
+						value="1234" /></td>
+				</tr>
+				<tr>
+					<th class="item1">회원 이름</th>
+					<td class="itme2"><input type="text" name="cname" id="cname"
+						value="관리자" /></td>
+				</tr>
+				<tr>
+					<th class="item1">우편번호</th>
+					<td class="item2"><input type="text" name="czipcode"
+						id="czipcode" value="10501" /></td>
+				<tr>
+				<tr>
+					<th class="item1">주소</th>
+					<td class="item2"><input type="text" name="caddress1"
+						id="caddress1" value="관리자" /></td>
+				</tr>
+				<tr>
+					<th class="item1">상세주소</th>
+					<td class="item2"><input type="text" name="caddress2"
+						id="caddress2" value="관리자" /></td>
+				</tr>
+				<tr>
+					<th class="item1">회원이메일</th>
+					<td class="item2"><input type="text" name="cemail" id="cemail"
+						value="admin@admin.com" /></td>
+				</tr>
+				<tr>
+					<th class="item1">회원 연락처</th>
+					<td class="item2"><input type="text" name="ctel" id="ctel"
+						value="000-000-0000" /></td>
+				</tr>
+				<tr>
+					<th class="item1">회원등급</th>
+					<td class="item2">관리자</td>
+				</tr>
+				<tr>
+					<th class="item1">가입일</th>
+					<td class="item2">2021-12-31</td>
+				</tr>
+
+
+			</table>
+			<div class="btn-group">
+				<input type="submit" class="btn btn-default" value="회원정보 수정" /> 
+				<a href="/custom/getCustomList.html" class="btn btn-default">목록</a>
+				<a href="" class="btn btn-default">회원정보 삭제</a>
+			</div>
+		</form>
+
+	</div>
+	
+</body>
+</html>

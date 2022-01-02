@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>회원가입</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="../assets/css/templatemo.css">
+<link rel="stylesheet" href="../assets/css/custom.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+<link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<style>
+#templatemo_nav_top .tnb{float: right;}
+#templatemo_nav_top ul li { padding-left:10px; list-style: none; float: left;}
+#templatemo_nav_top ul li:last-child { padding-right:20px;}
+#templatemo_nav_top a {text-decoration: none;}
+#templatemo_nav_top a:hover {
+	color: #333;
+}
+.tit{ font-size:48px; text-align: center;}
+.text a {text-decoration: none;}
+.text a:hover {
+	color: #333;
+}
+.container{
+margin:0 auto;
+}
+.table{
+margin:0 auto;
+text-align: center;
+}
+.table .item2{
+float: left;
+}
+</style>
+</head>
+<body>
+	<!-- Start Top Nav -->
+	<nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+		<ul class="tnb">
+			
+	
+		<li><a class="text-light" href="inform/getInformList2.html" rel="sponsored">고객센터</a> </li>
+		<li><a class="text-light" href="">관심상품</a> </li>
+		<li><a class="text-light" href="../Login.html">로그인</a></li>
+		<li><a class="text-light" href="/custom/addCustom.html">회원가입</a></li>
+	
+		</ul>
+	</nav>
+	<!-- Close Top Nav -->
+
+
+	<!-- Header -->
+	<nav class="navbar navbar-expand-lg navbar-light shadow" style="width:100%; background-color: white;">
+		<div class="container d-flex justify-content-between align-items-center">
+
+			<a class="navbar-brand text-success logo h1 align-self-center" href="../index.html" style="float: left;"> <img src="/assets/img/logo.png" alt="" /></a>
+
+			<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav"	aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+				<div class="flex-fill">
+					<ul
+						class="nav navbar-nav d-flex justify-content-between mx-lg-auto" style="float:right;">
+						<li class="nav-item"><a class="nav-link" href="../Company.html">Company</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="/inform/GetInformList2.html">About</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="/prolist/GetProlistList2.html">Shop</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</nav>
+	<!-- Close Header -->
+	<div class="container">
+		<h2 class="tit">회원가입</h2>
+		<form action="../AddCustomCtrl" method="post" onsubmit="return addCustomCheck(this)" >
+			<table class="table"  style="margin:0 auto;">
+					<tr>	
+						<th class="item1">아이디</th>
+						<td class="item2">
+							<input type="text" name="cid" id="cid" value="" required/>
+						</td>	
+					</tr>
+					<tr>
+						<th class="item1">비밀번호</th>
+						<td class="item2">
+						<input type="password" name="cpw" id="cpw" value="" required/>
+					</tr>
+					<tr>
+						<th class="item1">비밀번호 확인</th>
+						<td class="item2">
+						<input type="password" name="cpw2" id="cpw2" value="" required/>
+					</tr>
+					<tr>
+						<th class="item1">이름</th>
+						<td class="item2">
+						<input type="text" name="cname" id="cname" value="" required/>
+					</tr>
+					<tr>	
+						<th class="item1">우편번호</th>
+						<td class="item2">
+							<input type="text" name="czipcode" id="czipcode" value=""/>
+						</td>
+					<tr>
+					<tr>	
+						<th class="item1">주소</th>
+						<td class="item2">
+							<input type="text" name="caddress1" id="caddress1" value=""/>
+						</td>
+					<tr>
+					<tr>	
+						<th class="item1">상세주소</th>
+						<td class="item2">
+							<input type="text" name="caddress2" id="caddress2" value=""/>
+							<input type="button" value="주소찾기" onclick="findAddr()" class="in_btn"/>
+						</td>
+						
+					<tr>
+					<tr>	
+						<th class="item1">이메일</th>
+						<td class="item2">
+							<input type="text" name="cemail" id="cemail" value=""/>
+						</td>
+					<tr>
+					<tr>	
+						<th class="item1">전화번호</th>
+						<td class="item2">
+							<input type="text" name="ctel" id="ctel" value=""/>
+						</td>
+					<tr>
+				</table>
+		
+				<!-- 버튼 그룹 -->
+				<div class="btn-group">
+					<input type="submit" class="btn btn-default" value="회원가입" />
+				</div>
+			</form>
+		</div>
+		<script>
+       //다음카카오의 주소 API이용
+        function findAddr(){
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    console.log(data);                   
+                    var roadAddr = data.roadAddress; // 도로명 주소 변수
+                    var jibunAddr = data.jibunAddress; // 지번 주소 변수
+                    // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                    document.getElementById('czipcode').value = data.zonecode;
+                    if(roadAddr !== ''){
+                        document.getElementById("caddress1").value = roadAddr;
+                    } 
+                    else if(jibunAddr !== ''){
+                        document.getElementById("caddress1").value = jibunAddr;
+                    }
+                }
+            }).open();
+        }
+    </script>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	<script>
+		function addCustomCheck(f){
+			if(f.cpw.value!=f.cpw2.value) {
+				alert("비밀번호와 비밀번호 확인이 서로 다릅니다.");
+				return false;
+			}d
+		}
+	</script>
+    <footer class="bg-dark" id="tempaltemo_footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-success border-bottom pb-3 border-light logo"><img src="./assets/img/logo.png" alt="" /></h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt fa-fw"></i>
+                            <a class="text-decoration-none" href="">일산동구 112</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope fa-fw"></i>
+                            <a class="text-decoration-none" href="mailto:info@company.com">info@company.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Menu</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="">Company</a></li>
+                        <li><a class="text-decoration-none" href="/inform/getInformList2.html">About</a></li>
+                        <li><a class="text-decoration-none" href="/prolist/getProlistList2.html">Shop</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="#">Home</a></li>
+                        <li><a class="text-decoration-none" href="#">About Us</a></li>
+                        <li><a class="text-decoration-none" href="#">Shop</a></li>
+                        <li><a class="text-decoration-none" href="#">FAQs</a></li>
+                        <li><a class="text-decoration-none" href="#">Review</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="row text-light mb-4">
+                <div class="col-12 mb-3">
+                    <div class="w-100 my-3 border-top border-light"></div>
+                </div>
+                <div class="col-auto me-auto">
+                    <ul class="list-inline text-left footer-icons">
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

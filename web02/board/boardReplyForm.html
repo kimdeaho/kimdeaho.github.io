@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>답글달기</title>
+</head>
+<body>
+<div class="container">
+<!-- Start Top Nav -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+	<ul class="tnb">
+		
+
+	<li><a class="text-light" href="/inform/getInformList2.html" rel="sponsored">고객센터</a> </li>
+	<li><a class="text-light" href="basket/getUserBasketList.html">관심상품</a> </li>
+	<li><a class="text-light" href="Login.html">로그인</a></li>
+	<li><a class="text-light" href="./custom/addCustom.html">회원가입</a></li>
+
+	</ul>
+</nav>
+<!-- Close Top Nav -->
+
+
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light shadow" style="width:100%; background-color: white;">
+	<div class="container d-flex justify-content-between align-items-center">
+
+		<a class="navbar-brand text-success logo h1 align-self-center" href="index.html" style="float: left;"> <img src="./assets/img/logo.png" alt="" /></a>
+
+		<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav"	aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+			<div class="flex-fill">
+				<ul
+					class="nav navbar-nav d-flex justify-content-between mx-lg-auto" style="float:right;">
+					<li class="nav-item"><a class="nav-link" href="Company.html">Company</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="/inform/getInformList2.html">About</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="/prolist/getProlistList2.html">Shop</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</nav>
+<!-- Close Header -->
+
+<form action="" name="boardForm">
+	<input type="hidden" name="board_id" value=""/>
+	<input type="hidden" name="board_num" value=""/>
+	<input type="hidden" name="board_re_ref" value="/>
+	<input type="hidden" name="board_re_lev" value=""/>
+	<input type="hidden" name="board_re_seq" value=""/>
+	<div>
+	<table>
+	<thead>
+		<tr>
+			<th id="title">작성자</th>
+			<th id="title">제목</th>
+			<th id="title">내용</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td></td>
+		<td><input type="text" name="board_subject" /></td>
+		<td><textarea name="board_content" cols="30" rows="10"></textarea></td>
+	</tr>
+	</tbody>
+	</table>
+	<input type="submit" value="등록"/>
+	<input type="reset" value="취소"/>
+	<input type="button" value="목록" onclick="javascript:history.go(-1)"/>
+	</div>
+</form>
+</div>
+<footer class="bg-dark" id="tempaltemo_footer">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-4 pt-5">
+				<h2 class="h2 text-success border-bottom pb-3 border-light logo"><img src="./assets/img/logo.png" alt="" /></h2>
+				<ul class="list-unstyled text-light footer-link-list">
+					<li>
+						<i class="fas fa-map-marker-alt fa-fw"></i>
+						<a class="text-decoration-none" href="">일산동구 112</a>
+					</li>
+					<li>
+						<i class="fa fa-envelope fa-fw"></i>
+						<a class="text-decoration-none" href="mailto:info@company.com">info@company.com</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-md-4 pt-5">
+				<h2 class="h2 text-light border-bottom pb-3 border-light">Menu</h2>
+				<ul class="list-unstyled text-light footer-link-list">
+					<li><a class="text-decoration-none" href="">Company</a></li>
+					<li><a class="text-decoration-none" href="GetInformListCtrl2">About</a></li>
+					<li><a class="text-decoration-none" href="GetProlistListCtrl2">Shop</a></li>
+				</ul>
+			</div>
+
+			<div class="col-md-4 pt-5">
+				<h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
+				<ul class="list-unstyled text-light footer-link-list">
+					<li><a class="text-decoration-none" href="#">Home</a></li>
+					<li><a class="text-decoration-none" href="#">About Us</a></li>
+					<li><a class="text-decoration-none" href="#">Shop</a></li>
+					<li><a class="text-decoration-none" href="#">FAQs</a></li>
+					<li><a class="text-decoration-none" href="#">Review</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+		<div class="row text-light mb-4">
+			<div class="col-12 mb-3">
+				<div class="w-100 my-3 border-top border-light"></div>
+			</div>
+			<div class="col-auto me-auto">
+				<ul class="list-inline text-left footer-icons">
+					<li class="list-inline-item border border-light rounded-circle text-center">
+						<a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+					</li>
+					<li class="list-inline-item border border-light rounded-circle text-center">
+						<a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+					</li>
+					<li class="list-inline-item border border-light rounded-circle text-center">
+						<a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+					</li>
+					<li class="list-inline-item border border-light rounded-circle text-center">
+						<a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

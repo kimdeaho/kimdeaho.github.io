@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>구매 내역</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.css"/>
+<script src="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.js"></script>
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/templatemo.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <style>
+    .tit{ text-align: center; padding: 20px;}
+    .paytb {width:80%; margin: 0 auto;}
+	#templatemo_nav_top .tnb{float: right;}
+#templatemo_nav_top ul li { padding-left:10px; list-style: none; float: left;}
+#templatemo_nav_top ul li:last-child { padding-right:20px;}
+#templatemo_nav_top a {text-decoration: none;}
+#templatemo_nav_top a:hover {
+	color: #333;
+}
+    </style>
+</head>
+<body>
+	<!-- Start Top Nav -->
+	<nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+		<ul class="tnb">
+			
+	
+		<li><a class="text-light" href="getInformList2.html" rel="sponsored">고객센터</a> </li>
+		<li><a class="text-light" href="">관심상품</a> </li>
+		<li><a class="text-light" href="Login.html">로그인</a></li>
+		<li><a class="text-light" href="./custom/addCustom.html">회원가입</a></li>
+	
+		</ul>
+	</nav>
+	<!-- Close Top Nav -->
+
+
+	<!-- Header -->
+	<nav class="navbar navbar-expand-lg navbar-light shadow" style="width:100%; background-color: white;">
+		<div class="container d-flex justify-content-between align-items-center">
+
+			<a class="navbar-brand text-success logo h1 align-self-center" href="index.html" style="float: left;"> <img src="/assets/img/logo.png" alt="" /></a>
+
+			<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav"	aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+				<div class="flex-fill">
+					<ul
+						class="nav navbar-nav d-flex justify-content-between mx-lg-auto" style="float:right;">
+						<li class="nav-item"><a class="nav-link" href="Company.html">Company</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="/inform/getInformList2.html">About</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="/prolist/getProlistList2.html">Shop</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</nav>
+	<!-- Close Header -->
+
+	<h1 class="tit">구매내역</h1>
+	<c:set var="cnt" value="" />
+	<table class="paytb" id="paytb">
+	<thead>
+		<tr>
+			<th class="item1">결제번호</th>
+			<th class="item2">결제방식</th>
+			<th class="item3">결제상품</th>
+			<th class="item4">결제수량</th>
+			<th class="item5">결제금액</th>
+			<th class="item6">결제취소</th>
+		</tr>
+		</thead>
+		<tbody>
+	<c:forEach items="" var="pay" varStatus="status">
+		<tr>
+			<td class="item1">1</td>
+			<td class="item2">카드</td>
+			<td class="item3">신발1</td>
+			<td class="item4">1</td>
+			<td class="item5">10000</td>
+			<td class="item6"><a href="" class="btn btn-default" >취소</a></td>
+		</tr>
+		<c:set var="cnt" value="" />
+	</c:forEach>
+		</tbody>
+	</table>
+			<script>
+		$(function(){
+			$("#paytb").DataTable();		//#custom_tb는 반드시 table 태그일 것.
+		});
+		</script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>공지사항 목록</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./css/header.css">
+<style>
+header.masthead {
+  padding-top: 10rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: #fff;
+  background-image: url("./img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+header.masthead .masthead-subheading {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.masthead .masthead-heading {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 17rem;
+    padding-bottom: 12.5rem;
+  }
+  header.masthead .masthead-subheading {
+    font-size: 2.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  header.masthead .masthead-heading {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+  }
+}
+.tit{ display:block; clear: both; text-align: center;}
+</style>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed" style="margin-bottom: 0px;">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html"><img src="./assets/img/logo.png" alt="" /></a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="right" style="padding-top: 10px;">
+					<li class="top_item"><a href="index.html" class="top_link"> 메인페이지로 </a></li>
+					<li class="top_item"><a href="prolist/getProlistList.html"	class="top_link"> 제품목록 </a></li>
+					<li class="top_item"><a href="inform/getInformList.html" class="top_link"> 공지사항목록 </a></li>
+					<li class="top_item"><a href="board/getBoardSimpleList.html" class="top_link"> 묻고답하기목록 </a></li>
+					<li class="top_item">
+					<a href="/custom/getCustomList.html" class="top_link"> 회원목록 </a></li>
+					<li class="top_item">
+					<a href="" class="top_link"> 로그아웃 </a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="container">
+		<h2 class="tit">공지사항 보기</h2>
+		<form action="" method="post">
+			<table class="table">
+					<tr>
+						<input type="hidden" name ="inum" value=""/>						
+					</tr>
+					<tr>	
+						<th class="item1">제목</th>
+						<td class="itme2">
+							<input type="text" name="itit" value="공지사항입니다"/>
+						</td>	
+					</tr>
+					<tr>
+						<th class="item1">내용</th>
+						<td class="item2">
+						<textarea name="isub" id="isub" cols="90" rows="10">공지사항내용</textarea>
+					</tr>
+					<tr>	
+						<th class="item1">작성자</th>
+						<td class="item2">관리자</td>
+					<tr>
+					<tr>	
+						<th class="item1">작성일</th>
+						<td class="item2">2021-12-31</td>
+					</tr>
+					<tr>
+						<th class="item1">조회수</th>
+						<td class="item2">1</td>
+					</tr>	
+
+			
+						
+				</table>
+			<div class="btn-group">
+				<input type="submit" class="btn btn-default" value="글 수정" />
+				<a href="/inform/getInformList.html" class="btn btn-default">목록</a>
+				<button onclick="func1()" class="btn btn-default">글 삭제</button>
+			</div>
+			</form>
+				<script>
+		function func1(data) {
+			if(confirm("정말로 삭제하시겠습니까?")){
+			location.href="DeleteInformCtrl?inum="+data;
+			} else {
+			return false();
+			}
+		}
+	</script>
+	</div>
+</body>
+</html>
