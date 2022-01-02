@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,50 +17,7 @@
 </style>
 </head>
 <body>
-	<!-- Start Top Nav -->
-	<nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
-		<ul class="tnb">
-		   
-	 
-		<li><a class="text-light" href="/inform/getInformList2.html" rel="sponsored">고객센터</a> </li>
-		<li><a class="text-light" href="basket/getUserBasketList.html">관심상품</a> </li>
-		<li><a class="text-light" href="Login.html">로그인</a></li>
-		<li><a class="text-light" href="./custom/addCustom.html">회원가입</a></li>
-	 
-		</ul>
-	 </nav>
-	 <!-- Close Top Nav -->
-  
-  
-	 <!-- Header -->
-	 <nav class="navbar navbar-expand-lg navbar-light shadow" style="width:100%; background-color: white;">
-		<div class="container d-flex justify-content-between align-items-center">
-  
-		   <a class="navbar-brand text-success logo h1 align-self-center" href="index.html" style="float: left;"> <img src="./assets/img/logo.png" alt="" /></a>
-  
-		   <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav"   aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			  <span class="navbar-toggler-icon"></span>
-		   </button>
-  
-		   <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
-			  <div class="flex-fill">
-				 <ul
-					class="nav navbar-nav d-flex justify-content-between mx-lg-auto" style="float:right;">
-					<li class="nav-item"><a class="nav-link" href="Company.html">Company</a>
-					</li>
-					<li class="nav-item"><a class="nav-link" href="/inform/getInformList2.html">About</a>
-					</li>
-					<li class="nav-item"><a class="nav-link" href="/prolist/getProlistList2.html">Shop</a>
-					</li>
-  
-				 </ul>
-			  </div>
-		   </div>
-  
-		</div>
-	 </nav>
-	 <!-- Close Header -->
-	<form action="">
+	<form action="UpdateBoardCtrl?page=${pageNum }">
 	<table>
 	<thead>
 	<tr>
@@ -77,7 +35,7 @@
 		<td class="item3"><textarea name="board_subject">
 		묻고답하기 내용
 		</textarea></td>
-		<td class="item4"><c:if test="">
+		<td class="item4"><c:if test="${board.getReLevel() == 0 }">
 	<input type="text" name="board_file" value="" />
 	</c:if></td>
 	</tr>
@@ -85,7 +43,7 @@
 	</table>
 	<input type="reset" value="취소" class="btn btn-primary" />
 	<input type="submit" value="수정" class="btn btn-primary" />
-	<a href="/board/getBoardList2.html" class="btn btn-primary">목록</a>
+	<a href="getBoardList2.html" class="btn btn-primary">목록</a>
 	</form>
 </body>
 </html>

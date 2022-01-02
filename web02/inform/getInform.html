@@ -59,36 +59,9 @@ header.masthead .masthead-heading {
 </head>
 <body>
 
-	<nav class="navbar navbar-inverse navbar-fixed" style="margin-bottom: 0px;">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed"
-					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-					aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="index.html"><img src="./assets/img/logo.png" alt="" /></a>
-			</div>
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="right" style="padding-top: 10px;">
-					<li class="top_item"><a href="index.html" class="top_link"> 메인페이지로 </a></li>
-					<li class="top_item"><a href="prolist/getProlistList.html"	class="top_link"> 제품목록 </a></li>
-					<li class="top_item"><a href="inform/getInformList.html" class="top_link"> 공지사항목록 </a></li>
-					<li class="top_item"><a href="board/getBoardSimpleList.html" class="top_link"> 묻고답하기목록 </a></li>
-					<li class="top_item">
-					<a href="/custom/getCustomList.html" class="top_link"> 회원목록 </a></li>
-					<li class="top_item">
-					<a href="" class="top_link"> 로그아웃 </a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	
 	<div class="container">
 		<h2 class="tit">공지사항 보기</h2>
-		<form action="" method="post">
+		<form action="UpdateInformCtrl" method="post">
 			<table class="table">
 					<tr>
 						<input type="hidden" name ="inum" value=""/>						
@@ -122,7 +95,7 @@ header.masthead .masthead-heading {
 				</table>
 			<div class="btn-group">
 				<input type="submit" class="btn btn-default" value="글 수정" />
-				<a href="/inform/getInformList.html" class="btn btn-default">목록</a>
+				<a href="GetInformListCtrl" class="btn btn-default">목록</a>
 				<button onclick="func1()" class="btn btn-default">글 삭제</button>
 			</div>
 			</form>
@@ -136,5 +109,6 @@ header.masthead .masthead-heading {
 		}
 	</script>
 	</div>
+	
 </body>
 </html>

@@ -58,9 +58,9 @@
 						class="nav navbar-nav d-flex justify-content-between mx-lg-auto" style="float:right;">
 						<li class="nav-item"><a class="nav-link" href="Company.html">Company</a>
 						</li>
-						<li class="nav-item"><a class="nav-link" href="/inform/getInformList2.html">About</a>
+						<li class="nav-item"><a class="nav-link" href="GetInformList2.html">About</a>
 						</li>
-						<li class="nav-item"><a class="nav-link" href="/prolist/getProlistList2.html">Shop</a>
+						<li class="nav-item"><a class="nav-link" href="GetProlistList2.html">Shop</a>
 						</li>
 
 					</ul>
@@ -85,7 +85,7 @@
 		</tr>
 		</thead>
 		<tbody>
-	<c:forEach items="" var="pay" varStatus="status">
+	<c:forEach items="${payList }" var="pay" varStatus="status">
 		<tr>
 			<td class="item1">1</td>
 			<td class="item2">카드</td>
@@ -94,7 +94,7 @@
 			<td class="item5">10000</td>
 			<td class="item6"><a href="" class="btn btn-default" >취소</a></td>
 		</tr>
-		<c:set var="cnt" value="" />
+		<c:set var="cnt" value="${cnt - 1 }" />
 	</c:forEach>
 		</tbody>
 	</table>
