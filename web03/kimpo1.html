@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김포관광문화</title>
     <!-- 파비콘 설정 -->
-    <link rel="icon" href="./source/favicon.ico">
+    <link rel="icon" href="/source/favicon.ico">
     <!-- 메타포 설정 -->
     <meta name="title" content="김포 관광문화 홈페이지">
     <meta name="keywords" content="김포관광문화, 김포시청 관광문화, 김포시 여행정보">
@@ -20,15 +21,217 @@
     <link rel="stylesheet" href="fonts.css">
     <!-- 필수 API 로딩 -->
     <script src="https://code.jquery.com/jquery-latest.js"></script>
-    <link rel="stylesheet" href="./common.css">
-    <link rel="stylesheet" href="./grid.css">
-    <link rel="stylesheet" href="./slick/slick.css">
-    <link rel="stylesheet" href="./slick/slick-theme.css">
-    <script src="./slick/slick.js"></script>
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="/grid.css">
+    <link rel="stylesheet" href="/slick/slick.css">
+    <link rel="stylesheet" href="/slick/slick-theme.css">
+    <script src="/slick/slick.js"></script>
     <style>
+        .vs {
+            clear: both;
+            width: 100%;
+            height: 530px;
+            background-image: url("./source/sub_visual2.gif");
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
 
+        .content_wrap {
+            clear: both;
+            width: 1200px;
+            margin: 0 auto;
+            margin-top: -140px;
+        }
+
+        .sub_tit {
+            height: 126px;
+            line-height: 126px;
+            font-size: 28px;
+            background-color: skyblue;
+            text-align: center;
+            width: 190px;
+            float: left;
+            color: #fff;
+        }
+
+        .bread_box {
+            height: 101px;
+            background-color: #fff;
+            width: 980px;
+            float: right;
+            padding-left: 30px;
+            padding-top: 24px;
+            border-bottom: 1px solid #999;
+            position: relative;
+        }
+
+        .cate_tit {
+            color: #999;
+            font-size: 24px;
+        }
+
+        .bread {
+            padding-top: 24px;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .bread a {
+            color: #999;
+        }
+
+        .bread span.cur {
+            color: #222;
+            font-weight: 600;
+        }
+
+        .sub_tit_ico_box {
+            position: absolute;
+            right: 30px;
+            bottom: 18px;
+        }
+
+        .sub_tit_ico_box li {
+            float: left;
+            margin-left: 10px;
+        }
+
+        .sub_tit_ico_box li a {
+            display: block;
+            color: #fff;
+        }
+
+        .sub_tit_ico_box li a.ico {
+            width: 34px;
+            height: 34px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border-radius: 18px;
+            border: 1px solid #999;
+        }
+
+        .sub_tit_ico_box li a.ico.item1 {
+            background-image: url("./source/ico_sns.gif");
+        }
+
+        .sub_tit_ico_box li a.ico.item2 {
+            background-image: url("./source/ico_print.gif");
+        }
+
+        .sub_tit_ico_box li a.btn {
+            border-radius: 18px;
+            padding: 6px 12px;
+            width: auto;
+            background-color: #999;
+        }
+
+        .leftbar {
+            width: 190px;
+            float: left;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .lnb {
+            clear: both;
+        }
+
+        .lnb li {
+            clear: both;
+            margin: 5px 6px;
+            line-height: 52px;
+        }
+
+        .lnb li a {
+            color: #222;
+            font-size: 14px;
+            padding-left: 1em;
+        }
+
+        .lnb li.act a {
+            color: #0e3257;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .page_box {
+            width: 980px;
+            float: right;
+            padding-left: 30px;
+        }
+
+        .page {
+            padding-top: 40px;
+            overflow: visible;
+            height: auto;
+            min-height: 100vh;
+        }
+
+        .page_wrap {
+            width: 980px;
+        }
+
+        .page_tit {
+            padding-bottom: 36px;
+            color: #666;
+        }
+
+        .sub_pic img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .sub_pic_tit {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        .sub_pic_com {
+            font-size: 14px;
+            line-height: 1.6;
+            padding-bottom: 24px;
+        }
+
+        .sub_full_tit {
+            color: #2e70b4;
+            line-height: 3;
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .sub_con img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .sub_cate_com {
+            padding: 14px;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+            width: 920px;
+            font-weight: 400;
+        }
+
+        .map_area {
+            clear: both;
+            position: relative;
+        }
+
+        .map_tit,
+        .sub_cate_tit {
+            padding-left: 32px;
+            line-height: 2.4;
+            font-size: 20px;
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-image: url("/source/bull_h5.gif");
+            color: #2e70b4;
+        }
     </style>
 </head>
+
 <body>
     <div class="wrap">
         <header class="hd fix">
@@ -121,16 +324,23 @@
         </header>
         <div class="content fix">
             <figure class="vs" id="vs">
-                
+
             </figure>
             <div class="content_wrap">
                 <div class="sub_box">
                     <h2 class="sub_tit">한눈에 김포</h2>
                     <div class="bread_box">
                         <h3 class="cate_tit">사진으로 본 김포</h3>
-                        <p class="bread"><a href="" class="home">홈</a>
-                            &gt;<a href="">한눈에 김포</a>
-                            &gt;<span class="cur">사진으로 본 김포</span></a></p>
+                        <p class="bread">
+                            <a href="" class="home">홈</a>&gt;
+                            <a href="">한눈에 김포</a>&gt;
+                            <span class="cur">사진으로 본 김포</span>
+                        </p>
+                        <ul class="sub_tit_ico_box">
+                            <li><a href="" class="ico item1"></a></li>
+                            <li><a href="" class="ico item2"></a></li>
+                            <li><a href="" class="btn">정보수정요청</a></li>
+                        </ul>
                     </div>
                 </div>
                 <aside class="leftbar">
@@ -142,10 +352,83 @@
                     </nav>
                 </aside>
                 <div class="page_box">
-                    <section class="page" id="page1">]
-                        <h2 class="page_tit"></h2>
+                    <section class="page" id="page1">
+                        <h2 class="page_tit">평화누리길 1코스</h2>
                         <div class="page_wrap">
+                            <figure class="sub_pic">
+                                <img src="/source/sub1_img_gt2.jpeg" alt="사진1">
+                                <h3 class="sub_pic_tit">평화누리길 1코스</h3>
+                                <p class="sub_pic_com">직접 보는 자연의 환경</p>
+                            </figure>
+                            <h3 class="sub_full_tit">평화누리길 1코스</h3>
+                            <article class="sub_con">
+                                <h3 class="sub_cate_tit">위치 : 경기도 김포시 대곶면 대명항로1로 97 대명항</h3>
+                                <p class="sub_cate_com">
+                                    트레킹코스: 대명항 → 덕포진 → 파수청터 → 손돌목 → 부래도 → 부래도쉼터<br>
+                                    → 쇄암리전망대 → 원머루나루 → 고양리쉼터 → 김포CC → 문수산성남문
+                                </p>
+                            </article>
+                            <div class="map_area">
+                               <!-- * 카카오맵 - 지도퍼가기 -->
+                                <!-- 1. 지도 노드 -->
+                                <div id="daumRoughmapContainer1641373193321" class="root_daum_roughmap root_daum_roughmap_landing"></div>
 
+                                <!--
+                                    2. 설치 스크립트
+                                    * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                                -->
+                                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                                <!-- 3. 실행 스크립트 -->
+                                <script charset="UTF-8">
+                                    new daum.roughmap.Lander({
+                                        "timestamp" : "1641373193321",
+                                        "key" : "28p9d",
+                                        "mapWidth" : "980",
+                                        "mapHeight" : "360"
+                                    }).render();
+                                </script>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="page" id="page2">
+                        <h2 class="page_tit">평화누리길 3코스</h2>
+                        <div class="page_wrap">
+                            <figure class="sub_pic">
+                                <img src="/source/sub1_img_gt1.jpg" alt="사진1">
+                                <h3 class="sub_pic_tit">평화누리길 3코스</h3>
+                                <p class="sub_pic_com">직접 보는 자연의 환경</p>
+                            </figure>
+                            <h3 class="sub_full_tit">평화누리길 3코스(김포후평리 철새도래지)</h3>
+                            <article class="sub_con">
+                                <h3 class="sub_cate_tit">위치 : 경기도 김포시 하성면 가금리 218-4</h3>
+                                <p class="sub_cate_com">
+                                    트레킹코스 : 애기봉입구 → 박신묘역 → 마근포리마을회관 → 마조2리 → 연화봉 → 연화사 → 한강철책길 <br>
+                                    → 후평리철새도래지 → 재두루미 도래지 → 석탄배수펌프장 → 전류리포구
+                                </p>
+                            </article>
+                            <div class="map_area">
+                                <!-- 1. 지도 노드 -->
+                                <div id="daumRoughmapContainer1641371319710"
+                                    class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+                                <!--
+                                    2. 설치 스크립트
+                                    * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                                -->
+                                <script charset="UTF-8" class="daum_roughmap_loader_script"
+                                    src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                                <!-- 3. 실행 스크립트 -->
+                                <script charset="UTF-8">
+                                    new daum.roughmap.Lander({
+                                        "timestamp": "1641371319710",
+                                        "key": "28p8i",
+                                        "mapWidth": "980",
+                                        "mapHeight": "360"
+                                    }).render();
+                                </script>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -170,4 +453,5 @@
         </footer>
     </div>
 </body>
+
 </html>
