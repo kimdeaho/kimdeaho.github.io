@@ -1,52 +1,67 @@
-
-	
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
 
-<title>리뷰 목록</title>
-<script src="https://code.jquery.com/jquery-latest.js"></script>
-<link rel="stylesheet" href="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.css"/>
-<script src="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.js"></script>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-	<link rel="apple-touch-icon" href="assets/img/apple-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/templatemo.css">
-    <link rel="stylesheet" href="/assets/css/custom.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-<style>
-.tit {
-	font-size: 48px;
-	text-align: center;
-}
-#templatemo_nav_top .tnb{float: right;}
-#templatemo_nav_top ul li { padding-left:10px; list-style: none; float: left;}
-#templatemo_nav_top ul li:last-child { padding-right:20px;}
-#templatemo_nav_top a {text-decoration: none;}
-#templatemo_nav_top a:hover {
-	color: #333;
-}
-</style>
+<head>
+	<meta charset="UTF-8">
+
+	<title>리뷰 목록</title>
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<link rel="stylesheet" href="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.css" />
+	<script src="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<link rel="apple-touch-icon" href="../assets/img/apple-icon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/templatemo.css">
+	<link rel="stylesheet" href="../assets/css/custom.css">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+	<link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+	<style>
+		.tit {
+			font-size: 48px;
+			text-align: center;
+		}
+
+		#templatemo_nav_top .tnb {
+			float: right;
+		}
+
+		#templatemo_nav_top ul li {
+			padding-left: 10px;
+			list-style: none;
+			float: left;
+		}
+
+		#templatemo_nav_top ul li:last-child {
+			padding-right: 20px;
+		}
+
+		#templatemo_nav_top a {
+			text-decoration: none;
+		}
+
+		#templatemo_nav_top a:hover {
+			color: #333;
+		}
+	</style>
 </head>
+
 <body>
 	<!-- Start Top Nav -->
 	<nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
 		<ul class="tnb">
-			
-	
-		<li><a class="text-light" href="getInformList2.html" rel="sponsored">고객센터</a> </li>
-		<li><a class="text-light" href="">관심상품</a> </li>
-		<li><a class="text-light" href="Login.html">로그인</a></li>
-		<li><a class="text-light" href="./custom/addCustom.html">회원가입</a></li>
-	
+
+			<li><a class="text-light" href="../admin.html" rel="sponsored">관리자페이지</a> </li>
+			<li><a class="text-light" href="../inform/getInformList2.html" rel="sponsored">고객센터</a> </li>
+			<li><a class="text-light" href="../basket/getUserBasketList.html">관심상품</a> </li>
+			<li><a class="text-light" href="../board/getBoardList.html">게시판</a> </li>
+			<li><a class="text-light" href="./getReviewList.html">리뷰</a> </li>
+			<li><a class="text-light" href="../payment/getUserPaymentList.html">구매내역</a> </li>
+			<li><a class="text-light" href="../Login.html">로그인</a></li>
+			<li><a class="text-light" href="../custom/addCustom.html">회원가입</a></li>
 		</ul>
 	</nav>
 	<!-- Close Top Nav -->
@@ -56,23 +71,25 @@
 	<nav class="navbar navbar-expand-lg navbar-light shadow" style="width:100%; background-color: white;">
 		<div class="container d-flex justify-content-between align-items-center">
 
-			<a class="navbar-brand text-success logo h1 align-self-center" href="index.html" style="float: left;"> <img src="/assets/img/logo.png" alt="" /></a>
+			<a class="navbar-brand text-success logo h1 align-self-center" href="index.html" style="float: left;"> <img
+					src="./assets/img/logo.png" alt="" /></a>
 
-			<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav"	aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+				data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
-			<div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+			<div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+				id="templatemo_main_nav">
 				<div class="flex-fill">
-					<ul
-						class="nav navbar-nav d-flex justify-content-between mx-lg-auto" style="float:right;">
-						<li class="nav-item"><a class="nav-link" href="Company.html">Company</a>
+					<ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto" style="float:right;">
+						<li class="nav-item"><a class="nav-link" href="../Company.html">Company</a>
 						</li>
-						<li class="nav-item"><a class="nav-link" href="GetInformList2.html">About</a>
+						<li class="nav-item"><a class="nav-link" href="../inform/getInformList2.html">About</a>
 						</li>
-						<li class="nav-item"><a class="nav-link" href="GetProlistList2.html">Shop</a>
+						<li class="nav-item"><a class="nav-link" href="../prolist/getProlistList2.html">Shop</a>
 						</li>
-
 					</ul>
 				</div>
 			</div>
@@ -80,44 +97,45 @@
 		</div>
 	</nav>
 	<!-- Close Header -->
-	
+
 	<div class="container">
 		<h2 class="tit">리뷰 목록</h2>
 		<table class="table" id="riv_tb">
-		<thead>
-			<tr>
-				<th class="item1">번호</th>
-				<th class="item2">제목</th>
-				<th class="item3">작성자</th>
-				<th class="item4">작성일</th>
-				<th class="item5">조회수</th>
-			</tr>
+			<thead>
+				<tr>
+					<th class="item1">번호</th>
+					<th class="item2">제목</th>
+					<th class="item3">작성자</th>
+					<th class="item4">작성일</th>
+					<th class="item5">조회수</th>
+				</tr>
 			</thead>
 			<tbody>
-			
-			<tr>
-				<td class="item1">1</td>
-				<td class="item2"><a href="getReview.html">리뷰1</a></td>
-				<td class="item3">손님1</td>
-				<td class="item4">2021-12-31</td>
-				<td class="item5">1</td>
-			</tr>
-			
+
+				<tr>
+					<td class="item1">1</td>
+					<td class="item2"><a href="./getReview.html">리뷰1</a></td>
+					<td class="item3">손님1</td>
+					<td class="item4">2021-12-31</td>
+					<td class="item5">1</td>
+				</tr>
+
 			</tbody>
 		</table>
-		             <script>
-      $(document).ready(function(){
-        $("#riv_tb").DataTable();
-      });
-      </script>
+		<script>
+			$(document).ready(function () {
+				$("#riv_tb").DataTable();
+			});
+		</script>
 		<!-- 페이지내이션(PageNation): 목록의 값이 한 페이지 분량을 초과할 경우 나누어 표시하고, 
 				해당페이지 링크를 누르면 그페이지에 해당하는 내용만 표시 -->
 		<!-- 버튼 그룹 -->
 		<div class="btn-group">
-			<a href="addReview.html" class="btn btn-default">글 작성</a>
+			<a href="./addReview.html" class="btn btn-default">글 작성</a>
 		</div>
 
 	</div>
-	
+
 </body>
+
 </html>

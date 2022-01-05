@@ -7,13 +7,13 @@
 	<script src="https://code.jquery.com/jquery-latest.js"></script>
 	<link rel="stylesheet" href="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.css"/>
 	<script src="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.js"></script>
-    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/templatemo.css">
-    <link rel="stylesheet" href="/assets/css/custom.css">
+    <link rel="apple-touch-icon" href="../assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/templatemo.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
         <style>
     .tit{ text-align: center; padding: 20px;}
     .baskettb {width:80%; margin: 0 auto;}
@@ -30,9 +30,10 @@
 	<!-- Start Top Nav -->
 	<nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
 		<ul class="tnb">
+			
 	
 		<li><a class="text-light" href="../inform/getInformList2.html" rel="sponsored">고객센터</a> </li>
-		<li><a class="text-light" href="">관심상품</a> </li>
+		<li><a class="text-light" href="./getUserBasketList.html">관심상품</a> </li>
 		<li><a class="text-light" href="../Login.html">로그인</a></li>
 		<li><a class="text-light" href="../custom/addCustom.html">회원가입</a></li>
 	
@@ -45,7 +46,7 @@
 	<nav class="navbar navbar-expand-lg navbar-light shadow" style="width:100%; background-color: white;">
 		<div class="container d-flex justify-content-between align-items-center">
 
-			<a class="navbar-brand text-success logo h1 align-self-center" href="../index.html" style="float: left;"> <img src="/assets/img/logo.png" alt="" /></a>
+			<a class="navbar-brand text-success logo h1 align-self-center" href="../index.html" style="float: left;"> <img src="../assets/img/logo.png" alt="" /></a>
 
 			<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav"	aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -68,6 +69,7 @@
 
 		</div>
 	</nav>
+	<!-- Close Header -->
 	<h1 class="tit">장바구니보기</h1>
 	<c:set var="cnt" value=""/>
 	<table class="baskettb" id="baskettb">
@@ -85,7 +87,7 @@
 		<tr>
 			<td>1</td>
 			<td>1</td>
-			<td><a href="/prolist/getProlist2.html">신발1</a></td>
+			<td><a href="../prolist/getProlist2.html">신발1</a></td>
 			<td>손님1</td>
 			<td><a href="" class="btn btn-default">삭제</a></td>
 		</tr>
