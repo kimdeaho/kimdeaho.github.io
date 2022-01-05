@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>회원목록</title>
+<link rel="stylesheet" href="../include/css/common.css">
+<link rel="stylesheet" href="../include/css/datatables.min.css">
+<script src="../include/js/jquery-latest.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<header class="hd">
+		<div class="hd_wrap">
+			<a href="../index.html" class="logo"> 
+				<img src="../source/logo.png"	alt="로고타입" />
+			</a>
+			<nav class="tnb">
+				<ul>
+					<!-- 로그인 하지 않거나 비회윈일 경우 -->
+					<c:if test="${member == null }">
+						<li><a href="./member/login.html">로그인</a></li>
+						<li><a href="./member/join.html">회원가입</a></li>
+					</c:if>
+					<c:if test="${member != null }">
+						<li><a href="./member/mypage.html">마이페이지</a></li>
+						<!-- 로그아웃 -->
+					</c:if>
+					<!-- 관리자일때 -->
+						<li><a href="../board/board_list.html">게시판 관리</a></li>
+						<li><a href="./member/member_list.html">회원관리</a></li>
+												
+				</ul>
+			</nav>
+			<nav class="gnb">
+				<ul class="inner_menu">
+					<li>
+						<a href="" class="dp1">한눈의 김포</a>
+						<ul class="sub">
+							<li><a href="">사진으로 본 김포</a></li>
+							<li><a href="">VR 파노라마</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="" class="dp1">김포여행</a>
+						<ul class="sub">
+							<li><a href="">추천! 김포여행코스</a></li>
+							<li><a href="">꿀팁! 김포여행후기</a></li>
+							<li><a href="">김포 테마 여행.ZIP</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="" class="dp1">관광지</a>
+						<ul class="sub">
+							<li><a href="">전체</a></li>
+							<li><a href="">숲·길</a></li>
+							<li><a href="">항구·공원</a></li>
+							<li><a href="">박물관·전시관</a></li>
+							<li><a href="">레포츠·휴양</a></li>
+							<li><a href="">체험</a></li>
+							<li><a href="">쇼핑</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="" class="dp1">문화유산</a>
+						<ul class="sub">
+							<li><a href="">전체</a></li>
+							<li><a href="">국가지정문화재</a></li>
+							<li><a href="">도지정문화재</a></li>
+							<li><a href="">향토유적</a></li>
+							<li><a href="">전통민속예술</a></li>
+							<li><a href="">김포역사</a></li>
+							<li><a href="">문화공간</a></li>
+							<li><a href="">시립예술단</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="" class="dp1">축제 · 행사</a>
+						<ul class="sub">
+							<li><a href="">전체</a></li>
+							<li><a href="">상반기</a></li>
+							<li><a href="">하반기</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="" class="dp1">음식 · 숙박</a>
+						<ul class="sub">
+							<li><a href="">전체</a></li>
+							<li><a href="">음식(식사 합시다)</a></li>
+							<li><a href="">숙박(꿀잠 잡시다)</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="" class="dp1">여행 필수 정보</a>
+						<ul class="sub">
+							<li><a href="">알림사항</a></li>
+							<li><a href="">문화행사일정</a></li>
+							<li><a href="">문화관광해설사</a></li>
+							<li><a href="">관광안내지도</a></li>
+							<li><a href="">관광책자 신청</a></li>
+							<li><a href="">1330 전화안내</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	<h2>회원목록</h2>
+	<table id="mtb" >
+		<thead>
+		    <tr>
+		        <th>아이디</th>
+		        <th>이름</th>
+		        <th>이메일</th>
+		        <th>가입일자</th>
+		    </tr>
+		</thead>
+		<tbody>
+		    <c:forEach var="row" items="${list}"> 
+		    <tr>
+		        <td>admin</td>
+		        <td>
+		        <a href="./member/view.html">관리자</a>
+		        </td>
+		        <td>admin11@naver.com</td>
+		        <td>2021-12-21 </td>
+		    </tr>
+		    </c:forEach>
+		</tbody>    
+	</table>
+		<input type="button" value="회원등록" onclick="location.href='${path}/member/join.do'">
+	<!-- 테이블 jquery 적용 -->
+              	<script>
+					$(function(){
+						$("#mtb").DataTable();		
+					});
+				</script>
+	<footer class="ft fix">
+		<nav class="fnb">
+			<ul class="fnb_fr">
+				<li><a href="">관광사업소</a></li>
+				<li><a href="">면/동</a></li>
+				<li><a href="">시/군청</a></li>
+				<li><a href="">패밀리사이트</a></li>
+			</ul>
+		</nav>
+		<div class="copyright">
+			<p>개인정보처리방침</p>
+			<p>원격관리</p>
+		</div>
+		<div class="wa">
+			<img src="" alt="">
+		</div>
+	</footer>
+</div>
+</body>
+</html>

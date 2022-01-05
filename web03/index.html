@@ -80,79 +80,125 @@
         .half_com{color: #fff; padding: 40px 100px; font-size: 18px; 
             text-shadow: 1px 1px 1px #000, -1px -1px 1px #000; }
 
-        #page2 .ptit_box{background-color: #00436f;}
-        #item6{  width: 400%; margin-left: 0; transition-delay: 0.05s; 
-        transition-duration: 0.6s;}
-        #item6 li {width: 25%; float: left; overflow-x: hidden;}
-        .thumb_vs_wrap{position: absolute; right:0; bottom: 0; overflow: hidden; 
-            width: 300px;}
+            #page2 { position:relative; 
+        background-image:url("./source/bg2.png"), url("./source/pngwing.png");
+        background-size:120% auto;
+        background-position:center top, center bottom;
+        background-repeat: no-repeat;
+        background-color:#c0e6d7; 
+    }
+    #page2 .ptit_box { background-color: #00436f;}
+    #item6 { width: 400%;  transition-delay:0.05s; 
+    transition-duration:0.6s; }
+    #item6 li { width: 25%; float:left; }
+    .thumb_vs_wrap { position:absolute; right:0; bottom: 0; overflow:hidden; width: 300px; height: 277px; }
+    #item7 { width: 400%; margin-left: 0; transition-delay:0.05s; 
+    transition-duration:0.6s; }
+    #item7 li { width: 25%; float:left; }
+    #item7 li label { display:block; width: 18px; height: 36px; 
+    background-repeat: no-repeat; background-position:center center; position:absolute; bottom:100px; text-indent:-10000px; cursor:pointer; }
+    #item7 li label.lb1 { left:24px; background-image: url("./source/prev.png"); }
+    #item7 li label.lb2 { right:24px; background-image: url("./source/next.png"); }
+    #item7 .tbox { width: 140px; height: 140px; clear:both;overflow:hidden;   margin:20px auto; top: 50px;  border-radius:75px; border:3px solid #fff; }
+    .thumb_vs_wrap #item7 li label { display:none; }
+    .ra { display:none; }
+    #ra1:checked ~ .thumb_vs_wrap #item7 .item1 label { display:block; }
+    #ra2:checked ~ .thumb_vs_wrap #item7 .item2 label { display:block; }
+    #ra3:checked ~ .thumb_vs_wrap #item7 .item3 label { display:block; }
+    #ra4:checked ~ .thumb_vs_wrap #item7 .item4 label { display:block; }
+    #ra1:checked ~ .thumb_vs_wrap #item7 { margin-left: 0; }
+    #ra2:checked ~ .thumb_vs_wrap #item7 { margin-left:-100%; }
+    #ra3:checked ~ .thumb_vs_wrap #item7 { margin-left:-200%; }
+    #ra4:checked ~ .thumb_vs_wrap #item7 { margin-left:-300%; }
+    #ra1:checked ~ #item6 { margin-left: 0; }
+    #ra2:checked ~ #item6 { margin-left:-100%; }
+    #ra3:checked ~ #item6 { margin-left:-200%; }
+    #ra4:checked ~ #item6 { margin-left:-300%; }
+    .col_vs_tit_box { position:absolute; top: 0; left: 0; }
+    .col_vs_tit { clear:both; width: 100%;  padding-top: 50px;  }
+    .col_vs_tit span { display:block; font-family: 'TTTogether';  font-weight:400; 
+        padding-left:120px; font-size:48px;}
+    .col_vs_tit .row1 { color:#00436f; }
+    .col_vs_tit .row2 { color:#007bbf; }
+    .col_vs_com { padding-left: 120px; padding-top: 30px; }
+    #item8 .col_tit, #item9 .col_tit { line-height: 1.6; } 
+    #page2 .col_com { display: block; clear:both; float:none; width: 200px; margin:0px auto; text-align: center; }
+    #item9 .col_com img { border:2px solid #fff; border-radius:100px; }
+    .col_tit.black_txt { color:#000; line-height: 1.6; padding-top: 12px; }
+    .col_tit.black_txt:after { background-color: #00b2a3; }
+    #item11 { position:relative; }
+    #item11 .link_box { position:absolute; bottom: 0; left: 0; width: 100%; }
+    #item11 .link_box li { display:block; width: 50%; float:left; }
+    #item11 .link_box li a { display:block; line-height: 65px; height: 65px; color:#222; background-color: #00b2a3; padding-left:64px; font-size:14px; border-top:1px solid #fff; border-left:1px solid #fff; 
+    background-repeat: no-repeat; background-position:18px center; }
+    #item11 .link_box li:nth-child(2n+1) a { border-left:0px; }
+    #item11 .link_box li.item1 a { background-image: url("./source/pg2_icon1.png"); }
+    #item11 .link_box li.item2 a { background-image: url("./source/pg2_icon2.png"); }
+    #item11 .link_box li.item3 a { background-image: url("./source/pg2_icon3.png"); }
+    #item11 .link_box li.item4 a { background-image: url("./source/pg2_icon4.png"); }
 
-        #item7 { overflow: hidden; width: 400%; margin-left: 0; transition-delay: 0.05s; 
-        transition-duration: 0.6s; }
-        #item7 li{width: 25%; float: left;}
-        #item7 li label{display: block; width: 18px; height: 36px; 
-            background-repeat: no-repeat; background-position: center center; position: absolute; bottom: 100px; text-indent: -10000px;}
-        #item7 li label.lb1{left: 24px; background-image: url("/source/picLeft.jpg"); }
-        #item7 li label.lb2{right: 24px; background-image: url("source/picRight.jpg");}
-        #item7 .tbox{ width: 140px; height: 140px; clear: both;  margin: 20px auto; 
-            overflow: hidden; border-radius: 75px; border: 3px solid #fff;}
-        .thumb_vs_wrap #item7 li label{display: none;}
+        #page3 { background-image:url("./source/bg3.png");
+        background-position:center bottom, left top;
+        background-repeat:no-repeat, repeat;
+        background-color:#c0e6d7;  }
+        #page3 .ptit_box { background-color: #007bbf;}
+        .icon_lst { clear:both; width: 100%; padding-bottom: 50px; }
+        .icon_lst:after { content:""; display:block; clear:both; }
+        .icon_lst li { float:left; width: 200px;}
+        .icon_lst li a { display:block; text-align: center; color:#222; font-size:14px; }
+        .icon_lst li a .icon_box { display:block; width: 80px; height: 80px; margin:10px auto; 
+            border:5px solid transparent; box-sizing:border-box; border-radius:48px; overflow:hidden; }
+        .icon_lst li a:hover { text-decoration:underline; }
+        .icon_lst li a:hover .ico_box { border:5px solid #007bbf; }
+        .icon_lst li a .icon_box img { display:block; width: 48px; height: 48px; margin: 0 auto; margin-top: 11px; }
 
-        .ra {display: none;}
+        #page3 .news_lst { clear: both; background-color: #fff; width: 1200px; margin: 0 auto; }
+        #page3 .news_lst > .col6 { float: left; box-sizing: border-box; position: relative; 
+            height: 390px; overflow: hidden; }
+        .news_tit, .al_tit{font-size: 24px; line-height: 3; }
+        .news_lst .more { display: block; width: 24px; height: 24px;
+        background-image: url("./source/ico_more.png"); background-repeat: no-repeat; 
+        background-position: center center; position: absolute; top: 24px; right: 14px; z-index: 10;}
+        .noti_lst{clear: both; height: 390px;}
+        .noti_lst li { clear: both; padding: 10px 24px; }
+        .noti_lst li a { display: block; color: #666; font-size: 14px; }
+        .noti_lst li a .noti_tit {float: left; font-weight: 400; width: 420px; 
+        padding-right: 20px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+        .noti_lst li a .noti_date { float: right; width: 110px; text-align: center;}
+        .noti_lst li:hover a .noti_tit{ text-decoration: underline; }
+        .noti_lst li:hover a .noti_date{ text-decoration: underline; }
 
-        #ra1:checked ~ .thumb_vs_wrap #item7 .item1 label{display: block;}
-        #ra2:checked ~ .thumb_vs_wrap #item7 .item2 label{display: block;}
-        #ra3:checked ~ .thumb_vs_wrap #item7 .item3 label{display: block;}
-        #ra4:checked ~ .thumb_vs_wrap #item7 .item4 label{display: block;}
+        .noti_lst li.act:before{ content: ""; display: block; width: 80px; height: 80px;
+        background-image: url("./source/notice_act.png"); background-repeat: no-repeat;
+        background-position: center center; float: left;}
+        .noti_lst li:nth-child(2){ padding-top: 30px;}
+        .noti_lst li.act a {float: left; width: 460px; overflow: hidden;}
+        .noti_lst li.act a .noti_tit { width: auto; clear: both; font-size: 20px; color: #000;}
+        .noti_lst li.act a .noti_com { width: auto; clear: both; 
+            border-bottom:1px solid #999; white-space: pre; width: 460px; display: -webkit-box; 
+            -webkit-line-clamp: 3; -webkit-box-orient: vertical;}
         
-        #ra1:checked ~ .thumb_vs_wrap #item7 {margin-left: 0;}
-        #ra2:checked ~ .thumb_vs_wrap #item7 {margin-left: -100%;}
-        #ra3:checked ~ .thumb_vs_wrap #item7 {margin-left: -200%;}
-        #ra4:checked ~ .thumb_vs_wrap #item7 {margin-left: -300%;}
+        .al_box { width: 199px; float: left; background-color: #007bbf; height: 390px; }
+        .al_tit{text-align: center;}
+        .al_com { padding: 8px 20px; }
+        .al_btn_fr{ clear: both; width: 168px; margin: 20px auto; }
+        .al_btn_fr li { float: left; margin: 8px; }
+        .al_btn_fr li button { display: block; width: 40px; height: 40px; 
+            background-repeat: no-repeat; background-position: center center;}
+        .al_btn_fr li button.prev { background-image: url("/source/picLeft.jpg"); }
+        .al_btn_fr li button.play { background-image: url("/source/picPlay.jpg"); }
+        .al_btn_fr li button.next { background-image: url("/source/picRight.jpg"); } 
+        .photo_box {width: 399px; float: right; height: 390px; overflow: hidden;}
+        .photo_fr { width: 400%; }
+        .photo_fr li {width: 25%; float: left;}
+        .photo_tit { position: absolute; top: 100px; font-size: 40px; color: #fff;
+            text-shadow: 1px 1px 2px #333, -1px -1px 2px #333; text-align: center; width: 395px;}
+        .photo_com { position: absolute; bottom: 90px; font-size: 20px; color: #fff;
+            text-shadow: 1px 1px 2px #333, -1px -1px 2px #333; text-align: center;
+            width: 395px; }
+        .photo_img {display: block; width: 100%; height: auto; margin-top: 40px;}
 
-        #ra1:checked ~ #item6 {margin-left: 0;}
-        #ra2:checked ~ #item6 {margin-left: -100%;}
-        #ra3:checked ~ #item6 {margin-left: -200%;}
-        #ra4:checked ~ #item6 {margin-left: -300%;}
-
-        .col_vs_tit_box{position: absolute; top: 0; left: 0;}
-        .col_vs_tit{clear: both; width: 100%;  padding-top: 50px; }
-        .col_vs_tit span{display: block; font-family: 'TTTogether'; font-weight: 400;
-            padding-left: 120px; font-size: 48px;}
-        .col_vs_tit .row1{color: #00436f;}
-        .col_vs_tit .row2{color: #007bbf;}
-        .col_vs_com{padding-left: 120px; padding-top: 30px; }
-        
-        #page2 .col_com{ clear: both; float: none; width: auto; margin: 0 auto; }
-        .col_tit.black_txt { color: #000; line-height: 1.6; padding-top: 12px; }
-        .col_tit.black_txt:after { background-color: #4c7ed4; }
-        #item11{position: relative;}
-        #item11 .link_box { position: absolute; bottom: 0; left: 0; width: 100%;}
-        #item11 .link_box li{display: block; width: 50%; float: left;}
-        #item11 .link_box li a{display: block; line-height: 65px; height: 65px;
-        color: #222; background-color: #007bbf; padding-left: 56px; font-size: 14px;
-        border-top: 1px solid #fff; border-left: 1px solid #fff;
-        background-repeat: no-repeat; background-position: center center;}
-        #item11 .link_box li:nth-child(2n+1) a { border-left: 0px;}
-        #item11 .link_box li.item1 a{ background-image: url("./source/pg2_icon1.png"); }
-        #item11 .link_box li.item2 a{ background-image: url("./source/pg2_icon2.png"); }
-        #item11 .link_box li.item3 a{ background-image: url("./source/pg2_icon3.png"); }
-        #item11 .link_box li.item4 a{ background-image: url("./source/pg2_icon4.png"); }
-
-        #page3 .ptit_box{background-color: #007bbf;}
-        .icon_lst {clear: both; width: 100%;}
-        .icon_lst:after{content: ""; display: block; clear: both;}
-        .icon_lst li {float: left; width: 10%;}
-        .icon_lst li a{display: block; text-align: center; color: #222; font-size: 14px;}
-        .icon_lst li a .ico_box{display: block; width: 80px; height: 80px; margin: 10px auto;
-            border: 5px solid transparent; box-sizing: border-box;
-            border-radius: 48px; overflow: hidden;}
-        .icon_lst li a:hover { text-decoration: underline; }
-        .icon_lst li a:hover .ico_box{ border: 5px solid #84dbf0; }
-        .icon_lst li a .ico_box img { display: block; width: 48px; height: 48px;
-            margin: 0 auto;  margin-top: 11px;}
-        
-    </style>
+        </style>
 </head>
 <body>
     <div class="wrap">
@@ -164,18 +210,20 @@
                 </a>
                 <nav class="tnb">
                     <ul>
-                        <li><a href="">회원가입</a></li>
-                        <li><a href="">로그인</a></li>
+                        <li><a href="/member/join.html">회원가입</a></li>
+                        <li><a href="/member/login.html">로그인</a></li>
                         <li class="user_name">000님</li>
-                        <li><a href="">마이페이지</a></li>
-                        <li><a href="">로그아웃</a></li>
+                        <li><a href="/member/mypage.html">마이페이지</a></li>
                         <li><a href="">여행 가이드 신청</a></li>
+                        <!-- 관리자 -->
+                        <li><a href="/board/board_list.html">관리자 게시판 목록</a></li>
+                        <li><a href="/member/member_list.html">관리자 회원 목록</a></li>
                     </ul>
                 </nav>
                 <nav class="gnb">
                     <ul>
                         <li>
-                            <a href="" class="dp1">한눈의 김포</a>
+                            <a href="kimpo1.html" class="dp1">한눈의 김포</a>
                             <ul class="sub">
                                 <li><a href="">사진으로 본 김포</a></li>
                                 <li><a href="">VR 파노라마</a></li>
@@ -436,101 +484,116 @@
                         <h4 class="pg_tit1">소식 및 다양한 정보</h4>
                         <h2 class="pg_tit2">김포의 소식정보</h2>
                     </div>
-                    <h2 class="hid_tit">새소식 및 앨범</h2>
                     <div class="page_wrap">
                         <ul class="icon_lst">
-                            <li class="item1">
-                                <div class="icon_box"><img src="/source/sec3_icon7.png" alt=""></div>
-                                <span class="icon_txt">알림사항</span>
-                            </li>
-                            <li class="item2">
-                                <div class="icon_box"><img src="/source/sec3_icon6.png" alt=""></div>
-                                <span class="icon_txt">문화행사일정</span>
-                            </li>
-                            <li class="item3">
-                                <div class="icon_box"><img src="/source/sec3_icon4.png" alt=""></div>
-                                <span class="icon_txt">문화관광해설사</span>
-                            </li>
-                            <li class="item4">
-                                <div class="icon_box"><img src="/source/sec3_icon1.png" alt=""></div>
-                                <span class="icon_txt">관광안내지도</span>
-                            </li>
-                            <li class="item5">
-                                <div class="icon_box"><img src="/source/sec3_icon3.png" alt=""></div>
-                                <span class="icon_txt">관광책자신청</span>
-                            </li>
-                            <li class="item6">
-                                <div class="icon_box"><img src="/source/sec3_icon2.png" alt=""></div>
-                                <span class="icon_txt">1330 전화안내</span>
-                            </li>
-                            <ul class="new_lst">
+                        <li class="item1">
+                            <a>
+                            <div class="icon_box"><img src="/source/sec3_icon7.png" alt=""></div>
+                            <span class="icon_txt">알림사항</span>
+                            </a>
+                        </li>
+                        <li class="item2">
+                            <a>
+                            <div class="icon_box"><img src="/source/sec3_icon6.png" alt=""></div>
+                            <span class="icon_txt">문화행사일정</span>
+                            </a>
+                        </li>
+                        <li class="item3">
+                            <a>
+                            <div class="icon_box"><img src="/source/sec3_icon4.png" alt=""></div>
+                            <span class="icon_txt">문화관광해설사</span>
+                            </a>
+                        </li>
+                        <li class="item4">
+                            <a href="">
+                            <div class="icon_box"><img src="/source/sec3_icon1.png" alt=""></div>
+                            <span class="icon_txt">관광안내지도</span>
+                            </a>
+                        </li>
+                        <li class="item5">
+                            <a href="">
+                            <div class="icon_box"><img src="/source/sec3_icon3.png" alt=""></div>
+                            <span class="icon_txt">관광책자신청</span>
+                            </a>
+                        </li>
+                        <li class="item6">
+                            <a href="">
+                            <div class="icon_box"><img src="/source/sec3_icon2.png" alt=""></div>
+                            <span class="icon_txt">1330 전화안내</span>
+                            </a>
+                        </li>
+                        </ul>
+                            <ul class="news_lst">
                                 <li class="col6">
-                                    <h3 class="new_tit">새소식</h3>
-                                    <a href="" class="more">+</a>
+                                    <h3 class="news_tit">새소식</h3>
+                                    <a href="" class="more"></a>
                                     <ul class="noti_lst">
-                                        <a href="">
-                                            <li class="act">
+                                        <li class="act">
+                                            <a href="">
                                             <h4 class="noti_tit">2021년 12월 문화관광해설사 근무일정</h4>
-                                            <p class="noti_com"></p>
-                                            </li>
-                                        </a>
-                                        <a href="">
-                                            <li>
+                                            <p class="noti_com">2021년 12월 
+문화관광해설사 근무일정 2021년 12월 문화관광해설사 근무일정 
+2021년 12월 문화관광해설사 근무일정 2021년 12월 문화관광해설사 근무일정
+2021년 12월 문화관광해설사 근무일정 2021년 12월 문화관광해설사 근무일정
+                                            </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
                                                 <h4 class="noti_tit">2021 김포평화축제 개최</h4>
-                                                <p class="noti"></p>
-                                            </li>
-                                        </a>
-                                        <a href="">
-                                            <li>
+                                                <p class="noti_date">2021-12-21</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
                                                 <h4 class="noti_tit">2021년 10월 문화관광해설사 근무일정 알림</h4>
-                                                <p class="noti"></p>
-                                            </li>
-                                        </a>
-                                        <a href="">
-                                            <li>
+                                                <p class="noti_date">2021-12-21</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
                                                 <h4 class="noti_tit">2021년 9월 문화관광해설사 근무일정 안내</h4>
-                                                <p class="noti"></p>
-                                            </li>
-                                        </a>
+                                                <p class="noti_date">2021-12-21</p>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li class="col6">
                                     <div class="al_box">
                                         <h3 class="al_tit">내가 찍은 김포</h3>
-                                        <a href="" class="more">+</a>
+                                        <a href="" class="more"></a>
                                         <ul class="al_btn_fr">
-                                            <li class="button prev"></li>
-                                            <li class="button play"></li>
-                                            <li class="button next"></li>
+                                            <li><button class="prev"></button></li>
+                                            <li><button class="play"></button></li>
+                                            <li><button class="next"></button></li>
                                         </ul>
                                     </div>
                                     <div class="photo_box">
                                         <ul class="photo_fr">
                                             <li>
                                                 <img src="" alt="" class="photo_img">
-                                                <h4 class="photo tit"></h4>
-                                                <p class="photo_com"></p>
+                                                <h4 class="photo_tit">사진제목1</h4>
+                                                <p class="photo_com">2021-12-21</p>
                                             </li>
                                             <li>
                                                 <img src="" alt="" class="photo_img">
-                                                <h4 class="photo tit"></h4>
-                                                <p class="photo_com"></p>
+                                                <h4 class="photo_tit">사진제목2</h4>
+                                                <p class="photo_com">2021-12-21</p>
                                             </li>
                                             <li>
                                                 <img src="" alt="" class="photo_img">
-                                                <h4 class="photo tit"></h4>
-                                                <p class="photo_com"></p>
+                                                <h4 class="photo_tit">사진제목3</h4>
+                                                <p class="photo_com">2021-12-21</p>
                                             </li>
                                             <li>
                                                 <img src="" alt="" class="photo_img">
-                                                <h4 class="photo tit"></h4>
-                                                <p class="photo_com"></p>
+                                                <h4 class="photo_tit">사진제목4</h4>
+                                                <p class="photo_com">2021-12-21</p>
                                             </li>
                                         </ul>
                                     </div>
                                 </li>
                             </ul>
-                        </ul>
                     </div>
                 </section>
             </div>
