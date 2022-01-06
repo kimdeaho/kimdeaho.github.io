@@ -70,15 +70,51 @@
             overflow-x: hidden;
         }
 
-        .vs .img_box {
-            width: 400%;
-            z-index: 9;
+        button.slick-prev.slick-arrow,
+        button.slick-next.slick-arrow {
+            display: block;
+            width: 20px;
+            height: 40px;
+            position: absolute;
+            bottom: 42vh;
+            z-index: 10;
+            background-color: #fff;
+            text-indent: -10000px;
         }
 
-        .vs .img_box li {
-            width: 25%;
+        button.slick-prev.slick-arrow {
+            left: 60px;
+        }
+
+        button.slick-next.slick-arrow {
+            right: 60px;
+        }
+
+        .slick-dots {
+            position: absolute;
+            width: 200px;
+            left: 50%;
+            margin-left: -80px;
+            bottom: 80px;
+        }
+
+        .slick-dots li {
             float: left;
         }
+
+        .slick-dots li button {
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 12px;
+            background-color: #fff;
+            text-indent: -10000px;
+        }
+
+        .slick-dots li.slick-active button {
+            background-color: deepskyblue;
+        }
+
 
         .vs .img_box li a {
             display: block;
@@ -94,8 +130,8 @@
         .vs .img_box .tit_box {
             position: absolute;
             top: 100px;
-            left: 0;
-            z-index: 4;
+            left: 50;
+            z-index: 90;
             padding: 200px 500px;
             color: #fff;
             text-align: center;
@@ -847,56 +883,60 @@
             </div>
         </header>
         <div class="content fix">
-            <figure class="vs">
-                <ul class="img_box">
-                    <li>
-                        <a href="">
-                            <img src="./source/section_enjoy_bg.gif" alt="">
+            <figure class="vs slick">
+                <div class="vs_wrap">
+                    <div class="img_box single-item">
+                        <div class="item">
+                            <img src="./source/section_enjoy_bg.gif" alt="비쥬얼1">
                             <div class="tit_box">
-                                <h2 class="vs_tit">자연과 도시, <br>과거와 현재가 공존하는 평화생태 관광도시 김포</h2>
+                                <h2 class="vs_tit">
+                                    자연과 도시, <br>과거와 현재가 공존하는 평화생태 관광도시 김포
+                                </h2>
                                 <p class="vs_com">평화의 바람이 부는 김포를 걷다.</p>
                             </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
+                        </div>
+                        <div class="item">
                             <img src="./source/section_kimpo_bg.gif" alt="">
                             <div class="tit_box">
-                                <h2 class="vs_tit">자연과 도시, <br>과거와 현재가 공존하는 평화생태 관광도시 김포</h2>
+                                <h2 class="vs_tit">
+                                    자연과 도시, <br>과거와 현재가 공존하는 평화생태 관광도시 김포
+                                </h2>
                                 <p class="vs_com">평화의 바람이 부는 김포를 걷다.</p>
                             </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
+                        </div>
+                        <div class="item">
                             <img src="./source/section_media_bg.gif" alt="">
                             <div class="tit_box">
-                                <h2 class="vs_tit">자연과 도시, <br>과거와 현재가 공존하는 평화생태 관광도시 김포</h2>
+                                <h2 class="vs_tit">
+                                    자연과 도시, <br>과거와 현재가 공존하는 평화생태 관광도시 김포
+                                </h2>
                                 <p class="vs_com">평화의 바람이 부는 김포를 걷다.</p>
                             </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
+                        </div>
+                        <div class="item">
                             <img src="./source/section_today_bg.gif" alt="">
                             <div class="tit_box">
-                                <h2 class="vs_tit">자연과 도시, <br>과거와 현재가 공존하는 평화생태 관광도시 김포</h2>
+                                <h2 class="vs_tit">
+                                    자연과 도시, <br>과거와 현재가 공존하는 평화생태 관광도시 김포
+                                </h2>
                                 <p class="vs_com">평화의 바람이 부는 김포를 걷다.</p>
                             </div>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="btn_box">
-                    <li class="btn1"><button>이전</button></li>
-                    <li class="btn2"><button>다음</button></li>
-                </ul>
+                        </div>
+                    </div>
+                </div>
             </figure>
+
             <script>
-                $('.img_box').slick({
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                    autoplay: true,
-                    autoplaySpeed: 4000
+                $(function () {
+                    $(".single-item").slick({
+                        dots: true, //번호별 버튼 추가
+                        arrows: false, //좌우 버튼 추가
+                        infinite: true, //순환 반복
+                        speed: 300, //한 슬라이드당 속도
+                        autoplay: true, //자동 실행
+                        autoplayspeed: 3500
+                        //한 슬라이딩하고, 기다리는 시간
+                    });
                 });
             </script>
             <section class="page fix" id="page1">
@@ -1041,19 +1081,19 @@
                 <div class="page_wrap">
                     <ul class="icon_lst">
                         <li class="item1">
-                            <a>
+                            <a href="">
                                 <div class="icon_box"><img src="./source/sec3_icon7.png" alt=""></div>
                                 <span class="icon_txt">알림사항</span>
                             </a>
                         </li>
                         <li class="item2">
-                            <a>
+                            <a href="">
                                 <div class="icon_box"><img src="./source/sec3_icon6.png" alt=""></div>
                                 <span class="icon_txt">문화행사일정</span>
                             </a>
                         </li>
                         <li class="item3">
-                            <a>
+                            <a href="">
                                 <div class="icon_box"><img src="./source/sec3_icon4.png" alt=""></div>
                                 <span class="icon_txt">문화관광해설사</span>
                             </a>
@@ -1160,12 +1200,21 @@
                     <li><a href="">패밀리사이트</a></li>
                 </ul>
             </nav>
-            <div class="copyright">
-                <p>개인정보처리방침</p>
-                <p>원격관리</p>
-            </div>
-            <div class="wa">
-                <img src="" alt="">
+            <div class="ft_wrap">
+                <nav class="linkbar">
+                    <ul>
+                        <li><a href="">개인정보처리방침</a></li>
+                        <li><a href="">이메일무단수집거부</a></li>
+                        <li><a href="">저작권정책</a></li>
+                        <li><a href="">홈페이지 의견접수</a></li>
+                        <li><a href="">뷰어다운로드</a></li>
+                    </ul>
+                </nav>
+                <div class="copyright">
+                    <p class="addr">(53257) 거제시 계룡로 125 (고현동) / 대표전화 : 055)639-3000</p>
+                    <p class="copy">Copyright ⓒ 2019 GEOJE CITY. All Rights Reserved.</p>
+                </div>
+                <div class="wa"><img src="./source/wacc-logo.png" alt="WA인증로고"></div>
             </div>
         </footer>
     </div>
