@@ -5,6 +5,7 @@ body, html { width: 100%; font-family: 'Noto Sans KR', sans-serif;}
 ul { list-style: none; }
 button, input[type=button], input[type=submit], input[type=reset] { outline:0; border:0; }
 a { text-decoration: none; } 
+td{text-align: center;}
 .wrap { width: 100%; clear:both; }
 
 /* header */
