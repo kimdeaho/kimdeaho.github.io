@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="./css/header.css">
+<link rel="stylesheet" href="../css/header.css">
 <style>
 .tit {
 	font-size: 48px;
@@ -92,16 +92,16 @@ header.masthead .masthead-heading {
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.html"><img src="../assets/img/logo.png" alt="" /></a>
+				<a class="navbar-brand" href="../index.html"><img src="../assets/img/logo.png" alt="" /></a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="right" style="padding-top: 10px;">
 					<li class="top_item"><a href="../index.html" class="top_link"> 메인페이지로 </a></li>
-					<li class="top_item"><a href="/prolist/getProlistList.html"	class="top_link"> 제품목록 </a></li>
-					<li class="top_item"><a href="/inform/getInformList.html" class="top_link"> 공지사항목록 </a></li>
-					<li class="top_item"><a href="getBoardList2.html" class="top_link"> 묻고답하기목록 </a></li>
+					<li class="top_item"><a href="../prolist/getProlistList.html"	class="top_link"> 제품목록 </a></li>
+					<li class="top_item"><a href="../inform/getInformList.html" class="top_link"> 공지사항목록 </a></li>
+					<li class="top_item"><a href="./getBoardList2.html" class="top_link"> 묻고답하기목록 </a></li>
 					<li class="top_item">
-					<a href="/custom/getCustomList.html" class="top_link"> 회원목록 </a></li>
+					<a href="../custom/getCustomList.html" class="top_link"> 회원목록 </a></li>
 					<li class="top_item">
 					<a href="" class="top_link"> 로그아웃 </a></li>
 				</ul>
@@ -131,7 +131,7 @@ header.masthead .masthead-heading {
 					<tr>
 						<td>1</td>
 						<td>
-							<a href="getBoard.html">묻고답하기</a>
+							<a href="./getBoard.html">묻고답하기</a>
 						</td>
 						<td>관리자</td>
 						<td>2021-12-31</td>
@@ -142,7 +142,7 @@ header.masthead .masthead-heading {
 				</c:forEach>
 				</tbody>
 			</table>
-				<a href="addBoard.html" class="btn btn-default">글쓰기</a>
+				<a href="./addBoard.html" class="btn btn-default">글쓰기</a>
 		<script>
 		$(function(){
 			$("#bList").DataTable();		//#custom_tb는 반드시 table 태그일 것.
