@@ -36,6 +36,7 @@
 	<!-- Start Top Nav -->
 	<nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
 		<ul class="tnb">
+			
 	
 		<li><a class="text-light" href="../inform/getInformList2.html" rel="sponsored">고객센터</a> </li>
 		<li><a class="text-light" href="../basket/getUserBasketList.html">관심상품</a> </li>
@@ -51,7 +52,11 @@
 	<nav class="navbar navbar-expand-lg navbar-light shadow" style="width:100%; background-color: white;">
 		<div class="container d-flex justify-content-between align-items-center">
 
+<<<<<<< HEAD
 			<a class="navbar-brand text-success logo h1 align-self-center" href="../index.html" style="float: left;"><img src="../assets/img/logo.png" alt="" /> </a>
+=======
+			<a class="navbar-brand text-success logo h1 align-self-center" href="../index.html" style="float: left;"> <img src="../assets/img/logo.png" alt="" /></a>
+>>>>>>> 2a6e0f3386bbea2b762f530a866db1e8f1404836
 
 			<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav"	aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -74,6 +79,7 @@
 
 		</div>
 	</nav>
+	<!-- Close Header -->
    <div class="container">
       <h2 class="tit">게시판 목록</h2>
             <table class="table display" id="board_tb">
@@ -98,7 +104,7 @@
 						</c:forEach>
 						
 					</c:if>
-						<a href="getBoard.html">묻고답하기</a>
+						<a href="./getBoard.html">묻고답하기</a>
 					</td>
 					<td>관리자</td>
 					<td>2021-12-31</td>
@@ -112,7 +118,7 @@
             해당페이지 링크를 누르면 그페이지에 해당하는 내용만 표시 -->
             <!-- 버튼 그룹 -->
             <div class="btn-group">
-               <a href="./board/addBoard.jsp" class="btn btn-default">글 작성</a>
+               <a href="./addBoard.jsp" class="btn btn-default">글 작성</a>
             </div>   
             <form action="">
 		      <select name="opt" id="">
@@ -126,7 +132,7 @@
 		     </form>
             <div class="pageGroup">
 				<c:if test="${startPage != 1 }">
-					<a href="GetBoardListCtrl?page=${startPage - 1 }">[이전]</a>
+					<a href="">[이전]</a>
 				</c:if>
 				<c:forEach var="pageNum" begin="${startPage }" end="${endPage }"> 
 					<c:if test="">
@@ -137,7 +143,7 @@
 					</c:if>
 				</c:forEach>
 				<c:if test="">
-					<a href="GetBoardListCtrl?page=${endPage + 1 }">[이전]</a>
+					<a href="">[이전]</a>
 				</c:if>
             </div>
    </div>
