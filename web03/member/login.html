@@ -3,10 +3,254 @@
 <head>
 <title>로그인 페이지</title>
 <link rel="stylesheet" href="../include/css/common.css">
+<style>
+	.vs {
+		clear: both;
+		width: 100%;
+		height: 530px;
+		background-image: url("../source/sub_visual2.gif");
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+
+	.content_wrap {
+		clear: both;
+		width: 1200px;
+		margin: 0 auto;
+		margin-top: -140px;
+	}
+
+	.sub_tit {
+		height: 126px;
+		line-height: 126px;
+		font-size: 28px;
+		background-color: skyblue;
+		text-align: center;
+		width: 190px;
+		float: left;
+		color: #fff;
+	}
+
+	.bread_box {
+		height: 101px;
+		background-color: #fff;
+		width: 980px;
+		float: right;
+		padding-left: 30px;
+		padding-top: 24px;
+		border-bottom: 1px solid #999;
+		position: relative;
+	}
+
+	.cate_tit {
+		color: #999;
+		font-size: 24px;
+	}
+
+	.bread {
+		padding-top: 24px;
+		line-height: 1.6;
+		font-size: 16px;
+	}
+
+	.bread a {
+		color: #999;
+	}
+
+	.bread span.cur {
+		color: #222;
+		font-weight: 600;
+	}
+
+	.sub_tit_ico_box {
+		position: absolute;
+		right: 30px;
+		bottom: 18px;
+	}
+
+	.sub_tit_ico_box li {
+		float: left;
+		margin-left: 10px;
+	}
+
+	.sub_tit_ico_box li a {
+		display: block;
+		color: #fff;
+	}
+
+	.sub_tit_ico_box li a.ico {
+		width: 34px;
+		height: 34px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		border-radius: 18px;
+		border: 1px solid #999;
+	}
+
+	.sub_tit_ico_box li a.ico.item1 {
+		background-image: url("./source/ico_sns.gif");
+	}
+
+	.sub_tit_ico_box li a.ico.item2 {
+		background-image: url("./source/ico_print.gif");
+	}
+
+	.sub_tit_ico_box li a.btn {
+		border-radius: 18px;
+		padding: 6px 12px;
+		width: auto;
+		background-color: #999;
+	}
+
+	.leftbar {
+		width: 190px;
+		float: left;
+		min-height: 60vh;
+		background-color: #E0FFFF;
+	}
+
+	.lnb {
+		clear: both;
+	}
+
+	.lnb li {
+		clear: both;
+		margin: 5px 6px;
+		line-height: 52px;
+	}
+
+	.lnb li a {
+		color: #222;
+		font-size: 14px;
+		padding-left: 1em;
+	}
+
+	.lnb li.act a {
+		color: #0e3257;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	.page_box {
+		width: 980px;
+		float: right;
+		padding-left: 30px;
+	}
+
+	.page {
+		padding-top: 40px;
+		overflow: visible;
+		height: auto;
+		min-height: 100vh;
+	}
+
+	.page_wrap {
+		width: 980px;
+	}
+
+	.page_tit {
+		padding-bottom: 36px;
+		color: #666;
+		text-align: center;
+		font-size: 40px;
+	}
+
+	.onepage {
+		clear: both;
+		width: 100%;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.onepage img {
+		display: block;
+		width: 100%;
+	}
+
+	.page {
+		display: none;
+	}
+
+	.page:target {
+		display: block;
+	}
+
+	.form {
+		clear: both;
+		width: 100%;
+	}
+
+	.form_wrap {
+		display: table;
+	}
+
+	.form_group {
+		display: table-row-group;
+	}
+
+	.form_group li {
+		display: table-row;
+	}
+
+	.form_group li .control_wrap {
+		padding: 10px;
+	}
+
+	.form-control {
+		display: block; 
+		width: 900px; 
+		height: 42px; 
+		line-height: 42px;
+		padding-left: 14px;
+		font-size: 18px;
+	}
+
+	.btn {
+		display: block;
+		line-height: 32px;
+		width: auto;
+		padding: 5px 10px;
+		background-color: #666;
+		color: #fff;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	.btn-left{
+		float: left;
+	}
+
+	.btn_left:hover{
+			background-color: skyblue;
+		}
+
+	.btn-right {
+		float: right;
+	}
+
+	.btn_mid {
+		float: left;
+		margin-left: 24px;
+		margin-right: 24px;
+	}
+</style>
 </head>
 <body>
 	<div class="wrap">
-		<header class="hd">
+		<script>
+            $(document).ready(function(){
+                $(".lnb ul li").click(function(){
+                    $(".lnb ul li").removeClass("act");
+                    $(this).addClass("act");
+                });
+                $(".sub > li").click(function(){
+                    $(".lnb ul li").removeClass("act");
+                    var t = $(this).index();
+                    $(".lnb ul li").eq(t).addClass("act");
+                });
+            });
+        </script>
+		<header class="hd fix">
 			<div class="hd_wrap">
 				<a href="../index.html" class="logo"> 
 					<img src="../source/logo.png"	alt="로고타입" />
@@ -103,24 +347,82 @@
 			</div>
 		</header>
 		
-		<div class="content">
-			<h2 class="title">로그인</h2>
-			<form name="bdto" action="" method="post">
-	            <table class="table" id="data">
-	             	<tbody>
-	             		<tr>
-	             			<th>아이디</th>
-	             			<td><input type="text" name="userid" id="userid" /></td>
-	             		</tr>
-	             		<tr>
-	             			<th>비밀번호</th>
-	             			<td><input type="password" name="passwd" id="passwd" /></td>
-	             		</tr>
-	             	</tbody>
-	            </table>
-	            <input type="submit" value="로그인" />
-	            <input type="reset" value="취소" />
-            </form>
+		<div class="content fix">
+			<figure class="vs" id="vs">
+
+			</figure>
+			<div class="content_wrap">
+                <div class="sub_box">
+                    <h2 class="sub_tit">로그인</h2>
+                    <div class="bread_box">
+                        <h3 class="cate_tit">로그인</h3>
+                        <p class="bread">
+                            <a href="" class="home">홈</a>&gt;
+                            <a href="">회원</a>&gt;
+                            <span class="cur">로그인</span>
+                        </p>
+                    </div>
+                </div>
+                <aside class="leftbar">
+                    <nav class="lnb">
+                        <ul>
+                            <li class="act"><a href="#page1">로그인</a></li>
+                            <li><a href="#page2">회원약관</a></li>
+							<li><a href="#page3">회원안내</a></li>
+							<li><a href="./join.html">회원가입</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+                <div class="page_box">
+                    <section class="onepage">
+                        <h2></h2>
+                        <div class="" style="height: 50px;"></div>
+                        <h2 class="page_tit">로그인</h2>
+						<div class="login_frm_box">
+							<form action="" method="post" id="login_frm" class="form">
+								<div class="form_wrap">
+									<ul class="form_group">
+										<li class="form_row">
+											<div class="control_wrap">
+												<input type="text" class="form-control" name="userid" id="userid" placeholder="아이디를 입력하세요">
+											</div>
+										</li> 
+										<li class="form_row">
+											<div class="control_wrap">
+												<input type="password" class="form-control" id="passwd" name="passwd" class="reg-control" maxlength="20" placeholder="비밀번호를 입력하세요" required />
+											</div>
+											<!-- <input type="hidden" name="passwd" value=""> -->
+										</li> 
+										<li class="form_row">
+											<div class="control_wrap">
+												<input type="submit" class="btn btn-left" value="로그인" id="login_submit" />
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												<button type="button" class="btn btn-right" onclick="location.href='/member/reg.do'">회원가입</button>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</form>
+						</div>
+                        <div class="page_wrap">
+                        </div>
+                    </section>
+                    <section class="page" id="page2">
+                        <h2 class="page_tit">회원약관</h2>
+                        <div class="page_wrap">
+                            
+                            
+                        </div>
+                    </section>
+					<section class="page" id="page3">
+                        <h2 class="page_tit">회원안내</h2>
+                        <div class="page_wrap">
+                            
+                            
+                        </div>
+                    </section>
+                </div>
+            </div>
 		</div>
 	</div>
 	<footer class="ft fix">
@@ -146,7 +448,7 @@
 				<p class="addr">(53257) 거제시 계룡로 125 (고현동) / 대표전화 : 055)639-3000</p>
 				<p class="copy">Copyright ⓒ 2019 GEOJE CITY. All Rights Reserved.</p>
 			</div>
-			<div class="wa"><img src="./source/wacc-logo.png" alt="WA인증로고"></div>
+			<div class="wa"><img src="../source/wacc-logo.png" alt="WA인증로고"></div>
 		</div>
 	</footer>
 </body>

@@ -129,7 +129,7 @@
             width: 190px;
             float: left;
             min-height: 100vh;
-            background-color: #f0f0f0;
+            background-color: #E0FFFF;
         }
 
         .lnb {
@@ -229,11 +229,40 @@
             background-image: url("/source/bull_h5.gif");
             color: #2e70b4;
         }
+        .onepage {
+            clear: both;
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .onepage img {
+            display: block;
+            width: 100%;
+        }
+        .page {
+            display: none;
+        }
+        .page:target {
+            display: block;
+        }
     </style>
 </head>
 
 <body>
     <div class="wrap">
+        <script>
+            $(document).ready(function(){
+                $(".lnb ul li").click(function(){
+                    $(".lnb ul li").removeClass("act");
+                    $(this).addClass("act");
+                });
+                $(".sub > li").click(function(){
+                    $(".lnb ul li").removeClass("act");
+                    var t = $(this).index();
+                    $(".lnb ul li").eq(t).addClass("act");
+                });
+            });
+        </script>
         <header class="hd fix">
             <div class="hd_wrap">
                 <a href="index.html" class="logo">
@@ -242,8 +271,8 @@
                 </a>
                 <nav class="tnb">
                     <ul>
-                        <li><a href="./member/join.html">회원가입</a></li>
                         <li><a href="./member/login.html">로그인</a></li>
+                        <li><a href="./member/join.html">회원가입</a></li>
                         <li class="user_name">000님</li>
                         <li><a href="./member/mypage.html">마이페이지</a></li>
                         <li><a href="">여행 가이드 신청</a></li>
@@ -254,8 +283,8 @@
                         <li>
                             <a href="kimpo1.html" class="dp1">한눈의 김포</a>
                             <ul class="sub">
-                                <li><a href="kimpo1.html#page1">사진으로 본 김포</a></li>
-                                <li><a href="kimpo1.html#page2">VR 파노라마</a></li>
+                                <li><a href="kimpo1.html">사진으로 본 김포</a></li>
+                                <li><a href="kimpo2.html">VR 파노라마</a></li>
                             </ul>
                         </li>
                         <li>
@@ -346,12 +375,17 @@
                 <aside class="leftbar">
                     <nav class="lnb">
                         <ul>
-                            <li><a href="#page1">사진으로 본 김포</a></li>
-                            <li><a href="#page2">VR 파노라마</a></li>
+                            <li class="act"><a href="#page1">평화누리길 1코스</a></li>
+                            <li><a href="#page2">평화누리길 3코스</a></li>
                         </ul>
                     </nav>
                 </aside>
                 <div class="page_box">
+                    <section class="onepage">
+                        <h2></h2>
+                        <img src="./include/source/v1.gif" alt="김포여행">
+                        <img src="./include/source/v2.gif" alt="김포여행">
+                    </section>
                     <section class="page" id="page1">
                         <h2 class="page_tit">평화누리길 1코스</h2>
                         <div class="page_wrap">
