@@ -7,6 +7,19 @@
 <script src="../include/js/datatables.min.js"></script>
 <link rel="stylesheet" href="../include/css/datatables.min.css">
 <link rel="stylesheet" href="../include/css/common.css">
+<style>
+	.tit {
+		text-align: center;
+		padding: 20px;
+	}
+	.table_wrap {
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.table_wrap td {
+		text-align: center;
+	}
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -38,8 +51,8 @@
 					<li>
 						<a href="../kimpo1.html" class="dp1">한눈의 김포</a>
 						<ul class="sub">
-							<li><a href="">사진으로 본 김포</a></li>
-							<li><a href="">VR 파노라마</a></li>
+							<li><a href="../kimpo1.html">사진으로 본 김포</a></li>
+							<li><a href="../kimpovr.html">VR 파노라마</a></li>
 						</ul>
 					</li>
 					<li>
@@ -107,7 +120,8 @@
 		</div>
 	</header>
 	
-	<h2>회원목록</h2>
+	<h2 class="tit">회원목록</h2>
+	<div class="table_wrap">
 	<table id="mtb" >
 		<thead>
 		    <tr>
@@ -130,6 +144,7 @@
 		    </c:forEach>
 		</tbody>    
 	</table>
+</div>
 		<input type="button" value="회원등록" onclick="location.href='${path}/member/join.do'">
 	<!-- 테이블 jquery 적용 -->
               	<script>
