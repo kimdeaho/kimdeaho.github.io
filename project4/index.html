@@ -44,6 +44,7 @@
     <link rel="stylesheet" href="./common.css">
     <link rel="stylesheet" href="./slick/slick.css">
     <link rel="stylesheet" href="./owl/owl.carousel.css">
+    <link rel="stylesheet" href="./grid.css">
     <style>
         .vs {
             clear: both;
@@ -51,9 +52,11 @@
             width: 100%;
             overflow-x: hidden;
         }
+
         .slick-slide img {
             width: 100%;
         }
+
         button.slick-prev.slick-arrow,
         button.slick-next.slick-arrow {
             display: block;
@@ -134,50 +137,88 @@
             text-align: right;
             text-shadow: -2px -2px 2px #666;
         }
+
         .icon_wrap {
             max-width: 1200px;
             width: auto;
             margin: 15px auto;
             height: 120px;
         }
+
         .icon_wrap li {
             float: left;
             padding: 30px 30px;
         }
+
         .icon_wrap li:first-child {
             padding-left: 90px;
         }
-        .icon_wrap .item1 strong{
+
+        .icon_wrap .item1 strong {
             display: block;
             clear: both;
             float: right;
             margin-left: 5px;
+            color: #000;
         }
+
         .icon_wrap .item1 span {
             display: block;
             clear: both;
-            margin-left: 60px;
+            width: 55px;
+            margin-left: 50px;
             margin-top: -30px;
+            color: #666;
         }
-        .vs2 { clear: both; width: 1200px; overflow-x: hidden; position: relative;
-        margin: 0 auto;}
-        
-        .owl-dots{margin: 0 auto;}
-.owl-item img{
-    height: auto;
-}
-.customPrevBtn, .customNextBtn{
-    background : none;
-    border: none;
-    color: #999999;
-    font-size: 20px;
-    font-weight: bold;
-}
-@media(max-width:768px){
-    .pbPrevBtn, .pbNextBtn{
-        display: none;
-    }
-}
+
+        .icon_wrap .item1 span:hover {
+            text-decoration: underline;
+        }
+
+        .vs2 {
+            clear: both;
+            width: 1200px;
+            overflow-x: hidden;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .owl-carousel .item {
+            height: 10rem;
+            background: #4DC7A0;
+            padding: 1rem;
+        }
+
+        .owl-carousel .item h4 {
+            color: #FFF;
+            font-weight: 400;
+            margin-top: 0rem;
+        }
+
+        .owl-dots {
+            width: 160px;
+            height: 30px;
+            left: 50%;
+            margin: 0 auto;
+        }
+
+        .owl-dots div {
+            display: block;
+            width: 20px;
+            height: 20px;
+            float: left;
+            background-color: gray;
+            border-radius: 12px;
+            margin: 10px;
+        }
+
+        .owl-dots div.active {
+            background-color: #333;
+        }
+        .noti {
+            width: 100%;
+            height: 340px;
+        }
     </style>
 </head>
 
@@ -185,21 +226,23 @@
     <div class="container">
         <header class="hd">
             <div class="hd_wrap">
-                <a href=""><img src="./source/logo.png" alt=""></a>
-                <div class="search_wrap">
-                    <form action="" method="">
-                        <div class="search_fr">
-                            <input type="text" id="keyword" name="keyword">
-                            <input type="submit" class="search_btn" value="검색">
-                        </div>
-                    </form>
+                <div class="tnb_wrap">
+                    <a href=""><img src="./source/logo.png" alt=""></a>
+                    <div class="search_wrap">
+                        <form action="" method="">
+                            <div class="search_fr">
+                                <input type="text" id="keyword" name="keyword">
+                                <input type="submit" class="search_btn" value="검색">
+                            </div>
+                        </form>
+                    </div>
+                    <nav class="tnb">
+                        <ul>
+                            <li><a href=""><img src="./source/eng.jpg" alt="eng"><span>English</span></a></li>
+                            <li><a href=""><img src="./source/chi.jpg" alt="chi"><span>Chinese</span></a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav class="tnb">
-                    <ul>
-                        <li><a href=""><img src="./source/eng.jpg" alt="eng"><span>English</span></a></li>
-                        <li><a href=""><img src="./source/chi.jpg" alt="chi"><span>Chinese</span></a></li>
-                    </ul>
-                </nav>
                 <nav class="gnb">
                     <ul>
                         <li>
@@ -467,80 +510,85 @@
                 <ul>
                     <li class="item1">
                         <a href="">
-                            <img src="./source/main_icon01.png" alt="">
+                            <img src="./source/main_icon01.png" alt="메인아이콘1">
                             <strong>정보목록</strong>
-                            <span>more</span>
+                            <span>more ></span>
                         </a>
                     </li>
                     <li class="item1">
                         <a href="">
-                            <img src="./source/main_icon02.png" alt="">
+                            <img src="./source/main_icon02.png" alt="메인아이콘2">
                             <strong>정책연구</strong>
-                            <span>more</span>
+                            <span>more ></span>
                         </a>
                     </li>
                     <li class="item1">
                         <a href="">
-                            <img src="./source/main_icon03.png" alt="">
+                            <img src="./source/main_icon03.png" alt="메인아이콘3">
                             <strong>승인통계</strong>
-                            <span>more</span>
+                            <span>more ></span>
                         </a>
                     </li>
                     <li class="item1">
                         <a href="">
-                            <img src="./source/main_icon04.png" alt="">
+                            <img src="./source/main_icon04.png" alt="메인아이콘4">
                             <strong>훈령·예규</strong>
-                            <span>more</span>
+                            <span>more ></span>
                         </a>
                     </li>
                     <li class="item1">
                         <a href="">
-                            <img src="./source/main_icon05.png" alt="">
+                            <img src="./source/main_icon05.png" alt="메인아이콘5">
                             <strong>민원신청</strong>
-                            <span>more</span>
+                            <span>more ></span>
                         </a>
                     </li>
                     <li class="item1">
                         <a href="">
-                            <img src="./source/main_icon06.png" alt="">
+                            <img src="./source/main_icon06.png" alt="메인아이콘6">
                             <strong>부총리</strong>
-                            <span>more</span>
+                            <span>more ></span>
                         </a>
                     </li>
                 </ul>
             </div>
-                <figure class="vs2">
-                    <div class="vs2_wrap">
-                        <ul class="img_box2 owl-carousel">
-                            <li><img src="./source/slider1.jpg" alt="비쥬얼1"></li>
-                            <li><img src="./source/slider2.jpg" alt="비쥬얼2"></li>
-                            <li><img src="./source/slider3.jpg" alt="비쥬얼3"></li>
-                            <li><img src="./source/slider4.jpg" alt="비쥬얼4"></li>
-                        </ul>
-                    </div>
-                </figure>
-                <script type="text/javascript">
-                    $(document).ready(function(){
-                        var owl = $('.owl-carousel');
-                        
-                        owl.owlCarousel({
-                            items:3,                 // 한번에 보여줄 아이템 수
-                            loop:true,               // 반복여부
-                            margin:35,               // 오른쪽 간격
-                            autoplay:true,           // 자동재생 여부
-                            autoplayTimeout:1800,    // 재생간격
-                            autoplayHoverPause:true  //마우스오버시 멈출지 여부
-                        });    
-                        
-                        $('.customNextBtn').click(function() {
-                            owl.trigger('next.owl.carousel');
-                        })
-                        
-                        $('.customPrevBtn').click(function() {
-                            owl.trigger('prev.owl.carousel', [300]);
-                        })
+            <figure class="vs2">
+                <div class="vs2_wrap">
+                    <ul class="img_box2 owl-carousel">
+                        <li><img src="./source/slider1.jpg" alt="슬라이더1"></li>
+                        <li><img src="./source/slider2.jpg" alt="슬라이더2"></li>
+                        <li><img src="./source/slider3.jpg" alt="슬라이더3"></li>
+                        <li><img src="./source/slider4.jpg" alt="슬라이더4"></li>
+                    </ul>
+                </div>
+            </figure>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    var owl = $('.owl-carousel');
+                    owl.owlCarousel({
+                        items: 3, // 한번에 보여줄 아이템 수
+                        loop: true, // 반복여부
+                        margin: 35, // 오른쪽 간격
+                        autoplay: true, // 자동재생 여부
+                        autoplayTimeout: 1800, // 재생간격
+                        autoplayHoverPause: true //마우스오버시 멈출지 여부
                     });
-                    </script>
+                });
+            </script>
+            <div class="noti">
+                <div class="grid">
+                    <div class="col5"style="background-color: blue;">
+                        
+                    </div>
+                    <div class="col5" style="background-color: blue;">
+                        
+                    </div>
+                    <div class="col2" style="background-color: blue;">
+                        
+                    </div>
+                </div>
+            </div>
         </section>
 </body>
+
 </html>

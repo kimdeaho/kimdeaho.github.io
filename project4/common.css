@@ -23,6 +23,11 @@
 }
 
 .hd_wrap {
+    width: 100%;
+    margin: 15px auto;
+    position: relative;
+}
+.tnb_wrap{
     width: 1200px;
     margin: 15px auto;
     position: relative;
@@ -40,7 +45,9 @@
     border: 1px solid #f1f1f1;
     height: 100px;
 }
-
+.logo a {
+    padding: 25px 0;
+}
 .logo_tit {
     font-size: 24px;
     padding-top: 12px;
@@ -109,13 +116,17 @@
     top: 0;
     right: 0;
     z-index: -1;
-    width: 42%;
+    width: 46%;
     height: 100%;
     background-color: #ef4c84;
 }
 
 .gnb:hover::before {
     display: block;
+}
+.gnb ul{
+    width: 1200px;
+    margin: 0 auto;
 }
 .gnb li {
     float: left;
@@ -220,6 +231,7 @@ dt{
 /* content */
 .content {
     width:100%;
+    min-height: 100vh;
     background-color: #f1f1f1;
 }
 
