@@ -23,6 +23,8 @@
     <meta property="og:description" content="경제동향, 지표, 예산 및 기금, 전자민원창구 등 수록">
     <!-- 필요한 라이브러리 -->
     <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="./slick/slick.js"></script>
+    <script src="./owl/owl.carousel.js"></script>
     <!-- 구글 애널리틱스 연결 : 방문자 통계 및 로그 분석 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-99F02R9F8M"></script>
     <script>
@@ -40,8 +42,142 @@
     <!-- 사용자 외부 스타일 연결 -->
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./slick/slick.css">
+    <link rel="stylesheet" href="./owl/owl.carousel.css">
     <style>
+        .vs {
+            clear: both;
+            position: relative;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        .slick-slide img {
+            width: 100%;
+        }
+        button.slick-prev.slick-arrow,
+        button.slick-next.slick-arrow {
+            display: block;
+            width: 20px;
+            height: 40px;
+            position: absolute;
+            bottom: 42vh;
+            z-index: 10;
+            background-color: #fff;
+            text-indent: -10000px;
+        }
 
+        button.slick-prev.slick-arrow {
+            left: 60px;
+        }
+
+        button.slick-next.slick-arrow {
+            right: 60px;
+        }
+
+        .slick-dots {
+            position: absolute;
+            width: 200px;
+            left: 50%;
+            margin-left: -80px;
+            bottom: 40px;
+        }
+
+        .slick-dots li {
+            float: left;
+        }
+
+        .slick-dots li button {
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 12px;
+            background-color: #333;
+            text-indent: -10000px;
+            margin-left: 15px;
+        }
+
+        .slick-dots li.slick-active button {
+            background-color: #fff;
+        }
+
+
+        .vs .img_box li a {
+            display: block;
+            position: relative;
+        }
+
+        .vs .img_box .vs_img {
+            display: block;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        .vs .img_box .tit_box {
+            position: absolute;
+            top: 100px;
+            left: 50;
+            z-index: 90;
+            padding: 200px 500px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .vs .img_box .vs_tit {
+            font-family: 'TTTogether';
+            font-size: 40px;
+            font-weight: 400;
+            text-shadow: 2px 2px 15px #666;
+        }
+
+        .vs .img_box .vs_com {
+            font-size: 24px;
+            text-align: right;
+            text-shadow: -2px -2px 2px #666;
+        }
+        .icon_wrap {
+            max-width: 1200px;
+            width: auto;
+            margin: 15px auto;
+            height: 120px;
+        }
+        .icon_wrap li {
+            float: left;
+            padding: 30px 30px;
+        }
+        .icon_wrap li:first-child {
+            padding-left: 90px;
+        }
+        .icon_wrap .item1 strong{
+            display: block;
+            clear: both;
+            float: right;
+            margin-left: 5px;
+        }
+        .icon_wrap .item1 span {
+            display: block;
+            clear: both;
+            margin-left: 60px;
+            margin-top: -30px;
+        }
+        .vs2 { clear: both; width: 1200px; overflow-x: hidden; position: relative;
+        margin: 0 auto;}
+        
+        .owl-dots{margin: 0 auto;}
+.owl-item img{
+    height: auto;
+}
+.customPrevBtn, .customNextBtn{
+    background : none;
+    border: none;
+    color: #999999;
+    font-size: 20px;
+    font-weight: bold;
+}
+@media(max-width:768px){
+    .pbPrevBtn, .pbNextBtn{
+        display: none;
+    }
+}
     </style>
 </head>
 
@@ -295,100 +431,116 @@
                 </nav>
             </div>
         </header>
-        <section class="content" style="width:100%; min-height:100vh; background-color: #f1f1f1;">
-
-        </section>
-        <div class="multipleDiv">
-            <div class="multipleContentsDiv">
-                <div class="_obj _objHtml ui-draggable" >
-                    <div class="sns">
-                        <ul>
-                            <li class="facebook">
-                                <a href="https://www.facebook.com/ksastorysns">
-                                    <img src="./source/facebook.png">
-                                </a>
-                            </li>
-                            <li class="utube">
-                                <a href="https://www.youtube.com/channel/UCx6S3sqjrcczM9DCqvJ6KYg">
-                                <img src="./source/utube.png">
-                                </a>
-                            </li>
-                            <li class="blog">
-                                <a href="https://blog.naver.com/ksaqs">
-                                <img src="./source/blog.png">
-                                </a>
-                            </li>
-                            <li class="insta">
-                                <a href="https://www.instagram.com/korean_standards_association/?hl=ko">
-                                <img src="./source/instar.png">
-                                </a>
-                            </li>
-                            <li class="naverTv">
-                                <a href="https://tv.naver.com/ksa1962">
-                                <img src="./source/naverTv.png">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="_obj _objHtml ui-draggable" id="menu7031_obj171" style="">
-                        <div class="linkWrap">
-                            <div class="link-go">
-                                <a href="https://www.ksa.or.kr/ksa_kr/7012/subview.do"><strong>지역본부</strong> 홈페이지</a>
-                            </div>
-
-                            <div class="_jumpMenuWrap _sWidth">
-                                <div class="_jumpMenu">
-                                    <h2>관련기관 바로가기</h2>
-                                    <select id="jumpMenuFooter1" name="jumpMenuFooter1" title="관련사이트선택" )">
-                                        <option value="">관련기관 바로가기</option>
-                                        <option value="http://www.motie.go.kr">산업통상자원부</option>
-                                        <option value="http://www.moel.go.kr">고용노동부</option>
-                                        <option value="https://www.msit.go.kr/index.do">미래창조과학부</option>
-                                        <option value="http://www.smba.go.kr">중소벤처기업부</option>
-                                        <option value="http://www.kats.go.kr">국가기술표준원</option>
-                                        <option value="http://www.kab.or.kr/">한국인정지원센터</option>
-                                        <option value="http://www.ksamedia.co.kr/">한국표준협회미디어</option>
-                                    </select>
-                                </div>
-                            </div>
+        <section class="content">
+            <figure class="vs slick">
+                <div class="vs_wrap">
+                    <div class="img_box single-item">
+                        <div class="item">
+                            <img src="./source/main.jpg" alt="비쥬얼1">
+                        </div>
+                        <div class="item">
+                            <img src="./source/main2.jpg" alt="비쥬얼2">
+                        </div>
+                        <div class="item">
+                            <img src="./source/main3.jpg" alt="비쥬얼3">
+                        </div>
+                        <div class="item">
+                            <img src="./source/main4.jpg" alt="비쥬얼4">
                         </div>
                     </div>
                 </div>
+            </figure>
+            <script>
+                $(function () {
+                    $(".single-item").slick({
+                        dots: true, //번호별 버튼 추가
+                        arrows: false, //좌우 버튼 추가
+                        infinite: true, //순환 반복
+                        speed: 300, //한 슬라이드당 속도
+                        autoplay: true, //자동 실행
+                        autoplayspeed: 3500
+                        //한 슬라이딩하고, 기다리는 시간
+                    });
+                });
+            </script>
+            <div class="icon_wrap">
+                <ul>
+                    <li class="item1">
+                        <a href="">
+                            <img src="./source/main_icon01.png" alt="">
+                            <strong>정보목록</strong>
+                            <span>more</span>
+                        </a>
+                    </li>
+                    <li class="item1">
+                        <a href="">
+                            <img src="./source/main_icon02.png" alt="">
+                            <strong>정책연구</strong>
+                            <span>more</span>
+                        </a>
+                    </li>
+                    <li class="item1">
+                        <a href="">
+                            <img src="./source/main_icon03.png" alt="">
+                            <strong>승인통계</strong>
+                            <span>more</span>
+                        </a>
+                    </li>
+                    <li class="item1">
+                        <a href="">
+                            <img src="./source/main_icon04.png" alt="">
+                            <strong>훈령·예규</strong>
+                            <span>more</span>
+                        </a>
+                    </li>
+                    <li class="item1">
+                        <a href="">
+                            <img src="./source/main_icon05.png" alt="">
+                            <strong>민원신청</strong>
+                            <span>more</span>
+                        </a>
+                    </li>
+                    <li class="item1">
+                        <a href="">
+                            <img src="./source/main_icon06.png" alt="">
+                            <strong>부총리</strong>
+                            <span>more</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </div>
-                        <footer class="ft">
-                            <div class="footerSecInner">
-                                <!--접근성마크-->
-                                <div class="f-logo"><img src="./source/mainSymbol.png"></div>
-                                <!--접근성마크-->
-                                <div class="nav_add">
-                                    <!--카피라이트-->
-                                    <nav class="footer_nav">
-                                        <ul>
-                                            <li><a href="">개인정보처리방침</a></li>
-                                            <li><a href="">찾아오시는 길</a></li>
-                                            <li><a href="">담당자 연락처</a></li>
-                                            <li><a href="">사업자등록증·계좌안내</a></li>
-                                            <li><a href="">전자세금계산 확인</a></li>
-                                            <li><a href="">대금지급조회서비스</a></li>
-                                        </ul>
-                                    </nav>
-                                    <address><span>06160 </span>서울시 강남구 테헤란로 69길 5 (삼성동, DT센터) <span>대표전화 :
-                                            1670-6009</span></address>
-                                    <p class="p_2">Copyright(c) KOREAN STANDARDS ASSOCIATION.<span>All Rights
-                                            Reserved.</span></p>
-                                    <!--카피라이트-->
-                                </div>
-                                <div class="logos">
-                                    <ul>
-                                        <li><img src="./source/ico-openNuri.png" alt=""
-                                                style="background-color: #fff;" /><span>인적자원개발우수기관</span></li>
-                                        <li><img src="./source/ico-webWatch.png" alt=""></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </footer>
+                <figure class="vs2">
+                    <div class="vs2_wrap">
+                        <ul class="img_box2 owl-carousel">
+                            <li><img src="./source/slider1.jpg" alt="비쥬얼1"></li>
+                            <li><img src="./source/slider2.jpg" alt="비쥬얼2"></li>
+                            <li><img src="./source/slider3.jpg" alt="비쥬얼3"></li>
+                            <li><img src="./source/slider4.jpg" alt="비쥬얼4"></li>
+                        </ul>
                     </div>
+                </figure>
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        var owl = $('.owl-carousel');
+                        
+                        owl.owlCarousel({
+                            items:3,                 // 한번에 보여줄 아이템 수
+                            loop:true,               // 반복여부
+                            margin:35,               // 오른쪽 간격
+                            autoplay:true,           // 자동재생 여부
+                            autoplayTimeout:1800,    // 재생간격
+                            autoplayHoverPause:true  //마우스오버시 멈출지 여부
+                        });    
+                        
+                        $('.customNextBtn').click(function() {
+                            owl.trigger('next.owl.carousel');
+                        })
+                        
+                        $('.customPrevBtn').click(function() {
+                            owl.trigger('prev.owl.carousel', [300]);
+                        })
+                    });
+                    </script>
+        </section>
 </body>
-
 </html>
