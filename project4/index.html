@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width: device-width:  initial-scale=1.0">
     <title>기획재정부</title>
     <!-- 메타포 -->
     <meta name="title" content="기획재정부">
@@ -79,7 +79,7 @@
 
         .slick-dots {
             position: absolute;
-            width: 200px;
+            width:  200px;
             left: 50%;
             margin-left: -80px;
             bottom: 40px;
@@ -91,7 +91,7 @@
 
         .slick-dots li button {
             display: block;
-            width: 20px;
+            width:  20px;
             height: 20px;
             border-radius: 12px;
             background-color: #333;
@@ -111,14 +111,14 @@
 
         .vs .img_box .vs_img {
             display: block;
-            width: 100%;
-            max-width: 100vw;
+            width:  100%;
+            max-width:  100vw;
         }
 
         .vs .img_box .tit_box {
             position: absolute;
             top: 100px;
-            left: 50;
+            left: 0;
             z-index: 90;
             padding: 200px 500px;
             color: #fff;
@@ -139,8 +139,8 @@
         }
 
         .icon_wrap {
-            max-width: 1200px;
-            width: auto;
+            max-width:  1200px;
+            width:  auto;
             margin: 15px auto;
             height: 120px;
         }
@@ -160,12 +160,12 @@
             float: right;
             margin-left: 5px;
             color: #000;
+            line-height: 1.8;
         }
 
         .icon_wrap .item1 span {
             display: block;
             clear: both;
-            width: 55px;
             margin-left: 50px;
             margin-top: -30px;
             color: #666;
@@ -177,7 +177,7 @@
 
         .vs2 {
             clear: both;
-            width: 1200px;
+            width:  1200px;
             overflow-x: hidden;
             position: relative;
             margin: 0 auto;
@@ -196,7 +196,7 @@
         }
 
         .owl-dots {
-            width: 160px;
+            width:  160px;
             height: 30px;
             left: 50%;
             margin: 0 auto;
@@ -204,7 +204,7 @@
 
         .owl-dots div {
             display: block;
-            width: 20px;
+            width:  20px;
             height: 20px;
             float: left;
             background-color: gray;
@@ -215,10 +215,170 @@
         .owl-dots div.active {
             background-color: #333;
         }
-        .noti {
-            width: 100%;
-            height: 340px;
+    .noti{
+        width: 100%;
+        height: 340px;
+        margin: 0 auto;
+        background-color: #f1f1f1;
+    }
+    .noti a {
+        color: #000;
+    }
+    .noti a:hover{
+        color: #666;
+    }
+    .noti_box { width: 400px; height: auto; float:left; margin-top: 100px; margin-right: 40px; }
+    .ra_item { display:none; }
+    .noti_wrap { clear:both; }
+    .noti_wrap .noti { display:none; width: 400px; height: 100px; }
+    #ra1:checked ~ .noti_wrap .noti.item1 { display:block;}
+    #ra2:checked ~ .noti_wrap .noti.item2 { display:block;}
+    .noti_lb_box { clear:both; height: 48px; }
+    .noti_lb_box li { float:left; width: 70px; text-align: center; height: 48px; line-height: 48px;
+     cursor: pointer; }
+    .noti_lb_box li:first-child{margin-right: 20px;}
+    .noti_lb_box li.more_item { float:right; font-size: 14px; }
+    .noti_lb_box li label { color:#000; font-weight: normal;}
+    #ra1:checked ~ .noti_lb_box li.item1 label { font-weight:bold; }
+    #ra2:checked ~ .noti_lb_box li.item2 label { font-weight:bold; }
+    .noti_con ul li{
+        line-height: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .news_box { width: 400px; height: auto; float:left; margin-top: 100px; margin-right: 40px;}
+    .news_wrap { clear:both; }
+    .news_wrap .news { display:none; width: 400px; height: 100px; }
+    #ra3:checked ~ .news_wrap .news.item1 { display:block; }
+    #ra4:checked ~ .news_wrap .news.item2 { display:block; }
+    .news_lb_box { clear:both; height: 48px; }
+    .news_lb_box li { float:left; width: 70px; text-align: center; height: 48px; line-height: 48px;
+     cursor: pointer;  }
+    .news_lb_box li:first-child{
+        margin-right: 20px;
+    }
+    .news_lb_box li.more_item { float:right; font-size: 14px; }
+    .news_lb_box li label { color:#000; font-weight: normal;}
+    #ra3:checked ~ .news_lb_box li.item1 label { font-weight:bold; }
+    #ra4:checked ~ .news_lb_box li.item2 label { font-weight:bold; }
+    .news_con, .noti_con{
+        border-top: 2px solid #666;
+    }
+    .news_con ul li{
+        line-height: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .info{
+        width: 300px;
+        height: 300px;
+        float: right;
+        
+    }
+        .info_wrap {
+            height: 210px;
+            background-image: url("./source/info-mo.png");
+            background-repeat: no-repeat;
+            background-position: 30px 180px;
+            padding: 30px;
+            background-color: #1d4bb0;
         }
+        
+        .info_box{
+            border: 1px solid #6181c8;
+            padding: 30px 30px;
+        }
+
+        .info_box li{
+            margin-bottom: 20px;
+        }
+        .info_box li:last-child{
+            margin-bottom: 0;
+        }
+        .info_box ul li a{
+            padding-left: 25px;
+            font-size: 15px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .info_box ul li a{
+            background-image: url("./source/info-loca.png");
+            background-repeat: no-repeat;
+            background-position: 3px 0;
+        }
+        .info_tel{
+            padding-top: 10px;
+            padding-left: 80px;
+            margin-top: 20px;
+        }
+        .info_tel p{
+            display: block;
+            color: #fff;
+            padding-bottom: 8px;
+        }
+        .info_tel p:last-child{
+            font-size: 25px;
+        }
+        .sns{
+            width:  1200px;
+            margin: 0 auto;
+            height: 100px;
+        }
+        .sns_wrap{
+            padding: 20px 0;
+        }
+        .sns_icon{
+            width:  569px;
+        }
+        .sns_icon ul li{
+            float: left;
+            margin-right: 39px; 
+        }
+        .link{
+            position: relative;
+            float: right;
+            width:  35%;
+            margin-top: -20px;
+        }
+        .link_wrap {
+            overflow: hidden;
+            
+        }
+        .link_wrap ul li{
+            float: left;
+            width:  150px;
+            margin-left: 28px;
+            border: 1px solid #333;
+            text-align: center;
+            padding: 15px;
+            background-color: #ddd;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .link_wrap ul li:first-child{
+            background-color: #999;
+        }
+        .link_wrap ul li:hover{
+            background-color: #fff;
+        }
+        .link_wrap ul li:hover select{
+            background-color: #fff;
+        }
+        .link_wrap ul li a{
+            color: #000;
+        }
+        .link_wrap ul li select{
+            border: none;
+            font-size: 14px;
+            font-weight: bold;
+            appearance: none;
+            position: relative;
+            background-color: #ddd;
+            cursor: pointer;
+        }
+  
     </style>
 </head>
 
@@ -229,10 +389,10 @@
                 <div class="tnb_wrap">
                     <a href=""><img src="./source/logo.png" alt=""></a>
                     <div class="search_wrap">
-                        <form action="" method="">
+                        <form action="search" method="post">
                             <div class="search_fr">
-                                <input type="text" id="keyword" name="keyword">
-                                <input type="submit" class="search_btn" value="검색">
+                                <input type="text" class="search_btn1" id="keyword" name="keyword">
+                                <input type="submit" class="search_btn" value="">
                             </div>
                         </form>
                     </div>
@@ -244,49 +404,41 @@
                     </nav>
                 </div>
                 <nav class="gnb">
-                    <ul>
+                    <ul class="main_sub">
                         <li>
                             <a href="" class="dp1">정보공개</a>
                             <ul class="sub">
                                 <li>
-                                    <dl>
-                                        <dt>정보공개제도안내</dt>
-                                        <a href="" class="dp2">정보공개제도안내</a>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">정보공개제도안내</li>
+                                        <li><a href="" class="dp2">정보공개제도안내</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <dl>
-                                        <dt>사전정보공표</dt>
-                                        <a href="">
-                                            <dd>사전정보공표목록</dd>
-                                        </a>
-                                        <a href="">
-                                            <dd>주요 공표목록</dd>
-                                        </a>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">사전정보공표</li>
+                                            <li><a href="">사전정보공표목록</a></li>
+                                            <li><a href="">주요 공표목록</a></li>
+                                    </ul>
                                 </li>
                                 <li>
 
-                                    <dl>
-                                        <dt>정보목록</dt>
-                                        <a href="" class="dp2">
-                                            <dd>정보목록</dd>
-                                        </a>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">정보목록</li>
+                                            <li><a href="" class="dp2">정보목록</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <dl>
-                                        <dt>정보공개청구</dt>
-                                        <a href="" class="dp2">
-                                            <dd>정보공개청구</dd>
-                                        </a>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">정보공개청구</li>
+                                            <li><a href="" class="dp2">정보공개청구</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <dl>
-                                        <dt>공공데이터개방</dt>
-                                        <dd><a href="" class="dp2">공공데이터개방</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">공공데이터개방</li>
+                                        <li><a href="" class="dp2">공공데이터개방</a></li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>
@@ -294,36 +446,36 @@
                             <a href="" class="dp1">뉴스</a>
                             <ul class="sub">
                                 <li>
-                                    <dl>
-                                        <dt>보도자료</dt>
-                                        <dd><a href="" class="dp2">보도·참고자료</a></dd>
-                                        <dd><a href="" class="dp2">설명·반박자료</a></dd>
-                                        <dd><a href="" class="dp2">알려드립니다</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">보도자료</li>
+                                        <li><a href="" class="dp2">보도·참고자료</a></li>
+                                        <li><a href="" class="dp2">설명·반박자료</a></li>
+                                        <li><a href="" class="dp2">알려드립니다</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <dl>
-                                        <dt>사진뉴스</dt>
-                                        <dd><a href="" class="dp2">사진뉴스</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">사진뉴스</li>
+                                        <li><a href="" class="dp2">사진뉴스</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <dl>
-                                        <dt>현장에서 답을 찾다</dt>
-                                        <dd><a href="" class="dp2">현장에서 답을 찾다</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">현장에서 답을 찾다</li>
+                                        <li><a href="" class="dp2">현장에서 답을 찾다</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <dl>
-                                        <dt>정책홍보마당</dt>
-                                        <dd><a href="" class="dp2">정보그림(인포그래픽)</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">정책홍보마당</li>
+                                        <li><a href="" class="dp2">정보그림(인포그래픽)</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <dl>
-                                        <dt>공지사항</dt>
-                                        <dd><a href="" class="dp2">공지</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">공지사항</li>
+                                        <li><a href="" class="dp2">공지</a></li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>
@@ -331,34 +483,34 @@
                             <a href="" class="dp1">정책</a>
                             <ul class="sub">
                                 <li>
-                                    <dl>
-                                        <dt>업무계획</dt>
-                                        <dd><a href="" class="dp2">업무계획</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">업무계획</li>
+                                        <li><a href="" class="dp2">업무계획</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <dl>
-                                        <dt>정책자료</dt>
-                                        <dd><a href="" class="dp2">정책게시판</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">정책자료</li>
+                                        <li><a href="" class="dp2">정책게시판</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <dl>
-                                        <dt>정책연구</dt>
-                                        <dd><a href="" class="dp2">정책연구기관 소개</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">정책연구</li>
+                                        <li><a href="" class="dp2">정책연구기관 소개</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <dl>
-                                        <dt>알림판</dt>
-                                        <dd><a href="" class="dp2">알림판</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">알림판</li>
+                                        <li><a href="" class="dp2">알림판</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <dl>
-                                        <dt>예산 둘러보기</dt>
-                                        <dd><a href="" class="dp2">예산 길라잡이</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">예산 둘러보기</li>
+                                        <li><a href="" class="dp2">예산 길라잡이</a></li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>
@@ -366,107 +518,108 @@
                             <a href="" class="dp1">통계</a>
                             <ul class="sub">
                                 <li>
-                                    <dl>
-                                        <dt>주요경제지표</dt>
-                                        <dd><a href="" class="dp2">일일경제지표</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">주요경제지표</li>
+                                        <li><a href="" class="dp2">일일경제지표</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <dl>
-                                        <dt>승인통계</dt>
-                                        <dd><a href="" class="dp2">승인통계</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">승인통계</li>
+                                        <li><a href="" class="dp2">승인통계</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <dl>
-                                        <dt>e-나라지표</dt>
-                                        <dd><a href="" class="dp2">e-나라지표</a></dd>
-                                    </dl>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="" class="dp1"><img src="./source/gnb_icon1.png" alt="">법령</a>
-                            <ul class="sub">
-                                <li>
-                                    <dl>
-                                        <dt>소관법령</dt>
-                                        <dd><a href="" class="dp2">소관법령</a></dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>훈령·예규</dt>
-                                        <dd><a href="" class="dp2">훈령·예규</a></dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>고시·공고·지침</dt>
-                                        <dd><a href="" class="dp2">고시·공고·지침</a></dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>입법·행정예고</dt>
-                                        <dd><a href="" class="dp2">입법·행정예고</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">e-나라지표</li>
+                                        <li><a href="" class="dp2">e-나라지표</a></li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="" class="dp1"><img src="./source/gnb_icon2.png" alt="">국민참여</a>
+                            <a href="" class="dp1"><img src="./source/gnb_icon1.png" alt="헤더 아이콘1">법령</a>
                             <ul class="sub">
                                 <li>
-                                    <dl>
-                                        <dt>민원이용안내</dt>
-                                        <dd><a href="" class="dp2">민원이용안내</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">소관법령</li>
+                                        <li><a href="" class="dp2">소관법령</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <dl>
-                                        <dt>민원신청</dt>
-                                        <dd><a href="" class="dp2">민원신청</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">훈령·예규</li>
+                                        <li><a href="" class="dp2">훈령·예규</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <dl>
-                                        <dt>세법해석</dt>
-                                        <dd><a href="" class="dp2">세법해석 신청안내</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">고시·공고·지침</li>
+                                        <li><a href="" class="dp2">고시·공고·지침</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">입법·행정예고</li>
+                                        <li><a href="" class="dp2">입법·행정예고</a></li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="" class="dp1"><img src="./source/gnb_icon3.png" alt="">기관소개</a>
+                            <a href="" class="dp1"><img src="./source/gnb_icon2.png" alt="헤더 아이콘2">국민참여</a>
                             <ul class="sub">
                                 <li>
-                                    <dl>
-                                        <dt>일반현황</dt>
-                                        <dd><a href="" class="dp2">일반현황</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">민원이용안내</li>
+                                        <li><a href="" class="dp2">민원이용안내</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <dl>
-                                        <dt>부총리</dt>
-                                        <dd><a href="" class="dp2">부총리</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">민원신청</li>
+                                        <li><a href="" class="dp2">민원신청</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <dl>
-                                        <dt>차관</dt>
-                                        <dd><a href="" class="dp2">차관</a></dd>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">세법해석</li>
+                                        <li><a href="" class="dp2">세법해석 신청안내</a></li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="" class="dp1"><img src="./source/gnb_icon4.png" alt="">보는 경제</a>
+                            <a href="" class="dp1"><img src="./source/gnb_icon3.png" alt="헤더 아이콘3">기관소개</a>
                             <ul class="sub">
                                 <li>
-                                    <dl>
-                                        <dt><a href="" class="dp2">한 눈에 보는 경제</a></dt>
-                                    </dl>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">일반현황</li>
+                                        <li><a href="" class="dp2">일반현황</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">부총리</li>
+                                        <li><a href="" class="dp2">부총리</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">차관</li>
+                                        <li><a href="" class="dp2">차관</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="dp1"><img src="./source/gnb_icon4.png" alt="헤더 아이콘4">보는 경제</a>
+                            <ul class="sub">
+                                <li>
+                                    <ul class="sub_dt">
+                                        <li class="sub_tit">한 눈에 보는 경제</li>
+                                        <li><a href="" class="dp3">한 눈에 보는 경제</a></li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>
@@ -474,8 +627,8 @@
                 </nav>
             </div>
         </header>
-        <section class="content">
-            <figure class="vs slick">
+        <div class="content">
+            <div class="vs slick">
                 <div class="vs_wrap">
                     <div class="img_box single-item">
                         <div class="item">
@@ -492,7 +645,7 @@
                         </div>
                     </div>
                 </div>
-            </figure>
+            </div>
             <script>
                 $(function () {
                     $(".single-item").slick({
@@ -562,7 +715,7 @@
                     </ul>
                 </div>
             </figure>
-            <script type="text/javascript">
+            <script>
                 $(document).ready(function () {
                     var owl = $('.owl-carousel');
                     owl.owlCarousel({
@@ -577,18 +730,144 @@
             </script>
             <div class="noti">
                 <div class="grid">
-                    <div class="col5"style="background-color: blue;">
-                        
+                    <div class="noti_box">
+                        <input type="radio" name="ra1" class="ra_item" id="ra1" checked>
+                        <input type="radio" name="ra1" class="ra_item" id="ra2">
+                        <ul class="noti_lb_box">
+                            <li class="item1"><label for="ra1">공지사항</label></li>
+                            <li class="item2"><label for="ra2">입법예고</label></li>
+                            <li class="more_item"><a href="">더보기</a></li>
+                        </ul>
+                        <ul class="noti_wrap">
+                            <li class="item1 noti">
+                                <div class="noti_con">
+                                    <ul>
+                                        <li><a href="">민간, 지자체 협업으로 국유지 개발 패러다임 전환</a></li>
+                                        <li><a href="">[보도참고] 2022년 1월 최근 경제동향</a></li>
+                                        <li><a href="">제2차 물가관계차관회의 개최 및 가락동 농수산물도매시장 현장방문</a></li>
+                                        <li><a href="">제41차 요소수 수급 관련 범부처 합동 대응 회의 개최</a></li>
+                                    </ul>   
+                                </div>
+                            </li>
+                            <li class="item2 noti">
+                                <div class="noti_con">
+                                    <ul>
+                                        <li><a href="">「국제조세조정에 관한 법률 시행령」 일부개정령(안) 입법예고</a></li>
+                                        <li><a href="">「자유무역협정의 이행을 위한 관세법의 특례에 관한 법률 시행령」 일부개정령(안) 입법예고</a></li>
+                                        <li><a href="">「주세법 시행령」 일부개정령(안) 입법예고</a></li>
+                                        <li><a href="">「주류 면허 등에 관한 법률 시행령」 일부개정령(안) 입법예고</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>   
                     </div>
-                    <div class="col5" style="background-color: blue;">
-                        
+                    <div class="news_box">
+                        <input type="radio" name="ra2" class="ra_item" id="ra3" checked>
+                        <input type="radio" name="ra2" class="ra_item" id="ra4">
+                        <ul class="news_lb_box">
+                            <li class="item1"><label for="ra3">국고채</label></li>
+                            <li class="item2"><label for="ra4">입찰구매</label></li>
+                            <li class="more_item"><a href="">더보기</a></li>
+                        </ul>
+                        <ul class="news_wrap">
+                            <li class="item1 news">
+                                <div class="news_con">
+                                    <ul>
+                                        <li><a href="">국고채 2년물 "국고01750-2312" 비경쟁인수 결과('22.1.11.~14.)</a></li>
+                                        <li><a href="">국고채 50년물 “국고01625-7009” 통합발행 경쟁입찰 결과('22.1.14.)</a></li>
+                                        <li><a href="">국고채 3년물 "국고01875-2412" 비경쟁인수 결과('22.1.10.~1.13.)</a></li>
+                                        <li><a href="">국고채 2년물 “국고01750-2312” 통합발행 경쟁입찰 결과('22.1.11.)</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="item2 news">
+                                <div class="news_con">
+                                    <ul>
+                                        <li><a href="">한국판 뉴딜 정부포상 추천자 공개검증</a></li>
+                                        <li><a href="">제56회 납세자의 날 정부포상 추천 후보자 공개검증</a></li>
+                                        <li><a href="">2022년 1분기 적용 공공자금관리기금 금리 공지</a></li>
+                                        <li><a href="">2022년 정부포상 운영계획(안)</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>   
                     </div>
-                    <div class="col2" style="background-color: blue;">
-                        
+                    <div class="info">
+                        <div class="info_wrap">
+                            <div class="info_box">
+                                <ul>
+                                    <li><a href="">찾아오시는 길</a></li>
+                                    <li><a href="">담당자 연락처</a></li>
+                                </ul>
+                            </div>
+                            <div class="info_tel">
+                                <p><strong>대표전화</strong></p>
+                                <p>044-215-2150</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="sns">
+                <div class="sns_wrap">
+                    <div class="sns_icon">
+                        <ul>
+                            <li><a href=""><img src="./source/facebook.png" alt="페이스북"></a></li>
+                            <li><a href=""></a><img src="./source/utube.png" alt="유튜브"></li>
+                            <li><a href=""><img src="./source/blog.png" alt="블로그"></a></li>
+                            <li><a href=""><img src="./source/instar.png" alt="인스타"></a></li>
+                            <li><a href=""><img src="./source/naverTv.png" alt="네이버"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="link">
+                    <div class="link_wrap">
+                        <ul>
+                            <li><a href=""><strong>메인페이지</strong></a></li>
+                            <li>
+                                <div>
+                                    <select name="opt" id="opt">
+                                        <option value="site1">관련사이트 선택</option>
+                                        <option value="site2">링크2</option>
+                                        <option value="site3">링크3</option>
+                                        <option value="site4">링크4</option>
+                                        <option value="site5">링크5</option>
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="ft">
+                <div class="ft_wrap">
+                    <div class="ft_logo">
+                        <img src="./source/mainSymbol.png" alt="푸터 로고">
+                    </div>
+                    <div class="capi">
+                        <nav class="ft_menu">
+                            <ul>
+                                <li><a href="">국민참여예산</a></li>
+                                <li><a href="">생활법령정보</a></li>
+                                <li><a href="">국가정보원</a></li>
+                                <li><a href="">정부혁신1번가</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <span>(30109) 세종특별자치시 갈매로 477 정부세종청사 기획재정부</span>
+                    <div class="ft_logo2">
+                        <ul>
+                            <li><img src="./source/ico-openNuri.png" alt="푸터로고1"></li>
+                            <li><strong>기획재정부</strong></li>
+                        </ul>
+                        <img src="./source/ico-webWatch.png" alt="푸터로고2">
+                    </div>
+                </div>
+            </div>
+        </footer>
+</div>
 </body>
 
 </html>
