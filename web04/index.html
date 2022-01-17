@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width: device-width:  initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>기획재정부</title>
     <!-- 메타포 -->
     <meta name="title" content="기획재정부">
@@ -57,29 +57,9 @@
             width: 100%;
         }
 
-        button.slick-prev.slick-arrow,
-        button.slick-next.slick-arrow {
-            display: block;
-            width: 20px;
-            height: 40px;
-            position: absolute;
-            bottom: 42vh;
-            z-index: 10;
-            background-color: #fff;
-            text-indent: -10000px;
-        }
-
-        button.slick-prev.slick-arrow {
-            left: 60px;
-        }
-
-        button.slick-next.slick-arrow {
-            right: 60px;
-        }
-
         .slick-dots {
             position: absolute;
-            width:  200px;
+            width: 140px;
             left: 50%;
             margin-left: -80px;
             bottom: 40px;
@@ -91,56 +71,28 @@
 
         .slick-dots li button {
             display: block;
-            width:  20px;
+            width: 20px;
             height: 20px;
             border-radius: 12px;
             background-color: #333;
             text-indent: -10000px;
             margin-left: 15px;
+            cursor: pointer;
         }
 
         .slick-dots li.slick-active button {
             background-color: #fff;
         }
 
-
-        .vs .img_box li a {
-            display: block;
-            position: relative;
-        }
-
         .vs .img_box .vs_img {
             display: block;
-            width:  100%;
-            max-width:  100vw;
-        }
-
-        .vs .img_box .tit_box {
-            position: absolute;
-            top: 100px;
-            left: 0;
-            z-index: 90;
-            padding: 200px 500px;
-            color: #fff;
-            text-align: center;
-        }
-
-        .vs .img_box .vs_tit {
-            font-family: 'TTTogether';
-            font-size: 40px;
-            font-weight: 400;
-            text-shadow: 2px 2px 15px #666;
-        }
-
-        .vs .img_box .vs_com {
-            font-size: 24px;
-            text-align: right;
-            text-shadow: -2px -2px 2px #666;
+            width: 100%;
+            max-width: 100vw;
         }
 
         .icon_wrap {
-            max-width:  1200px;
-            width:  auto;
+            max-width: 1200px;
+            width: auto;
             margin: 15px auto;
             height: 120px;
         }
@@ -166,9 +118,10 @@
         .icon_wrap .item1 span {
             display: block;
             clear: both;
-            margin-left: 50px;
+            margin-left: 55px;
             margin-top: -30px;
             color: #666;
+            font-size: 14px;
         }
 
         .icon_wrap .item1 span:hover {
@@ -177,26 +130,14 @@
 
         .vs2 {
             clear: both;
-            width:  1200px;
+            width: 1200px;
             overflow-x: hidden;
             position: relative;
             margin: 0 auto;
         }
 
-        .owl-carousel .item {
-            height: 10rem;
-            background: #4DC7A0;
-            padding: 1rem;
-        }
-
-        .owl-carousel .item h4 {
-            color: #FFF;
-            font-weight: 400;
-            margin-top: 0rem;
-        }
-
         .owl-dots {
-            width:  160px;
+            width: 160px;
             height: 30px;
             left: 50%;
             margin: 0 auto;
@@ -204,7 +145,7 @@
 
         .owl-dots div {
             display: block;
-            width:  20px;
+            width: 20px;
             height: 20px;
             float: left;
             background-color: gray;
@@ -215,68 +156,176 @@
         .owl-dots div.active {
             background-color: #333;
         }
-    .noti{
-        width: 100%;
-        height: 340px;
-        margin: 0 auto;
-        background-color: #f1f1f1;
-    }
-    .noti a {
-        color: #000;
-    }
-    .noti a:hover{
-        color: #666;
-    }
-    .noti_box { width: 400px; height: auto; float:left; margin-top: 100px; margin-right: 40px; }
-    .ra_item { display:none; }
-    .noti_wrap { clear:both; }
-    .noti_wrap .noti { display:none; width: 400px; height: 100px; }
-    #ra1:checked ~ .noti_wrap .noti.item1 { display:block;}
-    #ra2:checked ~ .noti_wrap .noti.item2 { display:block;}
-    .noti_lb_box { clear:both; height: 48px; }
-    .noti_lb_box li { float:left; width: 70px; text-align: center; height: 48px; line-height: 48px;
-     cursor: pointer; }
-    .noti_lb_box li:first-child{margin-right: 20px;}
-    .noti_lb_box li.more_item { float:right; font-size: 14px; }
-    .noti_lb_box li label { color:#000; font-weight: normal;}
-    #ra1:checked ~ .noti_lb_box li.item1 label { font-weight:bold; }
-    #ra2:checked ~ .noti_lb_box li.item2 label { font-weight:bold; }
-    .noti_con ul li{
-        line-height: 2;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    .news_box { width: 400px; height: auto; float:left; margin-top: 100px; margin-right: 40px;}
-    .news_wrap { clear:both; }
-    .news_wrap .news { display:none; width: 400px; height: 100px; }
-    #ra3:checked ~ .news_wrap .news.item1 { display:block; }
-    #ra4:checked ~ .news_wrap .news.item2 { display:block; }
-    .news_lb_box { clear:both; height: 48px; }
-    .news_lb_box li { float:left; width: 70px; text-align: center; height: 48px; line-height: 48px;
-     cursor: pointer;  }
-    .news_lb_box li:first-child{
-        margin-right: 20px;
-    }
-    .news_lb_box li.more_item { float:right; font-size: 14px; }
-    .news_lb_box li label { color:#000; font-weight: normal;}
-    #ra3:checked ~ .news_lb_box li.item1 label { font-weight:bold; }
-    #ra4:checked ~ .news_lb_box li.item2 label { font-weight:bold; }
-    .news_con, .noti_con{
-        border-top: 2px solid #666;
-    }
-    .news_con ul li{
-        line-height: 2;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    .info{
-        width: 300px;
-        height: 300px;
-        float: right;
-        
-    }
+
+        .noti {
+            width: 100%;
+            height: 340px;
+            margin: 0 auto;
+            background-color: #f1f1f1;
+        }
+
+        .noti a {
+            color: #000;
+        }
+
+        .noti a:hover {
+            color: #666;
+        }
+
+        .noti_box {
+            width: 400px;
+            height: auto;
+            float: left;
+            margin-top: 100px;
+            margin-right: 40px;
+        }
+
+        .ra_item {
+            display: none;
+        }
+
+        .noti_wrap {
+            clear: both;
+        }
+
+        .noti_wrap .noti {
+            display: none;
+            width: 400px;
+            height: 100px;
+        }
+
+        #ra1:checked~.noti_wrap .noti.item1 {
+            display: block;
+        }
+
+        #ra2:checked~.noti_wrap .noti.item2 {
+            display: block;
+        }
+
+        .noti_lb_box {
+            clear: both;
+            height: 48px;
+        }
+
+        .noti_lb_box li {
+            float: left;
+            width: 70px;
+            text-align: center;
+            height: 48px;
+            line-height: 48px;
+            cursor: pointer;
+        }
+
+        .noti_lb_box li:first-child {
+            margin-right: 20px;
+        }
+
+        .noti_lb_box li.more_item {
+            float: right;
+            font-size: 14px;
+        }
+
+        .noti_lb_box li label {
+            color: #000;
+            font-weight: normal;
+        }
+
+        #ra1:checked~.noti_lb_box li.item1 label {
+            font-weight: bold;
+        }
+
+        #ra2:checked~.noti_lb_box li.item2 label {
+            font-weight: bold;
+        }
+
+        .noti_con ul li {
+            line-height: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .news_box {
+            width: 400px;
+            height: auto;
+            float: left;
+            margin-top: 100px;
+            margin-right: 40px;
+        }
+
+        .news_wrap {
+            clear: both;
+        }
+
+        .news_wrap .news {
+            display: none;
+            width: 400px;
+            height: 100px;
+        }
+
+        #ra3:checked~.news_wrap .news.item1 {
+            display: block;
+        }
+
+        #ra4:checked~.news_wrap .news.item2 {
+            display: block;
+        }
+
+        .news_lb_box {
+            clear: both;
+            height: 48px;
+        }
+
+        .news_lb_box li {
+            float: left;
+            width: 70px;
+            text-align: center;
+            height: 48px;
+            line-height: 48px;
+            cursor: pointer;
+        }
+
+        .news_lb_box li:first-child {
+            margin-right: 20px;
+        }
+
+        .news_lb_box li.more_item {
+            float: right;
+            font-size: 14px;
+        }
+
+        .news_lb_box li label {
+            color: #000;
+            font-weight: normal;
+        }
+
+        #ra3:checked~.news_lb_box li.item1 label {
+            font-weight: bold;
+        }
+
+        #ra4:checked~.news_lb_box li.item2 label {
+            font-weight: bold;
+        }
+
+        .news_con,
+        .noti_con {
+            border-top: 2px solid #666;
+        }
+
+        .news_con ul li {
+            line-height: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .info {
+            width: 300px;
+            height: 300px;
+            float: right;
+
+        }
+
         .info_wrap {
             height: 210px;
             background-image: url("./source/info-mo.png");
@@ -285,70 +334,83 @@
             padding: 30px;
             background-color: #1d4bb0;
         }
-        
-        .info_box{
+
+        .info_box {
             border: 1px solid #6181c8;
             padding: 30px 30px;
         }
 
-        .info_box li{
+        .info_box li {
             margin-bottom: 20px;
         }
-        .info_box li:last-child{
+
+        .info_box li:last-child {
             margin-bottom: 0;
         }
-        .info_box ul li a{
+
+        .info_box ul li a {
             padding-left: 25px;
             font-size: 15px;
             font-weight: bold;
             color: #fff;
         }
-        .info_box ul li a{
+
+        .info_box ul li a {
             background-image: url("./source/info-loca.png");
             background-repeat: no-repeat;
             background-position: 3px 0;
         }
-        .info_tel{
+
+        .info_tel {
             padding-top: 10px;
             padding-left: 80px;
             margin-top: 20px;
         }
-        .info_tel p{
+
+        .info_tel p {
             display: block;
             color: #fff;
             padding-bottom: 8px;
         }
-        .info_tel p:last-child{
+
+        .info_tel p:last-child {
             font-size: 25px;
         }
-        .sns{
-            width:  1200px;
+
+        .sns {
+            width: 1200px;
             margin: 0 auto;
             height: 100px;
         }
-        .sns_wrap{
+
+        .sns_wrap {
             padding: 20px 0;
         }
-        .sns_icon{
-            width:  569px;
+
+        .sns_icon {
+            width: 569px;
         }
-        .sns_icon ul li{
+
+        .sns_icon ul li {
             float: left;
-            margin-right: 39px; 
+            margin-right: 39px;
         }
-        .link{
+
+        .link {
             position: relative;
             float: right;
-            width:  35%;
+            width: 35%;
             margin-top: -20px;
         }
+
         .link_wrap {
             overflow: hidden;
-            
+
         }
-        .link_wrap ul li{
+
+        .link_wrap ul li {
             float: left;
-            width:  150px;
+            width: 150px;
             margin-left: 28px;
             border: 1px solid #333;
             text-align: center;
@@ -357,19 +419,24 @@
             cursor: pointer;
             border-radius: 5px;
         }
-        .link_wrap ul li:first-child{
+
+        .link_wrap ul li:first-child {
             background-color: #999;
         }
-        .link_wrap ul li:hover{
+
+        .link_wrap ul li:hover {
             background-color: #fff;
         }
-        .link_wrap ul li:hover select{
+
+        .link_wrap ul li:hover select {
             background-color: #fff;
         }
-        .link_wrap ul li a{
+
+        .link_wrap ul li a {
             color: #000;
         }
-        .link_wrap ul li select{
+
+        .link_wrap ul li select {
             border: none;
             font-size: 14px;
             font-weight: bold;
@@ -378,7 +445,6 @@
             background-color: #ddd;
             cursor: pointer;
         }
-  
     </style>
 </head>
 
@@ -417,21 +483,21 @@
                                 <li>
                                     <ul class="sub_dt">
                                         <li class="sub_tit">사전정보공표</li>
-                                            <li><a href="">사전정보공표목록</a></li>
-                                            <li><a href="">주요 공표목록</a></li>
+                                        <li><a href="">사전정보공표목록</a></li>
+                                        <li><a href="">주요 공표목록</a></li>
                                     </ul>
                                 </li>
                                 <li>
 
                                     <ul class="sub_dt">
                                         <li class="sub_tit">정보목록</li>
-                                            <li><a href="" class="dp2">정보목록</a></li>
+                                        <li><a href="" class="dp2">정보목록</a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <ul class="sub_dt">
                                         <li class="sub_tit">정보공개청구</li>
-                                            <li><a href="" class="dp2">정보공개청구</a></li>
+                                        <li><a href="" class="dp2">정보공개청구</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -746,7 +812,7 @@
                                         <li><a href="">[보도참고] 2022년 1월 최근 경제동향</a></li>
                                         <li><a href="">제2차 물가관계차관회의 개최 및 가락동 농수산물도매시장 현장방문</a></li>
                                         <li><a href="">제41차 요소수 수급 관련 범부처 합동 대응 회의 개최</a></li>
-                                    </ul>   
+                                    </ul>
                                 </div>
                             </li>
                             <li class="item2 noti">
@@ -759,7 +825,7 @@
                                     </ul>
                                 </div>
                             </li>
-                        </ul>   
+                        </ul>
                     </div>
                     <div class="news_box">
                         <input type="radio" name="ra2" class="ra_item" id="ra3" checked>
@@ -790,7 +856,7 @@
                                     </ul>
                                 </div>
                             </li>
-                        </ul>   
+                        </ul>
                     </div>
                     <div class="info">
                         <div class="info_wrap">
@@ -812,18 +878,17 @@
                 <div class="sns_wrap">
                     <div class="sns_icon">
                         <ul>
-                            <li><a href=""><img src="./source/facebook.png" alt="페이스북"></a></li>
-                            <li><a href=""></a><img src="./source/utube.png" alt="유튜브"></li>
-                            <li><a href=""><img src="./source/blog.png" alt="블로그"></a></li>
-                            <li><a href=""><img src="./source/instar.png" alt="인스타"></a></li>
-                            <li><a href=""><img src="./source/naverTv.png" alt="네이버"></a></li>
+                            <li><a href="https://www.facebook.com/moefkorea"><img src="./source/facebook.png" alt="페이스북"></a></li>
+                            <li><a href="https://www.youtube.com/moefkorea"><img src="./source/utube.png" alt="유튜브"></a></li>
+                            <li><a href="https://blog.naver.com/mosfnet"><img src="./source/blog.png" alt="블로그"></a></li>
+                            <li><a href="http://instagram.com/moef.korea"><img src="./source/instar.png" alt="인스타"></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="link">
                     <div class="link_wrap">
                         <ul>
-                            <li><a href=""><strong>메인페이지</strong></a></li>
+                            <li><a href="./index.html"><strong>메인페이지</strong></a></li>
                             <li>
                                 <div>
                                     <select name="opt" id="opt">
@@ -867,7 +932,7 @@
                 </div>
             </div>
         </footer>
-</div>
+    </div>
 </body>
 
 </html>
