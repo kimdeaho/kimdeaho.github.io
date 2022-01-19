@@ -60,7 +60,7 @@
     <link rel="stylesheet" href="./grid.css">
     <style>
         /* sub_common.css */
-        .content{min-height: 200px;}
+        .content{min-height: 0vh;}
         .con_wrap{ 
             clear: both;
             width: 100%; 
@@ -101,9 +101,12 @@
             margin-top: 9px;
             margin-right: 24px;
             border: 1px solid #333;
-            padding-left: 14px;
-            padding-right: 14px;
             position: relative;
+            width: 160px;
+        }
+        .bread_box li a.home_ico{
+            color: #000;
+            padding-left: 53px;
         }
         .bread_lst li a {
             color: #000;
@@ -111,10 +114,24 @@
         .bread_lst li select{ 
             border: 0; 
             outline: 0;
+            padding-left: 43px;
+            font-size: 15px;
         }
         .bread_lst li option{
             border: 0;
             outline: 0;
+        }
+        .bread_lst summary{
+            position: absolute;
+            padding-left: 30px;
+            
+        }
+        .bread_lst .dt{
+            z-index: 33;
+            text-align: center;
+        }
+        .bread_lst .dt:first-child{
+            margin-top: 55px;
         }
         .bread_lst li.cate3{
             width: 120px;
@@ -137,9 +154,9 @@
         }
 
         #sel3 dt, #sel3 dd{
-            line-height: 40px;
+            line-height: 45px;
             height: 40px;
-            padding-left: 14px;
+            padding-left: 30px;
          }
          ::marker{color: #fff;}
 
@@ -411,22 +428,30 @@
                         <a href="./index.html" class="home_ico">HOME</a>
                     </li>
                     <li class="cate1">
-                        <select name="sel1" id="sel1">
-                            <option value="sub1.html">정보공개</option>
-                            <option value="sub2.html">뉴스</option>
-                            <option value="sub3.html">정책</option>
-                            <option value="sub4.html">통계</option>
-                            <option value="sub5.html">법령</option>
-                        </select>
+                        <details id="sel2">
+                            <summary>정보공개</summary>
+                            <ul>
+                                <li class="dt"><a href="sub1.html">정보공개</a></li>
+                                <li class="dt"><a href="sub2.html">뉴스</a></li>
+                                <li class="dt"><a href="sub3.html">정책</a></li>
+                                <li class="dt"><a href="sub4.html">통계</a></li>
+                                <li class="dt"><a href="sub5.html">법령</a></li>
+                                <li class="dt"><a href="sub6.html">국민참여</a></li>
+                                <li class="dt"><a href="sub7.html">기관소개</a></li>
+                                <li class="dt"><a href="sub8.html">보는경제</a></li>
+                            </ul>
+                        </details>
                     </li>
                     <li class="cate2">
-                        <details name="sel2" id="sel2">
-                            <summary>정보공개제도안내</summary>
+                        <details id="sel2">
+                            <summary>정보공개</summary>
                             <ul>
-                                <li><a href="sub1.html?page=2">사전정보공표목록</a></li>
-                                <li><a href="sub1.html?page=3">공표목록</a></li>
-                                <li><a href="sub1.html?page=4">정보목록</a></li>
-                                <li><a href="sub1.html?page=5">정보공개청구</a></li>
+                                <li class="dt"><a href="sub1.html?page=1">정보공개제도안내</a></li>
+                                <li class="dt"><a href="sub1.html?page=2">사전정보공표목록</a></li>
+                                <li class="dt"><a href="sub1.html?page=3">공표목록</a></li>
+                                <li class="dt"><a href="sub1.html?page=4">정보목록</a></li>
+                                <li class="dt"><a href="sub1.html?page=5">정보공개청구</a></li>
+                                <li class="dt"><a href="sub1.html?page=6">공공데이터개방</a></li>
                             </ul>
                         </details>
                     </li>
