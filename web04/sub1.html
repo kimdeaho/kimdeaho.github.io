@@ -58,9 +58,10 @@
     <link rel="stylesheet" href="./slick/slick.css">
     <link rel="stylesheet" href="./owl/owl.carousel.css">
     <link rel="stylesheet" href="./grid.css">
+    <link rel="stylesheet" href="./sub.css">
     <style>
         /* sub_common.css */
-        .content{min-height: 0vh;}
+        .content{ min-height: 0vh; }
         .con_wrap{ 
             clear: both;
             width: 100%; 
@@ -81,7 +82,10 @@
             padding-top: 24px;
             line-height: 3;
             font-size: 32px;
-            color: navy;
+            color: black;
+        }
+        .page_wrap{
+            min-height: 100vh;
         }
         .bread_box{ 
             clear: both;
@@ -104,6 +108,35 @@
             position: relative;
             width: 160px;
         }
+        .bread_lst .cate2{
+            float: left;
+            height: 48px;
+            line-height: 48px;
+            margin-top: 9px;
+            margin-right: 24px;
+            border: 1px solid #333;
+            position: relative;
+            width: 180px;
+        }
+        .bread_lst .cate2 summary{
+            position: absolute;
+            padding-left: 10px;
+        }
+        .bread_lst .dt1{
+            float: left;
+            height: 48px;
+            line-height: 48px;
+            margin-top: 9px;
+            margin-right: 24px;
+            border: 1px solid #333;
+            position: relative;
+            width: 180px;
+            text-align: center;
+            background-color: #fff;
+        }
+        .bread_lst .dt1:first-child{
+            margin-top: 55px;
+        }
         .bread_box li a.home_ico{
             color: #000;
             padding-left: 53px;
@@ -124,11 +157,11 @@
         .bread_lst summary{
             position: absolute;
             padding-left: 30px;
-            
         }
         .bread_lst .dt{
             z-index: 33;
             text-align: center;
+            background-color: #fff;
         }
         .bread_lst .dt:first-child{
             margin-top: 55px;
@@ -181,7 +214,7 @@
         <header class="hd">
             <div class="hd_wrap">
                 <div class="tnb_wrap">
-                    <a href=""><img src="./source/logo.png" alt=""></a>
+                    <a href="./index.html"><img src="./source/logo.png" alt=""></a>
                     <div class="search_wrap">
                         <form action="search" method="post">
                             <div class="search_fr">
@@ -200,7 +233,7 @@
                 <nav class="gnb">
                     <ul class="main_sub">
                         <li>
-                            <a href="sub1.html" class="dp1">정보공개</a>
+                            <a href="sub1.html?page=1" class="dp1">정보공개</a>
                             <ul class="sub">
                                 <li>
                                     <ul class="sub_dt">
@@ -444,14 +477,14 @@
                     </li>
                     <li class="cate2">
                         <details id="sel2">
-                            <summary>정보공개</summary>
+                            <summary>정보공개제도안내</summary>
                             <ul>
-                                <li class="dt"><a href="sub1.html?page=1">정보공개제도안내</a></li>
-                                <li class="dt"><a href="sub1.html?page=2">사전정보공표목록</a></li>
-                                <li class="dt"><a href="sub1.html?page=3">공표목록</a></li>
-                                <li class="dt"><a href="sub1.html?page=4">정보목록</a></li>
-                                <li class="dt"><a href="sub1.html?page=5">정보공개청구</a></li>
-                                <li class="dt"><a href="sub1.html?page=6">공공데이터개방</a></li>
+                                <li class="dt1"><a href="sub1.html?page=1">정보공개제도안내</a></li>
+                                <li class="dt1"><a href="sub1.html?page=2">사전정보공표목록</a></li>
+                                <li class="dt1"><a href="sub1.html?page=3">공표목록</a></li>
+                                <li class="dt1"><a href="sub1.html?page=4">정보목록</a></li>
+                                <li class="dt1"><a href="sub1.html?page=5">정보공개청구</a></li>
+                                <li class="dt1"><a href="sub1.html?page=6">공공데이터개방</a></li>
                             </ul>
                         </details>
                     </li>
@@ -486,13 +519,63 @@
             });
         });    
         </script>
-        <figure class="vs">
-
-        </figure>
         <div class="con_wrap">
             <section class="page" id="page1">
-                <h2 class="page_tit">페이지 제목 1</h2>
-                <div class="page_wrap"></div>
+                <h2 class="page_tit">정보공개제도안내</h2>
+                <div class="page_wrap">
+                    <div class="subContainer">
+                        <section class="body">
+                            <!-- contents start -->
+                                <div class="inf_istt">
+                                    <p>국가기관·지방자치단체 등 공공기관이 업무 수행 중 생산하여 보유·관리하는 정보를 국민에게 공개함으로써, 국민의 알권리를 보장하고 더 많은 정보를 바탕으로 국정운영에 대한 참여를 유도하기 위한 제도입니다.</p>
+                                    <p class="imptt">정보공개관련 문의는 소관부처 담당과로 문의(운영지원과)</p>
+                                    <!-- tab menu start -->
+                                    <ul class="inf_tab">
+                                        <li><a href="" target="_blank" class="nwin" title="제도 주요내용 및 처리절차(새창열림)">제도 주요내용 및 처리절차</a></li>
+                                        <li><a href="" class="fdown" title="비공개대상정보 파일 다운로드">비공개대상정보</a></li>
+                                        <li><a href="" class="fdown" title="관련법령 파일 다운로드">관련법령</a></li>
+                                        <li><a href="" class="fdown" title="규정 파일 다운로드">규정</a></li>
+                                        <li><a href="" class="fdown" title="지침 파일 다운로드">지침</a></li>
+                                        <li><a href="" class="fdown" title="수수료 및 서식 파일 다운로드">수수료 및 서식</a></li>
+                                    </ul>
+                                    <!-- tab menu end -->
+                                    <h3>청구권자 및 대상정보</h3>
+                                    <dl class="iog_desc">
+                                        <dt><span>청구 및 처리절차</span></dt>
+                                        <dd>
+                                            <dl class="iog_li">
+                                                <dt>모든국민</dt>
+                                                <dd>- 모든 국민은 청구인 본인 또는 그 대리인을 통하여 공공기관에 정보공개를 청구할 수 있습니다.</dd>
+                                                <dt>법인&middot;단체</dt>
+                                                <dd>- 법인과 단체의 경우 대표자의 명의로 공공기관에 정보공개를 청구할 수 있습니다.</dd>
+                                                <dt>외국인</dt>
+                                                <dd>- 국내에 일정한 주소를 두고 거주하거나, 학술&middot;연구를 위하여 일시적으로 체류하는 자, 국내에 사무소를 두고 있는 법인 또는 단체에 한해 정보공개를 청구할 수 있습니다.</dd>
+                                            </dl>
+                                        </dd>
+                                        <dt><span>대상정보</span></dt>
+                                        <dd>
+                                            <div class="iog_li">
+                                                <p>- 공공기관이 직무상 작성 또는 취득하여 관리하고 있는 문서(전자문서 포함)&middot;도면&middot;사진&middot;필름&middot;테이프&middot;슬라이드 및 기타 이에 준하 는 매체 등에 기록된 사항</p>
+                                                <p>- 공공기관의 기록물관리에 관한 법률상 기록물과의 관계</p>
+                                                <p>- 공공기관이 업무와 관련하여 생산 또는 접수한 문서&middot;도서 &middot;대장&middot;카드&middot;도면&middot;시청각물&middot;전자문서 등 모든 형태의 기록정보자료"인 기록물은 모두 정보공개청구의 대상이 되는 정보에 해당합니다.</p>
+                                            </div>
+                                        </dd>
+                                        <dt><span>공개대상정보의 기준</span></dt>
+                                        <dd>
+                                            <ul class="iog_li">
+                                                <li>- 국민생활에 중대한 영향을 미치는 재정경제정책 및 행정에 관한 정보</li>
+                                                <li>- 대규모 예산이 투입되는 용역 사업에 관한 정보</li>
+                                                <li>- 주요정책의 추진과정에서 생산되는 연구보고서, 회의록 또는 시청각 자료 등</li>
+                                                <li>- 업무추진비 집행내역, 다만 개인을 식별 할 수 있는 정보는 제외</li>
+                                                <li>- 예산집행 상황, 사업평가결과 등 행정감시를 위해 필요한 정보</li>
+                                                <li>- 국민이 기획재정부 업무를 이해하고 참여하는데 필요한 기본적인 정보</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </section>
+                        </div>
+                </div>
             </section>
             <section class="page" id="page2">
                 <h2 class="page_tit">페이지 제목 2</h2>
