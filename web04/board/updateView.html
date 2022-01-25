@@ -1,5 +1,5 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 	<head>
 		<!-- 합쳐지고 최소화된 최신 CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -24,65 +24,6 @@
 		.cencle{margin-left: 280px;}
 		 </style>
 	</head>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			var formObj = $("form[name='updateForm']");
-			
-			$(document).on("click","#fileDel", function(){
-				$(this).parent().remove();
-			})
-			
-			fn_addFile();
-			
-			$(".cancel_btn").on("click", function(){
-				event.preventDefault();
-				location.href = "/board/readView?bno=${update.bno}"
-					   + "&page=${scri.page}"
-					   + "&perPageNum=${scri.perPageNum}"
-					   + "&searchType=${scri.searchType}"
-					   + "&keyword=${scri.keyword}";
-			})
-			
-			$(".update_btn").on("click", function(){
-				if(fn_valiChk()){
-					return false;
-				}
-				formObj.attr("action", "/board/update");
-				formObj.attr("method", "post");
-				formObj.submit();
-			})
-		})
-			
-		function fn_valiChk(){
-			var updateForm = $("form[name='updateForm'] .chk").length;
-			for(var i = 0; i<updateForm; i++){
-				if($(".chk").eq(i).val() == "" || $(".chk").eq(i).val() == null){
-					alert($(".chk").eq(i).attr("title"));
-					return true;
-				}
-			}
-		}
- 		function fn_addFile(){
-			var fileIndex = 1;
-			//$("#fileIndex").append("<div><input type='file' style='float:left;' name='file_"+(fileIndex++)+"'>"+"<button type='button' style='float:right;' id='fileAddBtn'>"+"추가"+"</button></div>");
-			$(".fileAdd_btn").on("click", function(){
-				$("#fileIndex").append("<div><input type='file' style='float:left;' name='file_"+(fileIndex++)+"'>"+"</button>"+"<button type='button' style='float:right;' id='fileDelBtn'>"+"삭제"+"</button></div>");
-			});
-			$(document).on("click","#fileDelBtn", function(){
-				$(this).parent().remove();
-				
-			});
-		}
- 		var fileNoArry = new Array();
- 		var fileNameArry = new Array();
- 		function fn_del(value, name){
- 			
- 			fileNoArry.push(value);
- 			fileNameArry.push(name);
- 			$("#fileNoDel").attr("value", fileNoArry);
- 			$("#fileNameDel").attr("value", fileNameArry);
- 		}
-	</script>
 	<body>
 	
 		<div id="root">
@@ -335,7 +276,7 @@
 				<h2 class="title">글 수정</h2>
 				<div class="reg_wrap">
 					<div class="form_wrap">
-					<form action="/member/registery" method="post" id="regForm" name="vo" onsummit="return regData(this)">
+					<form action="reg" method="post" id="regForm" name="vo">
 						<div class="form-group has-feedback">
 							
 							<label class="control-label" for="title">제목</label>

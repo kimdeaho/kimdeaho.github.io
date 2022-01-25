@@ -1,5 +1,5 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 	<head>
 		<!-- 합쳐지고 최소화된 최신 CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -27,50 +27,9 @@
 		.btn-success{margin-right: 40px;}
 		</style>
 	</head>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			// 취소
-			$(".cencle").on("click", function(){
-				
-				location.href = "/";
-						    
-			})
-		
-			$("#submit").on("click", function(){
-				if($("#userPass").val()==""){
-					alert("비밀번호를 입력해주세요.");
-					$("#userPass").focus();
-					return false;
-				}
-				if($("#userName").val()==""){
-					alert("성명을 입력해주세요.");
-					$("#userName").focus();
-					return false;
-				}
-				$.ajax({
-					url : "/member/passChk",
-					type : "POST",
-					dateType : "json",
-					data : $("#updateForm").serializeArray(),
-					success: function(data){
-						
-						if(data==true){
-							if(confirm("회원수정하시겠습니까?")){
-								$("#updateForm").submit();
-							}
-							
-						}else{
-							alert("패스워드가 틀렸습니다.");
-							return;
-							
-						}
-					}
-				})
-			});
-		})
-	</script>
+	
 <body>
-<section id="container">
+<div id="container">
 	<header class="hd">
 		<div class="hd_wrap">
 			<div class="tnb_wrap">
@@ -338,6 +297,6 @@
 			</div>
 		</form>
 	</div>
-</section>
+</div>
 </body>
 </html>
