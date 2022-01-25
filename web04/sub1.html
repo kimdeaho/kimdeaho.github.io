@@ -25,6 +25,7 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="./slick/slick.js"></script>
     <script src="./owl/owl.carousel.js"></script>
+    <script src="./datatables.min.js"></script>
     <!-- 구글 애널리틱스 연결 : 방문자 통계 및 로그 분석 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-99F02R9F8M"></script>
     <script>
@@ -59,6 +60,7 @@
     <link rel="stylesheet" href="./owl/owl.carousel.css">
     <link rel="stylesheet" href="./grid.css">
     <link rel="stylesheet" href="./sub.css">
+    <link rel="stylesheet" href="./datatables.min.css">
     <style>
         /* sub_common.css */
         .content{ min-height: 0vh; }
@@ -192,7 +194,16 @@
             padding-left: 30px;
          }*/
          ::marker{color: #fff;} 
-
+         .pidl{width: 1200px; margin: 0 auto;}
+         .ul_wrap{ line-height: 3; text-decoration: none ;}
+         .ul_wrap ul{text-align: center;}
+         .ul_wrap li a{  color: #000;}
+         .inf_pdo{width: 1200px; margin: 0 auto;}
+         .tb_wrap{width: 600px; margin: 40px auto;}
+         
+         .dataTables_wrapper{z-index: -1;}
+         .tb_wrap{width: 1200px; margin: 0 auto;}
+         .tb_wrap td {text-align: center;}
     </style>
 </head>
 
@@ -485,8 +496,7 @@
                                 <li class="dt1"><a href="sub1.html?page=2">사전정보공표목록</a></li>
                                 <li class="dt1"><a href="sub1.html?page=3">공표목록</a></li>
                                 <li class="dt1"><a href="sub1.html?page=4">정보목록</a></li>
-                                <li class="dt1"><a href="sub1.html?page=5">정보공개청구</a></li>
-                                <li class="dt1"><a href="sub1.html?page=6">공공데이터개방</a></li>
+                                <li class="dt1"><a href="sub1.html?page=5">공공데이터개방</a></li>
                             </ul>
                         </details>
                     </li>
@@ -580,24 +590,124 @@
                 </div>
             </section>
             <section class="page" id="page2">
-                <h2 class="page_tit">페이지 제목 2</h2>
-                <div class="page_wrap"></div>
+                <h2 class="page_tit">사전정보공표</h2>
+                <div class="page_wrap">
+                    <div class="pidl">
+                        <p>「공공기관의 정보공개에 관한 법률」 제7조(행정정보의 공표 등) 제1항과 「기획재정부
+                            행정정보공개운영지침」제5조(행정정보공표 및 대상정보) 제1항과 제2항에 의거 공표대상 행정정보의 구체적인 범위,
+                            주기·시기는 아래와 같이 정한다.</p>
+                        <p class="imptt">정보공개관련 문의는 소관부처 담당과로 문의(운영지원과)</p>
+                        <div class="ul_wrap">
+                            <div class="bil_tab">
+                                <ul>
+                                    <li><a href="#">전체</a></li>
+                                    <li><a href="#">자주 찾는 정보</a></li>
+                                    <li><a href="#">국민의 생명 신체 재산보호</a></li>
+                                    <li><a href="#">국민의 일상</a></li>
+                                    <li><a href="#">국가계약 및 지방계약법</a></li>
+                                    <li><a href="#">국가재정법 및 지방재정법</a></li>
+                                    <li><a href="#">국회ㆍ지방의회, 국정ㆍ행정 사무감사</a></li>
+                                    <li><a href="#">예산집행</a></li>
+                                    <li><a href="#">기타 공공기관 사무</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="page" id="page3">
-                <h2 class="page_tit">페이지 제목 3</h2>
-                <div class="page_wrap"></div>
+                <h2 class="page_tit">공표목록</h2>
+                <div class="page_wrap">
+                    <div class="tb_wrap">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>정책실명제</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2021년도 기재부 정책실명제 중점관리 사업내역서</td>
+                            </tr>
+                            <tr>
+                                <td>2020년도 기재부 정책실명제 중점관리 사업내역서</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                    <script>
+                        $(function(){
+                            $(".table").DataTable();		
+                        });
+                    </script>
+                </div>
             </section>
             <section class="page" id="page4">
-                <h2 class="page_tit">페이지 제목 4</h2>
-                <div class="page_wrap"></div>
+                <h2 class="page_tit">정보목록</h2>
+                <div class="page_wrap">
+                    <div class="tb_wrap">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>정보목록</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>[이송] 아산탕정2지구 도시개발사업 구역지정(변경) 및 개발계획 수립을 위한 협의</td>
+                                </tr>
+                                <tr>
+                                    <td>계획인사교류자 직위변경 통보</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                        <script>
+                            $(function(){
+                                $(".table").DataTable();		
+                            });
+                        </script>
+                </div>
             </section>
             <section class="page" id="page5">
-                <h2 class="page_tit">페이지 제목 5</h2>
-                <div class="page_wrap"></div>
-            </section>
-            <section class="page" id="page6">
-                <h2 class="page_tit">페이지 제목 6</h2>
-                <div class="page_wrap"></div>
+                <h2 class="page_tit">공공데이터개방</h2>
+                <div class="page_wrap">
+                    <div class="inf_pdo">
+                    <p>공공데이터의 제공 및 이용활성화에 관한 법률에 따라 공공데이터제공책임관(제12조)과 제공목록(제19조)을 아래와 같이 공표하며, 
+                    법률 제27조에 따라 제공목록에 포함되지 않은 공공데이터를 신청하실 수 있습니다.</p>
+                    <caption>공공데이터개방 담당정보 - 공공데이터 책임관, 실무담당자의 부서/직위, 성명, 연락처를 제공하는 표입니다.</caption>
+                    <div class="tb_wrap">
+                    <table class="tableType1 pdo-manager">
+                        <thead>
+                            <tr>
+                                <th scope="col">구분</th>
+                                <th scope="col">부서/직위</th>
+                                <th scope="col">성명</th>
+                                <th scope="col">연락처</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>공공데이터제공 책임관</th>
+                                <td>기획조정실장</td>
+                                <td>이이름</td>
+                                <td>000-000-0000</td>
+                            </tr>
+                            <tr>
+                                <th>공공데이터제공 실무담당자</th>
+                                <td>정보화담당관실 사무관</td>
+                                <td>김이름</td>
+                                <td>000-000-0000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <script>
+                        $(function(){
+                            $(".tableType1").DataTable();		
+                        });
+                    </script>
+                </div>
+                    </div></div>
             </section>
         </div>
         <footer>
