@@ -10,6 +10,19 @@
 	 	<link rel="stylesheet" href="../common.css">
 	<link rel="stylesheet" href="../reset.css">
 	 	<title>게시판</title>
+		 <style>
+			.gnb li .sub li {
+		    width: 200px;
+		    float: left;
+		}
+		.content{min-height: 60vh;}
+		.title{padding: 25px; text-align: center;}
+		.reg_wrap{width: 1200px; margin: 0 auto;}
+		.form-group{ width:500px; margin: 15px 37%;  float: left; }
+		.form-group .control-label{display:block;  margin-right: 18px;}
+		.form-group .form-control{display:block; float:left; width: 400px; margin-right: 15px;}
+		.cencle{margin-left: 280px;}
+		 </style>
 	</head>
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -319,50 +332,36 @@
 				</div>
 			</header>
 			<section id="container">
-				<form name="updateForm" role="form" method="post" action="/board/update" enctype="multipart/form-data">
-					<input type="hidden" name="bno" value="${update.bno}" readonly="readonly"/>
-					<input type="hidden" id="page" name="page" value="${scri.page}"> 
-					<input type="hidden" id="perPageNum" name="perPageNum" value="${scri.perPageNum}"> 
-					<input type="hidden" id="searchType" name="searchType" value="${scri.searchType}"> 
-					<input type="hidden" id="keyword" name="keyword" value="${scri.keyword}"> 
-					<input type="hidden" id="fileNoDel" name="fileNoDel[]" value=""> 
-					<input type="hidden" id="fileNameDel" name="fileNameDel[]" value=""> 
-					<table>
-						<tbody>
-							<tr>
-								<td>
-									<label for="title">제목</label><input type="text" id="title" name="title" value="안녕하세요" class="chk" title="제목을 입력하세요."/>
-								</td>
-							</tr>	
-							<tr>
-								<td>
-									<label for="content">내용</label><textarea id="content" name="content" class="chk" title="내용을 입력하세요.">안녕하세요</textarea>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label for="writer">작성자</label><input type="text" id="writer" name="writer" value="관리자" readonly="readonly"/>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label for="regdate">작성날짜</label>
-									2021-12-30				
-								</td>
-							</tr>
-							<tr>
-								<td id="fileIndex">
-									
-								</td>
-							</tr>
-						</tbody>			
-					</table>
-					<div>
-						<button type="button" class="update_btn">저장</button>
-						<button type="button" class="cancel_btn">취소</button>
-						<button type="button" class="fileAdd_btn">파일추가</button>
+				<h2 class="title">글 수정</h2>
+				<div class="reg_wrap">
+					<div class="form_wrap">
+					<form action="/member/registery" method="post" id="regForm" name="vo" onsummit="return regData(this)">
+						<div class="form-group has-feedback">
+							
+							<label class="control-label" for="title">제목</label>
+							
+							<input class="form-control" type="text" id="title" name="title" required />
+						</div>
+						<div class="form-group has-feedback">
+						
+							<label class="control-label" for="content">내용</label>
+							
+							<input class="form-control" type="text" id="content" name="content"  required/>
+						</div>
+						<div class="form-group has-feedback">
+						
+							<label class="control-label" for="userName">작성자</label>
+							
+							<input class="form-control" type="text" id="userName" name="userName" required/>
+						</div>
+						
+						<div class="form-group has-feedback">
+							<button class="btn btn-success" type="submit" id="submit">수정</button>
+							<button class="cencle btn btn-danger" type="button">취소</button>
+						</div>
+					</form>
 					</div>
-				</form>
+				</div>
 			</section>
 			<hr />
 		</div>
