@@ -55,9 +55,8 @@ body,html { overflow-x: hidden; }
     top: 150px; left: 150px; animation-name:intro_pic; 
 animation-duration:5s; animation-delay:0.8s; animation-fill-mode: both; animation-timing-function: ease-out; }
     @keyframes intro_pic {
-        0% { transform: rotate(0deg) scale(0.5);}
-        40% { transform: rotate(3600deg) scale(1); }
-        80% { transform: rotate(0deg) scale(0.5); }
+        0% { transform: rotate(360deg) scale(0.5);}
+        50% { transform: rotate(0deg) scale(1); }
         100% { transform:translateX(90px); }
     }
     .photo_data img { display:block; width: 100%; height:auto; }
@@ -86,14 +85,17 @@ animation-duration:5s; animation-delay:0.8s; animation-fill-mode: both; animatio
 
 
     .social_fr { clear:both; width: 1200px; margin: 250px auto; }
-    .social_fr li { float:left; width: 20%; height: 55px; text-align: center; }
-    .social_fr li span{display: block; width: 240px; margin-top: 20px; text-align: center; line-height: 1.6; font-size: 20px; font-weight: bold;}
+    .social_fr li { float:left; width: 25%; height: 55px; text-align: center; }
+    .social_fr li span{display: block; width: 300px; margin-top: 20px; text-align: center; line-height: 1.6; font-size: 20px; font-weight: bold;}
     .social_fr li.mobile { display:none; }
 
     @media screen and (max-width:767px) {   /* 모바일의 실제 크기 : 767px 이하 */
         .social_fr li:nth-child(4n) { clear:both; }
         .social_fr li.mobile { display:block; }
     }
+    .vs{background-color: #dfe1d5;}
+    #page2{background-color: #dfe1d5;}
+    #page4{background-color: #dfe1d5;}
     </style>
 </head>
 <body>
@@ -119,7 +121,7 @@ animation-duration:5s; animation-delay:0.8s; animation-fill-mode: both; animatio
                 <div class="page_wrap">
                     <h2 class="page_tit">About</h2>
                     <div class="photo_data">
-                        <img src="http://placehold.it/300x400" alt="">
+                        <img src="./img/kim1.jpg" alt="이미지">
                     </div>
                     <ul class="intro_con">
                         <li class="item1">
@@ -128,7 +130,7 @@ animation-duration:5s; animation-delay:0.8s; animation-fill-mode: both; animatio
                         </li>
                         <li class="item2">
                             <span class="intro_item_tit">나이</span>
-                            <span class="intro_item_con">31세</span>
+                            <span class="intro_item_con">32세</span>
                         </li>
                         <li class="item3">
                             <span class="intro_item_tit">희망직종</span>
@@ -140,7 +142,7 @@ animation-duration:5s; animation-delay:0.8s; animation-fill-mode: both; animatio
                         </li>
                         <li class="item5">
                             <span class="intro_item_tit">사는 곳</span>
-                            <span class="intro_item_con">고양시 덕양구 행신동</span>
+                            <span class="intro_item_con">경기도 고양시 덕양구 행신동</span>
                         </li>
                         <li class="item5">
                             <span class="intro_item_tit">연락처</span>
@@ -276,11 +278,10 @@ animation-duration:5s; animation-delay:0.8s; animation-fill-mode: both; animatio
                 <div class="page_wrap">
                     <h2 class="page_tit">Contact</h2>
                     <ul class="social_fr">
-                        <li class="item2"><a href=""><img src="./img/utube.png" alt=""></a><span>유튜브</span></li>
-                        <li class="item3"><a href=""><img src="./img/git.png" alt=""></a><span>깃허브</span></li>
-                        <li class="item4"><a href=""><img src="./img/trel.png" alt=""></a><span>트렐로</span></li>
-                        <li class="item5"><a href=""><img src="./img/facebook.png" alt=""></a><span>페이스북</span></li>
-                        <li class="item6"><a href=""><img src="./img/naver.png" alt=""></a><span>이메일</span></li>
+                        <li class="item2"><a href="https://www.youtube.com/channel/UCv1deOilNe8M1b192XOYLnQ" target="_blank"><img src="./img/utube.png" alt="유투브"></a><span>유튜브</span></li>
+                        <li class="item3"><a href="https://github.com/kimdeaho" target="_blank"><img src="./img/git.png" alt="깃허브"></a><span>깃허브</span></li>
+                        <li class="item4"><a href="https://trello.com/b/oYr5d8xA/%EA%B9%80%EB%8C%80%ED%98%B8" target="_blank"><img src="./img/trel.png" alt="트렐로"></a><span>트렐로</span></li>
+                        <li class="item5"><a href="https://www.facebook.com/deaho.kim.754/" target="_blank"><img src="./img/facebook.png" alt="페이스북"></a><span>페이스북</span></li>
                         <li class="item7 mobile"><a href="">전화</a></li>
                         <li class="item8 mobile"><a href="">SMS</a></li>
                     </ul>   
